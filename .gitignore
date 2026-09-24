@@ -1,0 +1,8 @@
+node_modules/
+public/
+.cache/
+.DS_Store
+info.txt
+*.log
+.env
+.env.*

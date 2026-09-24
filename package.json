@@ -1,0 +1,21 @@
+{
+  "name": "jalaranu-web",
+  "private": true,
+  "description": "Jalaranu — underwater lake datacenter concept website",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "gatsby develop -p 8787 -H localhost",
+    "build": "gatsby build",
+    "serve": "gatsby serve -p 8787 -H localhost",
+    "clean": "gatsby clean",
+    "deploy": "gh-pages -d public -b gh-pages"
+  },
+  "dependencies": {
+    "gatsby": "^5.16.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
