@@ -36,7 +36,8 @@
           "label": "Explore the Technology",
           "to": "/en/technology/"
         },
-        "caption": "Concept illustration. Final configuration is subject to study and engineering findings."
+        "caption": "Concept illustration. Final configuration is subject to study and engineering findings.",
+        "imageAlt": "Concept illustration: the Jalaranu datacenter module beneath the lake surface, connected to shore-based support facilities by protected power and communication routes."
       },
       "why": {
         "h2": "Why consider a location beneath a lake?",
@@ -149,7 +150,9 @@
           "Early visualisations use a truncated square pyramid. This is a design exploration; final geometry, materials, and specifications will follow engineering and test findings."
         ],
         "anchor": "system",
-        "visualNote": "A block diagram and cross-section showing logical connections, without coordinates or facility-security details."
+        "visualNote": "A block diagram and cross-section showing logical connections, without coordinates or facility-security details.",
+        "imageAlt": "Engineering concept figure of the truncated-pyramid module: front elevation, section A-A, roof framing plan, and watertight joint detail.",
+        "imageCaption": "Dimensional engineering concept, not a fabrication drawing."
       },
       "engineering": {
         "h2": "Five areas to evaluate.",
@@ -466,5 +469,12 @@
     "privacy": "Privacy",
     "contact": "Contact",
     "privacyNote": "The Privacy Notice will be updated to reflect actual data-handling practices."
+  },
+  "slugs": {
+    "technology": "technology",
+    "validation": "validation",
+    "partnerships": "partnerships",
+    "about": "about",
+    "privacy": "privacy"
   }
 }

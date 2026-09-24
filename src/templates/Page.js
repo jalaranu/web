@@ -5,7 +5,6 @@ import Button from "../components/Button";
 import CardGrid from "../components/CardGrid";
 import FAQ from "../components/FAQ";
 import ContactForm from "../components/ContactForm";
-import ConceptDiagram from "../components/ConceptDiagram";
 
 function Home({ page, locale, content }) {
   const hero = page.hero;
@@ -28,8 +27,15 @@ function Home({ page, locale, content }) {
               {hero.secondaryCta.label}
             </Button>
           </div>
-          <ConceptDiagram ariaLabel={hero.h1} />
-          <p className="caption concept-diagram__caption">{hero.caption}</p>
+          <figure className="concept-diagram">
+            <img
+              src={`/assets/matano-site-${locale}.svg`}
+              alt={hero.imageAlt}
+            />
+            <figcaption className="caption concept-diagram__caption">
+              {hero.caption}
+            </figcaption>
+          </figure>
         </div>
       </div>
 
@@ -105,7 +111,7 @@ function Home({ page, locale, content }) {
   );
 }
 
-function Technology({ page }) {
+function Technology({ page, locale }) {
   return (
     <>
       <div className="hero">
@@ -124,6 +130,16 @@ function Technology({ page }) {
             <p key={index}>{paragraph}</p>
           ))}
         </div>
+        <figure className="concept-diagram">
+          <img
+            src={`/assets/matano-structure-${locale}.svg`}
+            alt={page.architecture.imageAlt}
+            loading="lazy"
+          />
+          <figcaption className="caption concept-diagram__caption">
+            {page.architecture.imageCaption}
+          </figcaption>
+        </figure>
         <p className="caption visual-note">{page.architecture.visualNote}</p>
       </Section>
 
@@ -397,7 +413,7 @@ export default function Page({ pageContext }) {
       body = <Home page={page} locale={locale} content={content} />;
       break;
     case "technology":
-      body = <Technology page={page} />;
+      body = <Technology page={page} locale={locale} />;
       break;
     case "validation":
       body = <Validation page={page} />;

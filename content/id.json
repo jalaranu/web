@@ -36,7 +36,8 @@
           "label": "Jelajahi Teknologi",
           "to": "/id/teknologi/"
         },
-        "caption": "Ilustrasi konsep. Konfigurasi akhir mengikuti hasil studi dan rekayasa."
+        "caption": "Ilustrasi konsep. Konfigurasi akhir mengikuti hasil studi dan rekayasa.",
+        "imageAlt": "Ilustrasi konsep Jalaranu: modul datacenter di bawah permukaan danau yang terhubung ke fasilitas pendukung di darat melalui jalur daya dan komunikasi yang terlindung."
       },
       "why": {
         "h2": "Mengapa mempertimbangkan bawah danau?",
@@ -149,7 +150,9 @@
           "Visualisasi awal menggunakan bentuk limas segi empat terpancung. Bentuk tersebut merupakan eksplorasi desain; geometri, material, dan spesifikasi akhir mengikuti hasil rekayasa serta pengujian."
         ],
         "anchor": "system",
-        "visualNote": "Diagram blok dan potongan, dengan jalur logis tanpa koordinat atau rincian pengamanan fasilitas."
+        "visualNote": "Diagram blok dan potongan, dengan jalur logis tanpa koordinat atau rincian pengamanan fasilitas.",
+        "imageAlt": "Gambar konsep rekayasa modul limas segi empat terpancung: tampak depan, potongan A-A, denah rangka atap, dan detail sambungan kedap.",
+        "imageCaption": "Konsep rekayasa berdimensi, bukan gambar fabrikasi."
       },
       "engineering": {
         "h2": "Lima bidang yang perlu dievaluasi.",
@@ -466,5 +469,12 @@
     "privacy": "Privasi",
     "contact": "Kontak",
     "privacyNote": "Pemberitahuan Privasi akan diperbarui mengikuti praktik pengelolaan data yang berlaku."
+  },
+  "slugs": {
+    "technology": "teknologi",
+    "validation": "validasi",
+    "partnerships": "kemitraan",
+    "about": "tentang",
+    "privacy": "privasi"
   }
 }

@@ -19,10 +19,11 @@ const pageKeys = [
   "notFound",
 ];
 
-const slugFor = (locale, pageKey) => {
+const slugFor = (locale, pageKey, content) => {
   if (pageKey === "home") return `/${locale}/`;
   if (pageKey === "notFound") return `/${locale}/404/`;
-  return `/${locale}/${pageKey}/`;
+  const slug = content.slugs?.[pageKey] || pageKey;
+  return `/${locale}/${slug}/`;
 };
 
 exports.createPages = async ({ actions }) => {
@@ -36,9 +37,11 @@ exports.createPages = async ({ actions }) => {
     const equivalentRoot = `/${otherLocale(locale)}/`;
 
     pageKeys.forEach((pageKey) => {
-      const currentPath = slugFor(locale, pageKey);
+      const currentPath = slugFor(locale, pageKey, content);
       const equivalentPath =
-        pageKey === "home" ? equivalentRoot : slugFor(otherLocale(locale), pageKey);
+        pageKey === "home"
+          ? equivalentRoot
+          : slugFor(otherLocale(locale), pageKey, locales[otherLocale(locale)]);
 
       createPage({
         path: currentPath,
