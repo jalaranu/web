@@ -3,7 +3,7 @@ import { pathFor } from "../lib/paths";
 import { Mail } from "lucide-react";
 import { SOCIAL_BRANDS } from "./SocialIcons";
 
-const pageLinks = ["technology", "validation", "partnerships", "about"];
+const pageLinks = ["technology", "useCases", "validation", "partnerships", "about"];
 
 export default function Footer({ locale, content }) {
   const social = content.site.social || {};

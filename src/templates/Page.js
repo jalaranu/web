@@ -1,19 +1,33 @@
 import React from "react";
 import {
   Anchor,
+  Archive,
   Boxes,
   Building2,
+  ClipboardList,
+  Cpu,
+  Database,
   DollarSign,
   Droplets,
   FlaskConical,
   History,
+  KeyRound,
   Landmark,
+  Layers,
+  LifeBuoy,
+  Lock,
   Plane,
   FileText,
+  Radar,
+  Radio,
+  RotateCcw,
   Scale,
+  Search,
+  Server,
   Shield,
   ShieldCheck,
   Thermometer,
+  UserCog,
   Waves,
 } from "lucide-react";
 import Layout from "../components/Layout";
@@ -24,6 +38,7 @@ import FAQ from "../components/FAQ";
 import ContactForm from "../components/ContactForm";
 import Rich from "../components/Rich";
 import HeroCarousel from "../components/HeroCarousel";
+import FlowDiagram from "../components/FlowDiagram";
 
 const PLACEMENT_ICONS = {
   building2: Building2,
@@ -40,6 +55,26 @@ const PLACEMENT_ICONS = {
   boxes: Boxes,
   "dollar-sign": DollarSign,
   "flask-conical": FlaskConical,
+};
+
+const USECASES_ICONS = {
+  lock: Lock,
+  "life-buoy": LifeBuoy,
+  radio: Radio,
+  radar: Radar,
+  cpu: Cpu,
+  server: Server,
+  "clipboard-list": ClipboardList,
+  archive: Archive,
+  database: Database,
+  layers: Layers,
+  "key-round": KeyRound,
+  shield: Shield,
+  "rotate-ccw": RotateCcw,
+  "user-cog": UserCog,
+  search: Search,
+  "flask-conical": FlaskConical,
+  scale: Scale,
 };
 
 function Home({ page, locale, content }) {
@@ -519,6 +554,378 @@ function Validation({ page }) {
   );
 }
 
+function UseCases({ page, locale }) {
+  const flowSteps = page.approach.flow.map((step) => ({
+    ...step,
+    Icon: USECASES_ICONS[step.icon],
+  }));
+
+  return (
+    <>
+      <div className="hero">
+        <div className="container">
+          <span className="overline">{page.hero.eyebrow}</span>
+          <h1>
+            <Rich text={page.hero.h1} />
+          </h1>
+          <div className="hero__intro">
+            {page.hero.intro.map((paragraph, index) => (
+              <p key={index}>
+                <Rich text={paragraph} />
+              </p>
+            ))}
+          </div>
+          <div className="hero__actions">
+            <Button to={page.hero.primaryCta.to} variant="primary" arrow>
+              {page.hero.primaryCta.label}
+            </Button>
+            <Button to={page.hero.secondaryCta.to} variant="secondary">
+              {page.hero.secondaryCta.label}
+            </Button>
+          </div>
+          {page.index ? (
+            <nav className="inpage-nav" aria-label={page.indexLabel}>
+              <ul>
+                {page.index.map((entry) => (
+                  <li key={entry.id}>
+                    <a href={`#${entry.id}`}>{entry.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ) : null}
+        </div>
+      </div>
+
+      <Section id="data">
+        <div className="section-head">
+          <h2>
+            <Rich text={page.data.h2} />
+          </h2>
+          {page.data.intro.map((paragraph, index) => (
+            <p key={index}>
+              <Rich text={paragraph} />
+            </p>
+          ))}
+        </div>
+        <figure className="concept-diagram">
+          <img
+            src={`/assets/matano-site-${locale}.svg`}
+            alt={page.data.illustrationAlt}
+            loading="lazy"
+          />
+          <figcaption className="caption concept-diagram__caption">
+            {page.data.illustrationCaption}
+          </figcaption>
+        </figure>
+        <div className="table-wrap requirement-wrap">
+          <table className="plan-table requirement-table">
+            <caption className="sr-only">{page.data.h2}</caption>
+            <thead>
+              <tr>
+                <th>{page.data.tableHeaderRequirement}</th>
+                <th>{page.data.tableHeaderFocus}</th>
+                <th>{page.data.tableHeaderApplications}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {page.data.rows.map((row) => {
+                const Icon = USECASES_ICONS[row.icon];
+                return (
+                  <tr key={row.requirement}>
+                    <th scope="row" className="requirement-table__label">
+                      <span className="requirement-table__icon">
+                        {Icon ? <Icon size={16} aria-hidden="true" /> : null}
+                      </span>
+                      <span>
+                        <Rich text={row.requirement} />
+                      </span>
+                    </th>
+                    <td>
+                      <Rich text={row.focus} />
+                    </td>
+                    <td>
+                      <Rich text={row.applications} />
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </Section>
+
+      <Section
+        className="section--alt"
+        style={{ background: "var(--jlr-surface-alt)" }}
+        id="use-cases"
+      >
+        <div className="section-head">
+          <h2>
+            <Rich text={page.explore.h2} />
+          </h2>
+          {page.explore.intro.map((paragraph, index) => (
+            <p key={index}>
+              <Rich text={paragraph} />
+            </p>
+          ))}
+          <p className="caption uc-explore__hint">{page.explore.cardsLabel}</p>
+        </div>
+        <div className="uc-grid">
+          {page.explore.cards.map((card, index) => {
+            const Icon = USECASES_ICONS[card.icon];
+            return (
+              <a
+                className="uc-card"
+                href={`#uc-${index + 1}`}
+                key={card.id}
+                aria-label={`${String(index + 1).padStart(2, "0")} ${card.title}`}
+              >
+                <div className="uc-card__top">
+                  <span className="uc-card__num">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <span className="uc-card__icon">
+                    {Icon ? <Icon size={22} aria-hidden="true" /> : null}
+                  </span>
+                </div>
+                <h3 className="uc-card__title">
+                  <Rich text={card.title} />
+                </h3>
+                {card.titleEn ? (
+                  <span className="uc-card__name">{card.titleEn}</span>
+                ) : null}
+                <ul className="uc-card__sectors">
+                  {card.sectors.map((sector) => (
+                    <li key={sector} className="badge">
+                      {sector}
+                    </li>
+                  ))}
+                </ul>
+              </a>
+            );
+          })}
+        </div>
+      </Section>
+
+      <Section className="uc-details">
+        {page.explore.cards.map((card, index) => {
+          const Icon = USECASES_ICONS[card.icon];
+          return (
+            <article
+              className="uc-detail"
+              id={`uc-${index + 1}`}
+              key={card.id}
+            >
+              <header className="uc-detail__head">
+                <span className="uc-detail__num">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="uc-detail__icon">
+                  {Icon ? <Icon size={22} aria-hidden="true" /> : null}
+                </span>
+                <div className="uc-detail__titles">
+                  <h3>
+                    <Rich text={card.title} />
+                  </h3>
+                  {card.titleEn ? (
+                    <span className="uc-detail__name">{card.titleEn}</span>
+                  ) : null}
+                </div>
+                <ul
+                  className="uc-detail__sectors"
+                  aria-label={page.explore.sectorsLabel}
+                >
+                  {card.sectors.map((sector) => (
+                    <li key={sector} className="badge">
+                      {sector}
+                    </li>
+                  ))}
+                </ul>
+              </header>
+              <p className="uc-detail__body">
+                <Rich text={card.body} />
+              </p>
+              <div className="uc-detail__cols">
+                <div>
+                  <h4 className="uc-detail__label">
+                    {page.explore.applicationsLabel}
+                  </h4>
+                  <ul className="uc-list">
+                    {card.applications.map((item, itemIndex) => (
+                      <li key={itemIndex}>
+                        <Rich text={item} />
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="uc-detail__facts">
+                  <div className="uc-fact">
+                    <h4 className="uc-detail__label">
+                      {page.explore.objectiveLabel}
+                    </h4>
+                    <p>
+                      <Rich text={card.objective} />
+                    </p>
+                  </div>
+                  <div className="uc-fact">
+                    <h4 className="uc-detail__label">
+                      {page.explore.validateLabel}
+                    </h4>
+                    <p>
+                      <Rich text={card.toValidate} />
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </Section>
+
+      <Section
+        className="section--alt"
+        style={{ background: "var(--jlr-surface-alt)" }}
+        id="mapping"
+      >
+        <div className="section-head">
+          <h2>
+            <Rich text={page.mapping.h2} />
+          </h2>
+          {page.mapping.intro.map((paragraph, index) => (
+            <p key={index}>
+              <Rich text={paragraph} />
+            </p>
+          ))}
+        </div>
+        <div className="table-wrap">
+          <table className="plan-table sector-table">
+            <caption className="sr-only">{page.mapping.h2}</caption>
+            <thead>
+              <tr>
+                <th>{page.mapping.tableHeaderSector}</th>
+                <th>{page.mapping.tableHeaderRequirements}</th>
+                <th>{page.mapping.tableHeaderUseCases}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {page.mapping.rows.map((row) => (
+                <tr key={row.sector}>
+                  <th scope="row" className="sector-table__sector">
+                    {row.sector}
+                  </th>
+                  <td>
+                    <Rich text={row.requirements} />
+                  </td>
+                  <td className="sector-table__uc">
+                    {row.useCases.map((num) => (
+                      <a
+                        key={num}
+                        className="uc-chip"
+                        href={`#uc-${num}`}
+                        aria-label={`Use case ${num}`}
+                      >
+                        {num}
+                      </a>
+                    ))}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Section>
+
+      <Section id="needs">
+        <div className="section-head">
+          <h2>
+            <Rich text={page.needs.h2} />
+          </h2>
+        </div>
+        <div className="card-grid">
+          {page.needs.items.map((item) => {
+            const Icon = USECASES_ICONS[item.icon];
+            return (
+              <div className="card need-card card--count-4" key={item.title}>
+                <span className="need-card__icon">
+                  {Icon ? <Icon size={20} aria-hidden="true" /> : null}
+                </span>
+                <h3>
+                  <Rich text={item.title} />
+                </h3>
+                <p>
+                  <Rich text={item.body} />
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </Section>
+
+      <Section
+        className="section--alt"
+        style={{ background: "var(--jlr-surface-alt)" }}
+        id="approach"
+      >
+        <div className="section-head">
+          <h2>
+            <Rich text={page.approach.h2} />
+          </h2>
+          {page.approach.body.map((paragraph, index) => (
+            <p key={index}>
+              <Rich text={paragraph} />
+            </p>
+          ))}
+        </div>
+        <FlowDiagram steps={flowSteps} label={page.approach.flowLabel} />
+        <p className="caption visual-note">{page.approach.flowCaption}</p>
+        <div className="approach-block">
+          <h3 className="approach-block__title">
+            <Rich text={page.approach.discussionIntro} />
+          </h3>
+          <ol className="numbered-list">
+            {page.approach.discussion.map((item, index) => (
+              <li key={index} className="numbered-item">
+                <div>
+                  <p>
+                    <Rich text={item} />
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </div>
+        <div className="scope-callout">
+          <span className="overline">{page.approach.scopeTitle}</span>
+          <p>
+            <Rich text={page.approach.scope} />
+          </p>
+        </div>
+        <div className="cta-row">
+          <Button to={page.approach.cta.to} variant="secondary">
+            {page.approach.cta.label}
+          </Button>
+        </div>
+      </Section>
+
+      <div className="section closing dark">
+        <div className="container">
+          <h2 className="closing__h2">
+            <Rich text={page.closing.h2} />
+          </h2>
+          <p>
+            <Rich text={page.closing.body} />
+          </p>
+          <Button to={page.closing.cta.to} variant="primary" arrow>
+            {page.closing.cta.label}
+          </Button>
+          <p className="closing__helper">{page.closing.helperText}</p>
+        </div>
+      </div>
+    </>
+  );
+}
+
 function Partnerships({ page, locale }) {
   return (
     <>
@@ -757,6 +1164,9 @@ export default function Page({ pageContext }) {
       break;
     case "technology":
       body = <Technology page={page} locale={locale} />;
+      break;
+    case "useCases":
+      body = <UseCases page={page} locale={locale} />;
       break;
     case "validation":
       body = <Validation page={page} />;

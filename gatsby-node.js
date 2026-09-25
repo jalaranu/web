@@ -13,6 +13,7 @@ const defaultLocale = Object.keys(locales).find((key) => locales[key].default) |
 const pageKeys = [
   "home",
   "technology",
+  "useCases",
   "validation",
   "partnerships",
   "about",

@@ -61,8 +61,8 @@ legacy paths (all configured via the Cloudflare API).
 ## Build and rendering flow
 
 1. `gatsby-node.js` reads `content/en.json` and `content/id.json`, then calls `createPage`
-   for every `pageKey` (`home`, `technology`, `validation`, `partnerships`, `about`,
-   `privacy`, `notFound`) in both locales.
+   for every `pageKey` (`home`, `technology`, `useCases`, `validation`, `partnerships`,
+   `about`, `privacy`, `notFound`) in both locales.
 2. URL slugs come from `content.slugs` (uniform English slugs for both languages) and are
    assembled by `slugFor()`; the page key `validation` is routed as `/milestones/`.
 3. Each page renders through the single template `src/templates/Page.js`, which switches on
@@ -84,8 +84,9 @@ legacy paths (all configured via the Cloudflare API).
 - `gatsby-node.js` - page creation, locale pairing (`equivalentPath`), slim page context.
 - `gatsby-ssr.js` / `gatsby-browser.js` - head components, global CSS import.
 - `content/en.json`, `content/id.json` - every user-facing string, per locale.
-- `src/templates/Page.js` - the single page template: `Home`, `Technology`, `Validation`
-  (rendered at `/milestones/`), `Partnerships`, `About`, `Privacy`, `NotFound`, plus `Head`.
+- `src/templates/Page.js` - the single page template: `Home`, `Technology`, `UseCases`,
+  `Validation` (rendered at `/milestones/`), `Partnerships`, `About`, `Privacy`, `NotFound`,
+  plus `Head`.
 - `src/templates/Redirect.js` - root redirect page.
 - `src/pages/404.js` - client-routed 404 (localizes by URL prefix, no redirect).
 - `src/components/`
@@ -99,10 +100,12 @@ legacy paths (all configured via the Cloudflare API).
     POST to `/api/contact`.
   - `CardGrid.js`, `FAQ.js`, `Section.js`, `Button.js`, `Rich.js` - shared UI primitives
     (`Rich` renders the limited `**bold**` / `==highlight==` markdown used in content).
+  - `FlowDiagram.js` - sharp-edged horizontal flow diagram with directed edges, used for
+    the Use Cases evaluation path.
   - `Flags.js`, `SocialIcons.js` - local flag and brand icons.
 - `src/lib/paths.js` - `pathFor()` helper (slug-aware internal links).
 - `src/styles/global.css` - design tokens and all styles (swiss-grid theme).
-- `static/` - `robots.txt` (allows all search and AI crawlers), `sitemap.xml` (12 URLs),
+- `static/` - `robots.txt` (allows all search and AI crawlers), `sitemap.xml` (14 URLs),
   `assets/` (logos, hero webp set, Matano figures, partner SVGs, favicons, OG images, paper PDF).
 - `workers/contact.js` - Cloudflare Worker: CORS, server-side input validation, Turnstile
   siteverify, EmailJS REST send (with `Origin` header), generic error responses.
