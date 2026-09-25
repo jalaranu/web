@@ -667,14 +667,13 @@ function About({ page, content }) {
             {page.team.items.map((partner) => (
               <li key={partner.name}>
                 <a
-                  className="partner-card"
+                  className="partner-logo-link"
                   href={partner.url}
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label={partner.name}
                 >
                   <img src={partner.logo} alt={partner.name} loading="lazy" />
-                  <span className="partner-card__name">{partner.name}</span>
-                  <span className="partner-card__role">{partner.role}</span>
                 </a>
               </li>
             ))}
