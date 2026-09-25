@@ -1450,7 +1450,6 @@ p {
 
 .compare-wrap {
   overflow-x: auto;
-  border: 1px solid var(--jlr-border);
   -webkit-overflow-scrolling: touch;
 }
 
