@@ -31,7 +31,6 @@
     "carouselPlay": "Play slideshow",
     "carouselGoTo": "Go to slide",
     "carouselSlides": "Hero image slides",
-    "carouselCredit": "Photos: SiDanau BRIN",
     "brandSlogan": "Cold, silent, a sustainable data realm."
   },
   "nav": {
@@ -65,13 +64,11 @@
         "slides": [
           {
             "src": "/assets/hero/danau-batur.webp",
-            "alt": "Lake Batur, Bali, seen from its volcanic shore",
-            "credit": "Lake Batur"
+            "alt": "Lake Batur, Bali, seen from its volcanic shore"
           },
           {
             "src": "/assets/hero/danau-matano.webp",
-            "alt": "Lake Matano, South Sulawesi, an ancient deep-water lake",
-            "credit": "Lake Matano"
+            "alt": "Lake Matano, South Sulawesi, an ancient deep-water lake"
           }
         ]
       },

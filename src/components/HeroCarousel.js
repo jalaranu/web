@@ -99,11 +99,6 @@ export default function HeroCarousel({ slides, labels }) {
           {userPaused ? <Play size={14} aria-hidden="true" /> : <Pause size={14} aria-hidden="true" />}
         </button>
       </div>
-
-      <p className="hero-carousel__credit">
-        {labels.carouselCredit} <span aria-hidden="true">/</span>{" "}
-        {slides[index].credit}
-      </p>
     </div>
   );
 }

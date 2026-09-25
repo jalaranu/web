@@ -31,7 +31,6 @@
     "carouselPlay": "Putar tampilan",
     "carouselGoTo": "Ke slide",
     "carouselSlides": "Slide gambar utama",
-    "carouselCredit": "Foto: SiDanau BRIN",
     "brandSlogan": "Dingin, sunyi, jagat data lestari."
   },
   "nav": {
@@ -65,13 +64,11 @@
         "slides": [
           {
             "src": "/assets/hero/danau-batur.webp",
-            "alt": "Danau Batur, Bali, dilihat dari tepian vulkaniknya",
-            "credit": "Danau Batur"
+            "alt": "Danau Batur, Bali, dilihat dari tepian vulkaniknya"
           },
           {
             "src": "/assets/hero/danau-matano.webp",
-            "alt": "Danau Matano, Sulawesi Selatan, danau purba berair dalam",
-            "credit": "Danau Matano"
+            "alt": "Danau Matano, Sulawesi Selatan, danau purba berair dalam"
           }
         ]
       },
