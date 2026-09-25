@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "gatsby";
 import { Globe, Menu, X } from "lucide-react";
 import Button from "./Button";
 import { Flag } from "./Flags";
@@ -91,12 +92,12 @@ export default function Header({ locale, content, currentPath, equivalentPath })
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <a className="site-header__logo" href={logoHref}>
+        <Link className="site-header__logo" to={logoHref}>
           <img
             src="/assets/jalaranu-vivid-horizontal-light.svg"
             alt={content.site.logoAlt}
           />
-        </a>
+        </Link>
 
         <nav
           className="site-header__nav"
@@ -110,13 +111,13 @@ export default function Header({ locale, content, currentPath, equivalentPath })
               const isCurrent = currentPath.startsWith(item.to);
               return (
                 <li key={item.key}>
-                  <a
-                    href={item.to}
+                  <Link
+                    to={item.to}
                     aria-current={isCurrent ? "page" : undefined}
                     onClick={closeMenu}
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 </li>
               );
             })}
@@ -169,15 +170,15 @@ export default function Header({ locale, content, currentPath, equivalentPath })
               {languageOptions(content, locale, currentPath, equivalentPath).map(
                 (option) => (
                   <li key={option.code}>
-                    <a
-                      href={option.href}
+                    <Link
+                      to={option.href}
                       hreflang={option.code}
                       lang={option.code}
                       aria-current={option.code === locale ? "true" : undefined}
                     >
                       <Flag code={option.code} />
                       <span>{option.label}</span>
-                    </a>
+                    </Link>
                   </li>
                 )
               )}

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { ArrowRight } from "lucide-react";
 
 export default function Button({ to, variant = "primary", onClick, children, type, arrow }) {
@@ -8,6 +9,14 @@ export default function Button({ to, variant = "primary", onClick, children, typ
       {arrow ? <ArrowRight size={16} aria-hidden="true" /> : null}
     </>
   );
+
+  if (to && typeof to === "string" && to.startsWith("/")) {
+    return (
+      <Link className={`btn btn--${variant}`} to={to} onClick={onClick}>
+        {label}
+      </Link>
+    );
+  }
 
   if (to) {
     return (

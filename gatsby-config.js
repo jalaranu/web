@@ -25,6 +25,19 @@ module.exports = {
       resolve: "gatsby-plugin-offline",
       options: {
         precachePages: ["/en/", "/id/"],
+        workboxConfig: {
+          runtimeCaching: [
+            {
+              // Page documents (pretty URLs): stale-while-revalidate so
+              // direct visits render instantly from cache and update in the
+              // background. Workbox's default "runtime" cache names are
+              // cleared when a new service worker takes over.
+              urlPattern:
+                /^https?:\/\/[^/]+\/(en|id)(\/(technology|use-cases|milestones|partnerships|about|privacy))?\/?(\?.*)?$/,
+              handler: "StaleWhileRevalidate",
+            },
+          ],
+        },
       },
     },
   ],

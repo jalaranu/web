@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { pathFor } from "../lib/paths";
 import { Mail } from "lucide-react";
 import { SOCIAL_BRANDS } from "./SocialIcons";
@@ -53,7 +54,7 @@ export default function Footer({ locale, content }) {
             <ul>
               {pageLinks.map((key) => (
                 <li key={key}>
-                  <a href={pathFor(content, key)}>{content.nav[key]}</a>
+                  <Link to={pathFor(content, key)}>{content.nav[key]}</Link>
                 </li>
               ))}
             </ul>
@@ -63,12 +64,12 @@ export default function Footer({ locale, content }) {
             <h2 className="site-footer__heading">{content.footer.legalHeading}</h2>
             <ul>
               <li>
-                <a href={pathFor(content, "privacy")}>{content.footer.privacy}</a>
+                <Link to={pathFor(content, "privacy")}>{content.footer.privacy}</Link>
               </li>
               <li>
-                <a href={pathFor(content, "partnerships") + "#contact"}>
+                <Link to={pathFor(content, "partnerships") + "#contact"}>
                   {content.footer.contact}
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
