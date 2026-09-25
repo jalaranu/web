@@ -1,39 +1,69 @@
-# Jalaranu: Website
+# Jalaranu Website
 
-Website bilingual (EN/ID) untuk proyek datacenter bawah danau (underlake datacenter) Jalaranu.
-Dibangun dengan Gatsby 5, deploy otomatis ke GitHub Pages (custom domain `jalaranu.org`) via GitHub Actions.
+Bilingual (EN/ID) website for the Jalaranu underlake datacenter project, the world's first
+eco-friendly modular underlake datacenter concept developed in Indonesia.
 
-## Pengembangan lokal
+Built with Gatsby 5 and deployed automatically to GitHub Pages (custom domain `jalaranu.org`)
+via GitHub Actions.
+
+## Local development
 
 ```sh
 npm install
-npm run dev      # gatsby develop di http://localhost:8787
-npm run build    # build produksi ke public/
-npm run serve    # preview hasil build di http://localhost:8787
+npm run dev      # gatsby develop at http://localhost:8787
+npm run build    # production build into public/
+npm run serve    # preview the build at http://localhost:8787
 ```
 
-## Deploy
+To build the production bundle with the contact form captcha enabled:
 
-Push ke branch `main` memicu workflow `.github/workflows/deploy.yml` yang membuild dan
-menerbitkan ke branch `gh-pages` (GitHub Pages). Custom domain: `jalaranu.org` (DNS Cloudflare:
-4 A record apex ke IP GitHub Pages, CNAME `www` → `jalaranu.github.io`; DNS-only).
+```sh
+GATSBY_TURNSTILE_SITE_KEY=0x4AAAAAAFDUKSCYymOMWDvO npm run build
+```
 
-## Struktur
+## Deployment
 
-- `content/en.json`, `content/id.json`: seluruh salinan publik (teks, CTA, SEO, form). Slug URL
-  seragam bahasa Inggris untuk kedua bahasa (`/id/technology/`, `/id/partnerships/`, dst).
-- `src/templates/Page.js`: satu template untuk semua halaman; `src/pages/404.js` + redirect root.
-- `static/assets/`: logo brand dan figur Matano (site section + struktur 4-panel), salinan dari
-  folder `Matano_*` dan `brand-aset/`.
-- Tema: swiss-grid "sharp card": radius 0, tanpa shadow, border hairline, aksen merah `#EF4136`.
+Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds the site and publishes
+it to the `gh-pages` branch (GitHub Pages). Custom domain: `jalaranu.org` (Cloudflare DNS:
+apex A records pointing to the GitHub Pages IPs and a `www` CNAME; proxied through Cloudflare).
 
-## Formulir kemitraan
+Cloudflare provides HTTPS, HSTS, security headers, and redirect rules for the apex, `www`, and
+legacy paths (all configured via the Cloudflare API).
 
-Form di `/en/partnerships/#contact` melakukan POST JSON ke `window.JLR_FORM_ENDPOINT`.
-Tanpa endpoint terkonfigurasi, submit selalu menampilkan status gagal (tidak pernah sukses palsu).
-Set endpoint saat backend tersedia, mis. melalui file injeksi kecil atau env build.
+## Structure
 
-## Konten & konfirmasi
+- `content/en.json`, `content/id.json`: all public copy (text, CTAs, SEO, form labels).
+  URL slugs are identical for both languages (`/id/technology/`, `/id/milestones/`, etc.).
+- `src/templates/Page.js`: a single template for every page; `src/pages/404.js` plus the
+  root redirect template handle edge cases.
+- `src/components/`: header, footer, hero carousel, contact form, and smaller UI pieces.
+- `static/assets/`: brand logos, hero photos, Matano figures, partner logos, favicons,
+  the OG images, and the research paper PDF.
+- `workers/contact.js`: the Cloudflare Worker that verifies Turnstile tokens and sends
+  emails through EmailJS (deployed separately with `wrangler`).
+- Theme: swiss-grid "sharp card" system - radius 0, no shadows, hairline borders,
+  red accent `#EF4136`, blue accent `#008FBF`.
 
-Bagian ber-tanda `[KONFIRMASI]` di `content_*.md` (status tahap, tim, email kontak, dokumen)
-belum ditampilkan sebagai klaim; salinan konservatif dipakai sampai dikonfirmasi.
+## Partnership contact form
+
+The form on `/en/partnerships/#contact` (and its ID counterpart) is fully functional:
+
+1. The browser renders a Cloudflare Turnstile widget (site key injected at build time via the
+   `TURNSTILE_SITE_KEY` GitHub secret).
+2. On submit, the form POSTs JSON to `https://jalaranu.org/api/contact`.
+3. The Cloudflare Worker `jalaranu-contact` verifies the Turnstile token server-side
+   (secret stored as a Worker secret) and then sends the email through the EmailJS REST API
+   (service `service_1erp3i4`, template `template_uystsfp`) to `info@jalaranu.org`.
+4. The template receives `title`, `name`, `time`, `OrganisationName`, `PartnershipType`,
+   `message`, `IPaddr` (from `CF-Connecting-IP`), and `reply_to`.
+
+Credentials live only in GitHub Secrets (`TURNSTILE_SITE_KEY`, `TURNSTILE_SECRET_KEY`,
+`EMAILJS_PUBLIC_KEY`) and Cloudflare Worker secrets; none are stored in the repository.
+
+For local experimentation, the endpoint can be overridden with
+`window.JLR_FORM_ENDPOINT` before hydration.
+
+## Content policy
+
+The copy follows a strict honesty policy: unproven performance, cost, or environmental claims
+are not asserted as facts. Where measurements are pending, the text says so explicitly.
