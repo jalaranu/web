@@ -1446,6 +1446,95 @@ p {
   border-top: 1px solid var(--jlr-border-subtle);
 }
 
+/* ---------- Placement comparison table ---------- */
+
+.compare-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--jlr-border);
+  -webkit-overflow-scrolling: touch;
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 780px;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--jlr-border-subtle);
+  text-align: left;
+  vertical-align: top;
+}
+
+.compare-table thead th {
+  text-align: center;
+  border-bottom: 2px solid var(--jlr-text);
+  background: var(--jlr-surface);
+}
+
+.compare-table__corner {
+  border-right: 1px solid var(--jlr-border-subtle);
+}
+
+.compare-table__header-icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 8px;
+  color: var(--jlr-text-secondary);
+}
+
+.compare-table__header-name {
+  display: block;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  line-height: 1.3;
+}
+
+.compare-table__header-sub {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.71875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--jlr-text-secondary);
+}
+
+.compare-table__row-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 190px;
+  font-weight: 600;
+  color: var(--jlr-text);
+}
+
+.compare-table__row-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  color: var(--jlr-blue);
+}
+
+.compare-table td {
+  color: var(--jlr-text-secondary);
+  line-height: 1.45;
+}
+
+.compare-table .is-jalaranu {
+  background: rgba(0, 143, 191, 0.07);
+}
+
+.compare-table thead .is-jalaranu {
+  border-top: 3px solid var(--jlr-blue);
+}
+
+.compare-table thead .is-jalaranu .compare-table__header-icon {
+  color: var(--jlr-blue);
+}
+
 /* ---------- In-page section nav ---------- */
 
 .inpage-nav {

@@ -6,7 +6,7 @@
     "title": "Jalaranu",
     "tagline": "Proyek datacenter bawah danau",
     "description": "Jelajahi proyek datacenter bawah danau Jalaranu, pendekatan validasi, dan peluang kemitraan untuk pengembangan infrastruktur komputasi di Indonesia.",
-    "footerTagline": "Jalaranu - pengembangan proyek datacenter bawah danau untuk ketahanan digital Indonesia.",
+    "footerTagline": "Jalaranu - pengembangan proyek datacenter bawah danau untuk ketahanan digital Indonesia. Proyek ini mengevaluasi efisiensi termal, keandalan operasi, dan dampak lingkungan melalui program bertahap berbasis bukti sebelum ada komitmen konstruksi.",
     "copyright": "Jalaranu",
     "logoAlt": "Jalaranu",
     "skipLink": "Langsung ke konten utama",
@@ -226,24 +226,113 @@
           "Model biaya sepuluh tahun pendamping pada tingkat layanan setara memberi 6,00 juta dolar untuk fasilitas darat dengan pendinginan konvensional, 6,34 untuk fasilitas darat yang diperkeras dengan pendinginan air danau, dan 7,85 untuk desain terendam. Submersion membeli kemampuan, bukan penghematan biaya."
         ],
         "note": "Penilaian kerangka awal untuk diskusi. Angka dan peringkat memerlukan pengukuran serta kajian lokasi. Angka termal penyaringan (anomali rata-rata cekungan sekitar 0,001 kelvin selama lima puluh tahun dan jejak dua belas bulan 228-509 meter) berstatus belum terbukti sampai diukur.",
-        "items": [
-          {
-            "title": "Datacenter darat",
-            "body": "Titik acuan yang matang: rantai pasok mapan, akses mudah, dan operasi terbukti. Biayanya mencakup pendinginan yang boros energi, kebutuhan lahan, serta konsentrasi data strategis di beberapa koridor perkotaan. Pada tingkat layanan setara, model sepuluh tahun memberi 6,00 juta dolar dengan pendinginan konvensional; kelemahan strategisnya adalah konsentrasi di beberapa koridor perkotaan."
-          },
-          {
-            "title": "Bunker yang diperkuat",
-            "body": "Perlindungan fisik yang kuat untuk beban kerja kritis. Pertukarannya adalah biaya konstruksi tinggi, pembuangan panas yang lebih rumit, dan fasilitas yang lebih sulit diskalakan dibanding infrastruktur modular di permukaan. Pada 6,34 juta dolar dengan pendinginan air danau, ini adalah pembanding yang diperkeras termurah dalam model, tetapi membawa biaya konstruksi tinggi dan pembuangan panas yang rumit."
-          },
-          {
-            "title": "Datacenter bawah laut",
-            "body": "Terbukti di laut melalui Project Natick: air laut membuang panas tanpa pendinginan mekanis. Namun permukaan ancaman maritim mencakup penyadapan kabel oleh kapal selam, seret jangkar, dan yurisdiksi yang diperebutkan, ditambah korosi air asin dan akses yang sulit. Project Natick membuktikan pembuangan panas terendam di laut; meski demikian, model ancaman paper menempatkan permukaan maritim (penyadapan kabel kapal selam, seret jangkar, yurisdiksi yang diperebutkan) sebagai pembeda yang menentukan."
-          },
-          {
-            "title": "Datacenter bawah danau",
-            "body": "Danau bukan samudra kecil. Perairan daratan berada di dalam yurisdiksi domestik, di luar jangkauan kapal selam, di air tawar yang tenang dekat pembangkit listrik tenaga air dan komunitas yang ada. Pertanyaan terbuka tetap ada: efek termal dan ekologis, paparan kegempaan, pengerasan akustik, dan prosedur pengambilan kembali. Model mematok desain terendam pada 7,85 juta dolar: submersion menghilangkan jalur akses maritim langsung dan menjaga fasilitas dalam yurisdiksi domestik, tetapi pertanyaan termal, ekologis, kegempaan, akustik, dan pengambilan kembali tetap terbuka dan belum terbukti."
-          }
-        ]
+        "table": {
+          "rowHeading": "Kriteria",
+          "columns": [
+            {
+              "icon": "building2",
+              "name": "Datacenter darat",
+              "sub": "Pendinginan konvensional"
+            },
+            {
+              "icon": "shield-check",
+              "name": "Bunker diperkuat",
+              "sub": "Cangkang berpelindung"
+            },
+            {
+              "icon": "waves",
+              "name": "Datacenter bawah laut",
+              "sub": "Penempatan laut"
+            },
+            {
+              "icon": "droplets",
+              "name": "Datacenter bawah danau",
+              "sub": "Danau air tawar"
+            }
+          ],
+          "rows": [
+            {
+              "icon": "history",
+              "label": "Kematangan operasi",
+              "values": [
+                "Terbukti beroperasi",
+                "Terbukti untuk beban kritis",
+                "Terbukti di laut (Project Natick)",
+                "Konseptual; belum dibangun"
+              ]
+            },
+            {
+              "icon": "shield",
+              "label": "Perlindungan fisik",
+              "values": [
+                "Keamanan tapak, perimeter terbuka",
+                "Konstruksi diperkuat, akses terbatas",
+                "Cangkang diperkeras, lokasi jauh",
+                "Lambung tekan, kolom air daratan"
+              ]
+            },
+            {
+              "icon": "thermometer",
+              "label": "Pembuangan panas",
+              "values": [
+                "Pendinginan mekanis, biaya energi",
+                "Pembuangan panas ruang tertutup yang rumit",
+                "Pendinginan air pasif",
+                "Pendinginan air pasif, anggaran termal belum diukur"
+              ]
+            },
+            {
+              "icon": "scale",
+              "label": "Yurisdiksi",
+              "values": [
+                "Domestik, koridor perkotaan",
+                "Domestik",
+                "Zona maritim yang diperebutkan",
+                "Perairan daratan domestik"
+              ]
+            },
+            {
+              "icon": "anchor",
+              "label": "Permukaan ancaman maritim",
+              "values": [
+                "Tidak ada",
+                "Tidak ada",
+                "Penyadapan kabel kapal selam, seret jangkar",
+                "Di luar jangkauan kapal selam"
+              ]
+            },
+            {
+              "icon": "boxes",
+              "label": "Skalabilitas",
+              "values": [
+                "Klaster hiperskala",
+                "Lebih sulit diskalakan",
+                "Modul terbatas lokasi",
+                "Modul terbatas danau"
+              ]
+            },
+            {
+              "icon": "dollar-sign",
+              "label": "Model biaya sepuluh tahun",
+              "values": [
+                "$6,00 juta",
+                "$6,34 juta",
+                "Belum dimodelkan",
+                "$7,85 juta"
+              ]
+            },
+            {
+              "icon": "flask-conical",
+              "label": "Status bukti",
+              "values": [
+                "Terukur",
+                "Terukur",
+                "Pilot terbukti",
+                "Dihitung, belum terbukti"
+              ]
+            }
+          ]
+        }
       },
       "scenarios": {
         "h2": "Skenario penggunaan yang dieksplorasi",

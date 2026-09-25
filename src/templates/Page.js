@@ -1,4 +1,18 @@
 import React from "react";
+import {
+  Anchor,
+  Boxes,
+  Building2,
+  DollarSign,
+  Droplets,
+  FlaskConical,
+  History,
+  Scale,
+  Shield,
+  ShieldCheck,
+  Thermometer,
+  Waves,
+} from "lucide-react";
 import Layout from "../components/Layout";
 import Section from "../components/Section";
 import Button from "../components/Button";
@@ -7,6 +21,21 @@ import FAQ from "../components/FAQ";
 import ContactForm from "../components/ContactForm";
 import Rich from "../components/Rich";
 import HeroCarousel from "../components/HeroCarousel";
+
+const PLACEMENT_ICONS = {
+  building2: Building2,
+  "shield-check": ShieldCheck,
+  shield: Shield,
+  waves: Waves,
+  droplets: Droplets,
+  history: History,
+  thermometer: Thermometer,
+  scale: Scale,
+  anchor: Anchor,
+  boxes: Boxes,
+  "dollar-sign": DollarSign,
+  "flask-conical": FlaskConical,
+};
 
 function Home({ page, locale, content }) {
   const hero = page.hero;
@@ -266,7 +295,54 @@ function Technology({ page, locale }) {
             </p>
           ))}
         </div>
-        <CardGrid items={page.placements.items} />
+        <div className="compare-wrap">
+          <table className="compare-table">
+            <caption className="sr-only">{page.placements.h2}</caption>
+            <thead>
+              <tr>
+                <th className="compare-table__corner" scope="col">
+                  <span className="sr-only">{page.placements.table.rowHeading}</span>
+                </th>
+                {page.placements.table.columns.map((column, index) => {
+                  const ColumnIcon = PLACEMENT_ICONS[column.icon];
+                  return (
+                    <th
+                      key={column.name}
+                      scope="col"
+                      className={index === 3 ? "is-jalaranu" : undefined}
+                    >
+                      <span className="compare-table__header-icon">
+                        {ColumnIcon ? <ColumnIcon size={18} aria-hidden="true" /> : null}
+                      </span>
+                      <span className="compare-table__header-name">{column.name}</span>
+                      <span className="compare-table__header-sub">{column.sub}</span>
+                    </th>
+                  );
+                })}
+              </tr>
+            </thead>
+            <tbody>
+              {page.placements.table.rows.map((row) => {
+                const RowIcon = PLACEMENT_ICONS[row.icon];
+                return (
+                  <tr key={row.label}>
+                    <th scope="row" className="compare-table__row-label">
+                      <span className="compare-table__row-icon">
+                        {RowIcon ? <RowIcon size={16} aria-hidden="true" /> : null}
+                      </span>
+                      <span>{row.label}</span>
+                    </th>
+                    {row.values.map((value, index) => (
+                      <td key={index} className={index === 3 ? "is-jalaranu" : undefined}>
+                        {value}
+                      </td>
+                    ))}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
         <p className="caption visual-note">{page.placements.note}</p>
       </Section>
 

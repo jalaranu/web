@@ -6,7 +6,7 @@
     "title": "Jalaranu",
     "tagline": "Underlake datacenter project",
     "description": "Explore Jalaranu's underlake datacenter project, validation approach, and partnership opportunities for computing infrastructure in Indonesia.",
-    "footerTagline": "Jalaranu - developing an underlake datacenter project to support Indonesia's digital resilience.",
+    "footerTagline": "Jalaranu - developing an underlake datacenter project to support Indonesia's digital resilience. The project evaluates thermal efficiency, operational reliability, and environmental effects through a staged, evidence-led program before any commitment to construction.",
     "copyright": "Jalaranu",
     "logoAlt": "Jalaranu",
     "skipLink": "Skip to main content",
@@ -226,24 +226,113 @@
           "A companion ten-year cost model at equal service gives 6.00 million dollars for a terrestrial facility with conventional cooling, 6.34 for a hardened terrestrial facility with lake-water cooling, and 7.85 for the submerged design. Submersion buys capability, not cost saving."
         ],
         "note": "Initial framework assessment for discussion. Figures and rankings require measurement and site studies. Screening thermal numbers (a basin-average anomaly of about 0.001 kelvin over fifty years and a twelve-month footprint of 228-509 metres) carry unproven status until measured.",
-        "items": [
-          {
-            "title": "Terrestrial datacenter",
-            "body": "The mature reference point: established supply chains, easy access, and proven operations. Its costs include energy-intensive cooling, land requirements, and the concentration of strategic data in a few urban corridors. At equal service the ten-year model gives 6.00 million dollars with conventional cooling; the strategic weakness is concentration in a few urban corridors."
-          },
-          {
-            "title": "Hardened bunker",
-            "body": "Strong physical protection for critical workloads. The trade-offs are high construction cost, more complex heat rejection, and a facility that is harder to scale than modular surface infrastructure. At 6.34 million dollars with lake-water cooling it is the cheapest hardened comparator in the model, but it carries high construction cost and complex heat rejection."
-          },
-          {
-            "title": "Undersea datacenter",
-            "body": "Proven at sea by Project Natick: ocean water removes heat without mechanical cooling. But the maritime threat surface includes submarine cable interception, anchor drag, and contested jurisdiction, with saltwater corrosion and difficult access. Project Natick proved submerged heat rejection at sea; the paper's threat model nonetheless treats the maritime surface (submarine cable interception, anchor drag, contested jurisdiction) as the decisive difference."
-          },
-          {
-            "title": "Underlake datacenter",
-            "body": "A lake is not a small ocean. Inland waters sit inside domestic jurisdiction, beyond submarine reach, in quiet freshwater near hydropower and existing communities. Open questions remain: thermal and ecological effects, seismic exposure, acoustic hardening, and retrieval procedures. The model prices the submerged design at 7.85 million dollars: submersion removes direct maritime access paths and keeps the facility in domestic jurisdiction, but thermal, ecological, seismic, acoustic, and retrieval questions remain open and unproven."
-          }
-        ]
+        "table": {
+          "rowHeading": "Criterion",
+          "columns": [
+            {
+              "icon": "building2",
+              "name": "Terrestrial datacenter",
+              "sub": "Conventional cooling"
+            },
+            {
+              "icon": "shield-check",
+              "name": "Hardened bunker",
+              "sub": "Reinforced shell"
+            },
+            {
+              "icon": "waves",
+              "name": "Undersea datacenter",
+              "sub": "Ocean deployment"
+            },
+            {
+              "icon": "droplets",
+              "name": "Underlake datacenter",
+              "sub": "Freshwater lake"
+            }
+          ],
+          "rows": [
+            {
+              "icon": "history",
+              "label": "Operational maturity",
+              "values": [
+                "Proven operations",
+                "Proven for critical workloads",
+                "Proven at sea (Project Natick)",
+                "Conceptual; unbuilt"
+              ]
+            },
+            {
+              "icon": "shield",
+              "label": "Physical protection",
+              "values": [
+                "Site security, exposed perimeter",
+                "Reinforced construction, restricted access",
+                "Hardened shell, remote siting",
+                "Pressure hull, inland water column"
+              ]
+            },
+            {
+              "icon": "thermometer",
+              "label": "Heat rejection",
+              "values": [
+                "Mechanical cooling, energy cost",
+                "Complex confined heat rejection",
+                "Passive water cooling",
+                "Passive water cooling, thermal budget unmeasured"
+              ]
+            },
+            {
+              "icon": "scale",
+              "label": "Jurisdiction",
+              "values": [
+                "Domestic, urban corridors",
+                "Domestic",
+                "Contested maritime zones",
+                "Domestic inland waters"
+              ]
+            },
+            {
+              "icon": "anchor",
+              "label": "Maritime threat surface",
+              "values": [
+                "None",
+                "None",
+                "Submarine cable interception, anchor drag",
+                "Out of submarine reach"
+              ]
+            },
+            {
+              "icon": "boxes",
+              "label": "Scalability",
+              "values": [
+                "Hyperscale clusters",
+                "Harder to scale",
+                "Site-limited modules",
+                "Lake-limited modules"
+              ]
+            },
+            {
+              "icon": "dollar-sign",
+              "label": "Ten-year cost model",
+              "values": [
+                "$6.00M",
+                "$6.34M",
+                "Not modeled",
+                "$7.85M"
+              ]
+            },
+            {
+              "icon": "flask-conical",
+              "label": "Evidence status",
+              "values": [
+                "Measured",
+                "Measured",
+                "Proven pilot",
+                "Computed, unproven"
+              ]
+            }
+          ]
+        }
       },
       "scenarios": {
         "h2": "Use cases under exploration",
