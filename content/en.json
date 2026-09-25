@@ -702,6 +702,13 @@
           "label": "Explore Collaboration Opportunities",
           "to": "/en/partnerships/"
         }
+      },
+      "paper": {
+        "h2": "Published research",
+        "body": "The engineering reasoning, threat model, thermal screening, and cost comparison behind this project are documented in an open paper. Read it directly or save a copy.",
+        "linkLabel": "Paper - An Underlake Data Center Framework for Intelligence Infrastructure and Indonesian National Resilience",
+        "linkHref": "/assets/jalaranu-underlake-datacenter-paper.pdf",
+        "cite": "[PDF 1]"
       }
     },
     "privacy": {

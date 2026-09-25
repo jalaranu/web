@@ -702,6 +702,13 @@
           "label": "Kenali Peluang Kolaborasi",
           "to": "/id/partnerships/"
         }
+      },
+      "paper": {
+        "h2": "Riset yang dipublikasikan",
+        "body": "Dasar rekayasa, model ancaman, penyaringan termal, dan perbandingan biaya di balik proyek ini terdokumentasi dalam paper terbuka. Baca langsung atau simpan salinannya.",
+        "linkLabel": "Paper - An Underlake Data Center Framework for Intelligence Infrastructure and Indonesian National Resilience",
+        "linkHref": "/assets/jalaranu-underlake-datacenter-paper.pdf",
+        "cite": "[PDF 1]"
       }
     },
     "privacy": {

@@ -9,6 +9,7 @@ import {
   History,
   Landmark,
   Plane,
+  FileText,
   Scale,
   Shield,
   ShieldCheck,
@@ -619,7 +620,28 @@ function About({ page, content }) {
         <CardGrid items={page.principles.items} />
       </Section>
 
-      <Section>
+      <Section id="paper">
+        <div className="section-head">
+          <h2>
+            <Rich text={page.paper.h2} />
+          </h2>
+          <p>
+            <Rich text={page.paper.body} />
+          </p>
+        </div>
+        <a
+          className="btn btn--secondary paper-link"
+          href={page.paper.linkHref}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FileText size={16} aria-hidden="true" />
+          <span>{page.paper.linkLabel}</span>
+          <span className="paper-link__cite">{page.paper.cite}</span>
+        </a>
+      </Section>
+
+      <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
         <div className="section-head">
           <h2>
             <Rich text={page.team.h2} />

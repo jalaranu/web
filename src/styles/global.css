@@ -1434,6 +1434,28 @@ p {
   margin: 32px 0;
 }
 
+/* ---------- About page paper link ---------- */
+
+.paper-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: 100%;
+  text-align: left;
+  white-space: normal;
+  height: auto;
+  padding: 14px 18px;
+}
+
+.paper-link__cite {
+  flex-shrink: 0;
+  margin-left: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--jlr-accent-text);
+}
+
 /* ---------- Privacy sections ---------- */
 
 .privacy-section {
