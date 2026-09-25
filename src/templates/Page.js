@@ -804,6 +804,7 @@ export function Head(props) {
       <title>{seoTitle}</title>
       <meta name="description" content={seoDescription} />
       {isNotFound ? <meta name="robots" content="noindex,follow" /> : null}
+      {!isNotFound ? <meta name="robots" content="index,follow" /> : null}
       {!isNotFound ? <link rel="canonical" href={canonical} /> : null}
       {!isNotFound ? <link rel="alternate" hreflang={locale} href={canonical} /> : null}
       {!isNotFound ? (
