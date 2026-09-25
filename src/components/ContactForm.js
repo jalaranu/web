@@ -1,6 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const TURNSTILE_SITE_KEY = process.env.GATSBY_TURNSTILE_SITE_KEY;
+const TURNSTILE_SCRIPT = "https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit";
+
+function resolveEndpoint() {
+  if (typeof window !== "undefined" && window.JLR_FORM_ENDPOINT) {
+    return window.JLR_FORM_ENDPOINT;
+  }
+  return "/api/contact";
+}
 
 const PRESET_TO_OPTION = {
   investor: 0,
@@ -31,7 +40,10 @@ export default function ContactForm({ contact, privacyPath }) {
     message: "",
   });
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState("unavailable");
+  const [status, setStatus] = useState("idle");
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const turnstileRef = useRef(null);
+  const widgetIdRef = useRef(null);
 
   useEffect(() => {
     const applyPreset = () => {
@@ -57,10 +69,39 @@ export default function ContactForm({ contact, privacyPath }) {
   }, [fields.typeOptions]);
 
   useEffect(() => {
+    if (!TURNSTILE_SITE_KEY) return;
     if (typeof window === "undefined") return;
-    if (window.JLR_FORM_ENDPOINT) {
-      setStatus("idle");
+
+    const renderWidget = () => {
+      if (!window.turnstile || !turnstileRef.current || widgetIdRef.current !== null) return;
+      widgetIdRef.current = window.turnstile.render(turnstileRef.current, {
+        sitekey: TURNSTILE_SITE_KEY,
+        theme: "light",
+        callback: (token) => setTurnstileToken(token),
+        "expired-callback": () => setTurnstileToken(""),
+      });
+    };
+
+    if (window.turnstile) {
+      renderWidget();
+      return;
     }
+
+    const existing = document.querySelector(`script[src="${TURNSTILE_SCRIPT}"]`);
+    if (existing) {
+      existing.addEventListener("load", renderWidget);
+      return () => existing.removeEventListener("load", renderWidget);
+    }
+
+    const script = document.createElement("script");
+    script.src = TURNSTILE_SCRIPT;
+    script.async = true;
+    script.defer = true;
+    script.onload = renderWidget;
+    document.head.appendChild(script);
+    return () => {
+      script.onload = null;
+    };
   }, []);
 
   const handleChange = (event) => {
@@ -87,24 +128,24 @@ export default function ContactForm({ contact, privacyPath }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (status === "unavailable") return;
 
     const nextErrors = validate();
+    if (TURNSTILE_SITE_KEY && !turnstileToken) {
+      nextErrors.captcha = contact.captchaError;
+    }
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) {
       const firstError = FIELD_ORDER.find((key) => nextErrors[key]);
-      window.requestAnimationFrame(() => {
-        const element = document.getElementById(`contact-${firstError}`);
-        if (element) element.focus();
-      });
+      if (firstError) {
+        window.requestAnimationFrame(() => {
+          const element = document.getElementById(`contact-${firstError}`);
+          if (element) element.focus();
+        });
+      }
       return;
     }
 
-    const endpoint = typeof window !== "undefined" ? window.JLR_FORM_ENDPOINT : null;
-    if (!endpoint) {
-      setStatus("unavailable");
-      return;
-    }
+    const endpoint = resolveEndpoint();
 
     setStatus("submitting");
     try {
@@ -112,6 +153,7 @@ export default function ContactForm({ contact, privacyPath }) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
+          turnstileToken,
           name: values.name.trim(),
           org: values.org.trim(),
           email: values.email.trim(),
@@ -122,6 +164,10 @@ export default function ContactForm({ contact, privacyPath }) {
       if (!response.ok) {
         throw new Error(`Request failed with status ${response.status}`);
       }
+      if (window.turnstile && widgetIdRef.current !== null) {
+        window.turnstile.reset(widgetIdRef.current);
+      }
+      setTurnstileToken("");
       setStatus("success");
       setValues({ name: "", org: "", email: "", type: "", message: "" });
     } catch (error) {
@@ -260,19 +306,23 @@ export default function ContactForm({ contact, privacyPath }) {
         <span className="form__help" id="contact-message-help">{contact.helpText}</span>
       </div>
 
+      {TURNSTILE_SITE_KEY ? (
+        <div className="form__turnstile" ref={turnstileRef} data-theme="light" />
+      ) : null}
+      {errors.captcha ? (
+        <span className="form__error" id="contact-captcha-error" role="alert">
+          {errors.captcha}
+        </span>
+      ) : null}
+
       <button
         className="btn btn--primary"
         type="submit"
-        disabled={status === "submitting" || status === "unavailable"}
+        disabled={status === "submitting"}
       >
         {status === "submitting" ? "…" : fields.submit}
       </button>
 
-      {status === "unavailable" ? (
-        <div className="form__status form__status--info" role="status">
-          {contact.unavailable}
-        </div>
-      ) : null}
       {status === "error" ? (
         <div className="form__status form__status--error" role="alert">
           {contact.error}

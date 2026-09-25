@@ -660,7 +660,8 @@
         "error": "Your request has not been sent. Please try again.",
         "unavailable": "The discussion form is not yet active. No data is transmitted from this page. The contact channel will be announced once established.",
         "requiredError": "Please complete this field.",
-        "emailError": "Enter a valid email address."
+        "emailError": "Enter a valid email address.",
+        "captchaError": "Please complete the security check before sending."
       }
     },
     "about": {

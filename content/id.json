@@ -660,7 +660,8 @@
         "error": "Permintaan belum terkirim. Silakan coba lagi.",
         "unavailable": "Formulir diskusi belum aktif. Tidak ada data yang dikirimkan dari halaman ini. Kanal kontak akan diumumkan setelah tersedia.",
         "requiredError": "Lengkapi kolom ini.",
-        "emailError": "Masukkan alamat email yang valid."
+        "emailError": "Masukkan alamat email yang valid.",
+        "captchaError": "Selesaikan pemeriksaan keamanan terlebih dahulu sebelum mengirim."
       }
     },
     "about": {
