@@ -1600,8 +1600,12 @@ p {
 
 /* ---------- In-page section nav ---------- */
 
-.inpage-nav {
+.inpage-nav__wrap {
+  position: relative;
   margin-top: 36px;
+}
+
+.inpage-nav {
   border-bottom: 1px solid var(--jlr-border);
 }
 
@@ -1629,6 +1633,57 @@ p {
 .inpage-nav a:hover {
   color: var(--jlr-text);
   border-bottom-color: var(--jlr-accent);
+}
+
+.inpage-nav__more {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--jlr-border);
+  background: var(--jlr-surface);
+  color: var(--jlr-text);
+  cursor: pointer;
+  transition: opacity var(--jlr-motion-base) var(--jlr-ease-standard),
+    background-color var(--jlr-motion-base) var(--jlr-ease-standard),
+    color var(--jlr-motion-base) var(--jlr-ease-standard);
+}
+
+.inpage-nav__more:hover {
+  background: var(--jlr-text);
+  color: var(--jlr-bg);
+}
+
+.inpage-nav__more[data-visible="false"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .inpage-nav ul {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-right: 44px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .inpage-nav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  .inpage-nav a {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .inpage-nav__more {
+    display: inline-flex;
+  }
 }
 
 /* ---------- Table scroll wrapper ---------- */

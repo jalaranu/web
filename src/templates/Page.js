@@ -39,6 +39,7 @@ import ContactForm from "../components/ContactForm";
 import Rich from "../components/Rich";
 import HeroCarousel from "../components/HeroCarousel";
 import FlowDiagram from "../components/FlowDiagram";
+import InPageNav from "../components/InPageNav";
 
 const PLACEMENT_ICONS = {
   building2: Building2,
@@ -229,15 +230,11 @@ function Technology({ page, locale }) {
             </p>
           </div>
           {page.index ? (
-            <nav className="inpage-nav" aria-label={page.indexLabel}>
-              <ul>
-                {page.index.map((entry) => (
-                  <li key={entry.id}>
-                    <a href={`#${entry.id}`}>{entry.label}</a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <InPageNav
+              items={page.index}
+              label={page.indexLabel}
+              moreLabel={page.indexMoreLabel}
+            />
           ) : null}
         </div>
       </div>
@@ -584,15 +581,11 @@ function UseCases({ page, locale }) {
             </Button>
           </div>
           {page.index ? (
-            <nav className="inpage-nav" aria-label={page.indexLabel}>
-              <ul>
-                {page.index.map((entry) => (
-                  <li key={entry.id}>
-                    <a href={`#${entry.id}`}>{entry.label}</a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            <InPageNav
+              items={page.index}
+              label={page.indexLabel}
+              moreLabel={page.indexMoreLabel}
+            />
           ) : null}
         </div>
       </div>

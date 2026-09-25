@@ -372,6 +372,8 @@
         }
       },
       "indexLabel": "Di halaman ini",
+      "indexMoreLabel": "Bagian lainnya",
+      "indexMoreLabel": "Bagian lainnya",
       "index": [
         {
           "id": "system",
@@ -433,6 +435,7 @@
       "seoTitle": "Use Cases: Data Strategis & Layanan Kritikal | Jalaranu",
       "seoDescription": "Jelajahi use case Jalaranu untuk informasi berklasifikasi, pemulihan layanan, dukungan pangkalan, analisis strategis, komputasi, dan arsip penting.",
       "indexLabel": "Di halaman ini",
+      "indexMoreLabel": "Bagian lainnya",
       "index": [
         {
           "id": "data",

@@ -372,6 +372,8 @@
         }
       },
       "indexLabel": "On this page",
+      "indexMoreLabel": "More sections",
+      "indexMoreLabel": "More sections",
       "index": [
         {
           "id": "system",
@@ -433,6 +435,7 @@
       "seoTitle": "Use Cases: Strategic Data & Critical Services | Jalaranu",
       "seoDescription": "Explore Jalaranu use cases for classified information, service recovery, base support, strategic analytics, computing, and essential archives.",
       "indexLabel": "On this page",
+      "indexMoreLabel": "More sections",
       "index": [
         {
           "id": "data",
