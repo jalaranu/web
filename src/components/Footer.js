@@ -1,9 +1,12 @@
 import React from "react";
 import { pathFor } from "../lib/paths";
+import { SOCIAL_BRANDS } from "./SocialIcons";
 
 const pageLinks = ["technology", "validation", "partnerships", "about"];
 
 export default function Footer({ locale, content }) {
+  const social = content.site.social || {};
+
   return (
     <footer className="site-footer dark">
       <div className="container">
@@ -16,6 +19,27 @@ export default function Footer({ locale, content }) {
               />
             </div>
             <p className="site-footer__tagline">{content.site.footerTagline}</p>
+            <p className="site-footer__social-title">{content.site.socialFollow}</p>
+            <ul className="site-footer__social">
+              {SOCIAL_BRANDS.map(({ key, label, Icon }) => {
+                const href = social[key];
+                if (!href) return null;
+                return (
+                  <li key={key}>
+                    <a
+                      className="site-footer__social-link"
+                      href={href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`${label} @projectjalaranu`}
+                      title={`${label} @projectjalaranu`}
+                    >
+                      <Icon size={18} />
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
 
           <nav className="site-footer__col" aria-label="Footer pages">

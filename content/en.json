@@ -11,7 +11,20 @@
     "logoAlt": "Jalaranu",
     "skipLink": "Skip to main content",
     "menuToggle": "Toggle menu",
+    "socialFollow": "Follow Jalaranu",
+    "social": {
+      "instagram": "https://instagram.com/projectjalaranu",
+      "x": "https://x.com/projectjalaranu",
+      "linkedin": "https://www.linkedin.com/company/projectjalaranu",
+      "facebook": "https://www.facebook.com/projectjalaranu",
+      "tiktok": "https://www.tiktok.com/@projectjalaranu"
+    },
     "languageSwitch": "Switch language to",
+    "languageMenu": "Language",
+    "languages": {
+      "en": "English",
+      "id": "Bahasa Indonesia"
+    },
     "carouselPrev": "Previous slide",
     "carouselNext": "Next slide",
     "carouselPause": "Pause slideshow",

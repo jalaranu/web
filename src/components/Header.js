@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Globe, Menu, X } from "lucide-react";
 import Button from "./Button";
+import { Flag } from "./Flags";
 
 const navItems = (nav, locale) => [
   { key: "technology", label: nav.technology, to: `/${locale}/technology/` },
@@ -9,19 +10,40 @@ const navItems = (nav, locale) => [
   { key: "about", label: nav.about, to: `/${locale}/about/` },
 ];
 
+const languageOptions = (content, locale, currentPath, equivalentPath) =>
+  Object.keys(content.site.languages).map((code) => ({
+    code,
+    label: content.site.languages[code],
+    href: code === locale ? currentPath : equivalentPath,
+  }));
+
 export default function Header({ locale, content, currentPath, equivalentPath }) {
   const [open, setOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const openRef = useRef(false);
+  const langOpenRef = useRef(false);
   const navRef = useRef(null);
   const burgerRef = useRef(null);
+  const langButtonRef = useRef(null);
+  const langMenuRef = useRef(null);
 
   useEffect(() => {
     openRef.current = open;
   }, [open]);
 
   useEffect(() => {
+    langOpenRef.current = langOpen;
+  }, [langOpen]);
+
+  useEffect(() => {
     const onKey = (event) => {
-      if (event.key === "Escape" && openRef.current) {
+      if (event.key !== "Escape") return;
+      if (langOpenRef.current) {
+        setLangOpen(false);
+        langButtonRef.current?.focus();
+        return;
+      }
+      if (openRef.current) {
         setOpen(false);
         burgerRef.current?.focus();
       }
@@ -30,10 +52,24 @@ export default function Header({ locale, content, currentPath, equivalentPath })
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
+  useEffect(() => {
+    const onDown = (event) => {
+      if (!langOpenRef.current) return;
+      const menu = langMenuRef.current;
+      const button = langButtonRef.current;
+      if (menu && !menu.contains(event.target) && button && !button.contains(event.target)) {
+        setLangOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", onDown);
+    return () => document.removeEventListener("mousedown", onDown);
+  }, []);
+
   const toggleMenu = () => {
     const next = !open;
     setOpen(next);
     if (next) {
+      setLangOpen(false);
       window.requestAnimationFrame(() => {
         navRef.current?.querySelector("a")?.focus();
       });
@@ -45,9 +81,12 @@ export default function Header({ locale, content, currentPath, equivalentPath })
     burgerRef.current?.focus();
   };
 
+  const toggleLanguage = () => {
+    setLangOpen((value) => !value);
+    setOpen(false);
+  };
+
   const logoHref = `/${locale}/`;
-  const otherLocale = locale === "en" ? "id" : "en";
-  const otherLabel = locale === "en" ? "ID" : "EN";
 
   return (
     <header className="site-header">
@@ -99,14 +138,52 @@ export default function Header({ locale, content, currentPath, equivalentPath })
               {content.nav.primaryCta}
             </Button>
           </span>
-          <a
-            className="lang-switch"
-            href={equivalentPath}
-            aria-label={`${content.site.languageSwitch} ${otherLabel}`}
-            lang={otherLocale}
-          >
-            {otherLabel}
-          </a>
+
+          <div className="lang">
+            <button
+              type="button"
+              className="lang-switch"
+              ref={langButtonRef}
+              aria-expanded={langOpen}
+              aria-haspopup="true"
+              aria-controls="lang-menu"
+              aria-label={content.site.languageMenu}
+              onClick={toggleLanguage}
+            >
+              <Globe size={16} aria-hidden="true" />
+              <Flag code={locale} />
+            </button>
+            {langOpen ? (
+              <div
+                className="lang-backdrop"
+                aria-hidden="true"
+                onClick={() => setLangOpen(false)}
+              />
+            ) : null}
+            <ul
+              className="lang-menu"
+              id="lang-menu"
+              ref={langMenuRef}
+              data-open={langOpen ? "true" : "false"}
+            >
+              {languageOptions(content, locale, currentPath, equivalentPath).map(
+                (option) => (
+                  <li key={option.code}>
+                    <a
+                      href={option.href}
+                      hreflang={option.code}
+                      lang={option.code}
+                      aria-current={option.code === locale ? "true" : undefined}
+                    >
+                      <Flag code={option.code} />
+                      <span>{option.label}</span>
+                    </a>
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+
           <button
             type="button"
             className="burger"

@@ -11,7 +11,20 @@
     "logoAlt": "Jalaranu",
     "skipLink": "Langsung ke konten utama",
     "menuToggle": "Buka atau tutup menu",
+    "socialFollow": "Ikuti Jalaranu",
+    "social": {
+      "instagram": "https://instagram.com/projectjalaranu",
+      "x": "https://x.com/projectjalaranu",
+      "linkedin": "https://www.linkedin.com/company/projectjalaranu",
+      "facebook": "https://www.facebook.com/projectjalaranu",
+      "tiktok": "https://www.tiktok.com/@projectjalaranu"
+    },
     "languageSwitch": "Ganti bahasa ke",
+    "languageMenu": "Bahasa",
+    "languages": {
+      "en": "English",
+      "id": "Bahasa Indonesia"
+    },
     "carouselPrev": "Slide sebelumnya",
     "carouselNext": "Slide berikutnya",
     "carouselPause": "Jeda tampilan",
