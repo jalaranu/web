@@ -1665,7 +1665,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 40px 56px;
+  gap: 48px 72px;
   margin-top: 0;
 }
 .partner-logo-link {
