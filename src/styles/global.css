@@ -1083,12 +1083,13 @@ p {
   border-top: 1px solid var(--jlr-border-subtle);
 }
 
-.concept-diagram--full {
+.concept-diagram--breakout {
+  margin-top: 0;
   border: none;
   background: transparent;
 }
 
-.concept-diagram--full .concept-diagram__caption {
+.concept-diagram--breakout .concept-diagram__caption {
   border-top: none;
   padding: 12px 0 0;
 }

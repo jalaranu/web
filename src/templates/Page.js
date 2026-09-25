@@ -597,63 +597,67 @@ function UseCases({ page, locale }) {
         </div>
       </div>
 
-      <Section id="data">
-        <div className="section-head">
-          <h2>
-            <Rich text={page.data.h2} />
-          </h2>
-          {page.data.intro.map((paragraph, index) => (
-            <p key={index}>
-              <Rich text={paragraph} />
-            </p>
-          ))}
+      <section className="section" id="data">
+        <div className="container">
+          <div className="section-head">
+            <h2>
+              <Rich text={page.data.h2} />
+            </h2>
+            {page.data.intro.map((paragraph, index) => (
+              <p key={index}>
+                <Rich text={paragraph} />
+              </p>
+            ))}
+          </div>
         </div>
-        <figure className="concept-diagram concept-diagram--full">
+        <figure className="concept-diagram concept-diagram--breakout">
           <img
             src={`/assets/matano-site-${locale}.svg`}
             alt={page.data.illustrationAlt}
             loading="lazy"
           />
           <figcaption className="caption concept-diagram__caption">
-            {page.data.illustrationCaption}
+            <div className="container">{page.data.illustrationCaption}</div>
           </figcaption>
         </figure>
-        <div className="table-wrap requirement-wrap">
-          <table className="plan-table requirement-table">
-            <caption className="sr-only">{page.data.h2}</caption>
-            <thead>
-              <tr>
-                <th>{page.data.tableHeaderRequirement}</th>
-                <th>{page.data.tableHeaderFocus}</th>
-                <th>{page.data.tableHeaderApplications}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {page.data.rows.map((row) => {
-                const Icon = USECASES_ICONS[row.icon];
-                return (
-                  <tr key={row.requirement}>
-                    <th scope="row" className="requirement-table__label">
-                      <span className="requirement-table__icon">
-                        {Icon ? <Icon size={16} aria-hidden="true" /> : null}
-                      </span>
-                      <span>
-                        <Rich text={row.requirement} />
-                      </span>
-                    </th>
-                    <td>
-                      <Rich text={row.focus} />
-                    </td>
-                    <td>
-                      <Rich text={row.applications} />
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
+        <div className="container">
+          <div className="table-wrap requirement-wrap">
+            <table className="plan-table requirement-table">
+              <caption className="sr-only">{page.data.h2}</caption>
+              <thead>
+                <tr>
+                  <th>{page.data.tableHeaderRequirement}</th>
+                  <th>{page.data.tableHeaderFocus}</th>
+                  <th>{page.data.tableHeaderApplications}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {page.data.rows.map((row) => {
+                  const Icon = USECASES_ICONS[row.icon];
+                  return (
+                    <tr key={row.requirement}>
+                      <th scope="row" className="requirement-table__label">
+                        <span className="requirement-table__icon">
+                          {Icon ? <Icon size={16} aria-hidden="true" /> : null}
+                        </span>
+                        <span>
+                          <Rich text={row.requirement} />
+                        </span>
+                      </th>
+                      <td>
+                        <Rich text={row.focus} />
+                      </td>
+                      <td>
+                        <Rich text={row.applications} />
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
         </div>
-      </Section>
+      </section>
 
       <Section
         className="section--alt"
