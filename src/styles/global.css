@@ -2041,7 +2041,32 @@ p {
 .sector-table__sector {
   font-weight: 600;
   color: var(--jlr-text);
-  white-space: nowrap;
+  min-width: 150px;
+  white-space: normal;
+}
+
+@media (max-width: 640px) {
+  .sector-table {
+    min-width: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .sector-table__sector {
+    min-width: 0;
+  }
+
+  .sector-table th:first-child {
+    width: 36%;
+  }
+
+  .sector-table th:nth-child(2) {
+    width: 40%;
+  }
+
+  .sector-table th:last-child {
+    width: 24%;
+  }
 }
 
 .uc-chip {
