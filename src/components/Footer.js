@@ -1,5 +1,6 @@
 import React from "react";
 import { pathFor } from "../lib/paths";
+import { Mail } from "lucide-react";
 import { SOCIAL_BRANDS } from "./SocialIcons";
 
 const pageLinks = ["technology", "validation", "partnerships", "about"];
@@ -41,6 +42,10 @@ export default function Footer({ locale, content }) {
                 );
               })}
             </ul>
+            <a className="site-footer__email" href={"mailto:" + content.footer.email}>
+              <Mail size={16} aria-hidden="true" />
+              {content.footer.email}
+            </a>
           </div>
 
           <nav className="site-footer__col" aria-label="Footer pages">

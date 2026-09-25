@@ -787,7 +787,8 @@
     "privacy": "Privacy",
     "contact": "Contact",
     "privacyNote": "The Privacy Notice will be updated to reflect actual data-handling practices.",
-    "legalHeading": "Legal"
+    "legalHeading": "Legal",
+    "email": "info@jalaranu.org"
   },
   "slugs": {
     "technology": "technology",
