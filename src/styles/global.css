@@ -4,7 +4,7 @@
    ============================================================ */
 
 :root {
-  --jlr-bg: #FFFFFF;
+  --jlr-bg: #ffffff;
   --jlr-surface: #FFFFFF;
   --jlr-surface-alt: #F2F2F2;
   --jlr-text: #202C3C;
@@ -67,6 +67,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: calc(var(--jlr-navbar-height) + 16px);
 }
 
 body {

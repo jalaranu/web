@@ -18,7 +18,7 @@ export default function Header({ locale, content, currentPath, equivalentPath })
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <a className="site-header__logo" href={logoHref} aria-label={content.site.logoAlt}>
+        <a className="site-header__logo" href={logoHref}>
           <img
             src="/assets/jalaranu-vivid-horizontal-light.svg"
             alt={content.site.logoAlt}
@@ -61,8 +61,7 @@ export default function Header({ locale, content, currentPath, equivalentPath })
           <a
             className="lang-switch"
             href={equivalentPath}
-            aria-current={otherLocale === locale ? "true" : undefined}
-            aria-label={`Switch language to ${otherLabel}`}
+            aria-label={`${content.site.languageSwitch} ${otherLabel}`}
             lang={otherLocale}
           >
             {otherLabel}
@@ -75,7 +74,7 @@ export default function Header({ locale, content, currentPath, equivalentPath })
             onClick={() => setOpen((value) => !value)}
           >
             <span aria-hidden="true" />
-            <span className="sr-only">Toggle menu</span>
+            <span className="sr-only">{content.site.menuToggle}</span>
           </button>
         </div>
       </div>

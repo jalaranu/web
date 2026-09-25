@@ -8,7 +8,10 @@
     "description": "Explore Jalaranu's underwater lake datacenter concept, validation approach, and partnership opportunities for computing infrastructure in Indonesia.",
     "footerTagline": "Jalaranu — developing an underwater lake datacenter concept to support Indonesia's digital resilience.",
     "copyright": "Jalaranu",
-    "logoAlt": "Jalaranu"
+    "logoAlt": "Jalaranu",
+    "skipLink": "Skip to main content",
+    "menuToggle": "Toggle menu",
+    "languageSwitch": "Switch language to"
   },
   "nav": {
     "technology": "Technology",
@@ -240,7 +243,9 @@
             "area": "Fitness for use",
             "question": "For which requirements and service levels do test results indicate suitability?"
           }
-        ]
+        ],
+        "tableHeaderArea": "Area",
+        "tableHeaderQuestion": "Evaluation question"
       },
       "framework": {
         "h2": "Staged development, with decisions at each stage.",
@@ -462,7 +467,9 @@
     "notFound": {
       "h1": "Page not found",
       "body": "The page you are looking for does not exist or has moved.",
-      "back": "Back to Home"
+      "back": "Back to Home",
+      "seoTitle": "Page Not Found — Jalaranu",
+      "seoDescription": "The page you are looking for could not be found. Return to the Jalaranu website."
     }
   },
   "footer": {

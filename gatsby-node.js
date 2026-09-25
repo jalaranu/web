@@ -1,6 +1,7 @@
 const path = require("path");
 const en = require("./content/en.json");
 const id = require("./content/id.json");
+const siteConfig = require("./gatsby-config");
 
 const locales = {
   en: en,
@@ -52,6 +53,7 @@ exports.createPages = async ({ actions }) => {
           content,
           currentPath,
           equivalentPath,
+          siteUrl: siteConfig.siteMetadata.siteUrl,
         },
       });
     });

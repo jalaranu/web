@@ -124,8 +124,13 @@ export default function ContactForm({ contact, privacyPath }) {
           value={values.name}
           onChange={handleChange}
           aria-invalid={errors.name ? "true" : undefined}
+          aria-describedby={errors.name ? "contact-name-error" : undefined}
         />
-        {errors.name ? <span className="form__error">{errors.name}</span> : null}
+        {errors.name ? (
+          <span className="form__error" id="contact-name-error">
+            {errors.name}
+          </span>
+        ) : null}
       </div>
 
       <div className="form__field">
@@ -141,8 +146,13 @@ export default function ContactForm({ contact, privacyPath }) {
           value={values.org}
           onChange={handleChange}
           aria-invalid={errors.org ? "true" : undefined}
+          aria-describedby={errors.org ? "contact-org-error" : undefined}
         />
-        {errors.org ? <span className="form__error">{errors.org}</span> : null}
+        {errors.org ? (
+          <span className="form__error" id="contact-org-error">
+            {errors.org}
+          </span>
+        ) : null}
       </div>
 
       <div className="form__field">
@@ -158,8 +168,13 @@ export default function ContactForm({ contact, privacyPath }) {
           value={values.email}
           onChange={handleChange}
           aria-invalid={errors.email ? "true" : undefined}
+          aria-describedby={errors.email ? "contact-email-error" : undefined}
         />
-        {errors.email ? <span className="form__error">{errors.email}</span> : null}
+        {errors.email ? (
+          <span className="form__error" id="contact-email-error">
+            {errors.email}
+          </span>
+        ) : null}
       </div>
 
       <div className="form__field">
@@ -173,6 +188,7 @@ export default function ContactForm({ contact, privacyPath }) {
           value={values.type}
           onChange={handleChange}
           aria-invalid={errors.type ? "true" : undefined}
+          aria-describedby={errors.type ? "contact-type-error" : undefined}
         >
           <option value="">—</option>
           {fields.typeOptions.map((option) => (
@@ -181,7 +197,11 @@ export default function ContactForm({ contact, privacyPath }) {
             </option>
           ))}
         </select>
-        {errors.type ? <span className="form__error">{errors.type}</span> : null}
+        {errors.type ? (
+          <span className="form__error" id="contact-type-error">
+            {errors.type}
+          </span>
+        ) : null}
       </div>
 
       <div className="form__field">
@@ -196,9 +216,14 @@ export default function ContactForm({ contact, privacyPath }) {
           placeholder={fields.messagePlaceholder}
           onChange={handleChange}
           aria-invalid={errors.message ? "true" : undefined}
+          aria-describedby={errors.message ? "contact-message-error" : "contact-message-help"}
         />
-        {errors.message ? <span className="form__error">{errors.message}</span> : null}
-        <span className="form__help">{contact.helpText}</span>
+        {errors.message ? (
+          <span className="form__error" id="contact-message-error">
+            {errors.message}
+          </span>
+        ) : null}
+        <span className="form__help" id="contact-message-help">{contact.helpText}</span>
       </div>
 
       <button className="btn btn--primary" type="submit" disabled={status === "submitting"}>

@@ -447,19 +447,29 @@ export default function Page({ pageContext }) {
 }
 
 export function Head(props) {
-  const { locale, pageKey, content } = props.pageContext;
+  const { locale, pageKey, content, currentPath, equivalentPath, siteUrl } =
+    props.pageContext;
   const page = content.pages[pageKey];
   const seoTitle = page.seoTitle || content.site.title;
   const seoDescription = page.seoDescription || content.site.description;
+  const canonical = `${siteUrl}${currentPath}`;
+  const alternate = `${siteUrl}${equivalentPath}`;
 
   return (
     <>
       <html lang={locale} />
       <title>{seoTitle}</title>
       <meta name="description" content={seoDescription} />
+      <link rel="canonical" href={canonical} />
+      <link rel="alternate" hreflang={locale} href={canonical} />
+      <link rel="alternate" hreflang={locale === "en" ? "id" : "en"} href={alternate} />
+      <link rel="alternate" hreflang="x-default" href={`${siteUrl}/en/`} />
       <meta property="og:title" content={seoTitle} />
       <meta property="og:description" content={seoDescription} />
       <meta property="og:type" content="website" />
+      <meta property="og:url" content={canonical} />
+      <meta property="og:locale" content={locale === "en" ? "en_US" : "id_ID"} />
+      <meta property="og:site_name" content={content.site.title} />
     </>
   );
 }

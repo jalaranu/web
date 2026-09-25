@@ -8,7 +8,10 @@
     "description": "Jelajahi konsep datacenter bawah danau Jalaranu, pendekatan validasi, dan peluang kemitraan untuk pengembangan infrastruktur komputasi di Indonesia.",
     "footerTagline": "Jalaranu — pengembangan konsep datacenter bawah danau untuk ketahanan digital Indonesia.",
     "copyright": "Jalaranu",
-    "logoAlt": "Jalaranu"
+    "logoAlt": "Jalaranu",
+    "skipLink": "Langsung ke konten utama",
+    "menuToggle": "Buka atau tutup menu",
+    "languageSwitch": "Ganti bahasa ke"
   },
   "nav": {
     "technology": "Teknologi",
@@ -30,11 +33,11 @@
         ],
         "primaryCta": {
           "label": "Diskusikan Kemitraan",
-          "to": "/id/kemitraan/#contact"
+          "to": "/id/partnerships/#contact"
         },
         "secondaryCta": {
           "label": "Jelajahi Teknologi",
-          "to": "/id/teknologi/"
+          "to": "/id/technology/"
         },
         "caption": "Ilustrasi konsep. Konfigurasi akhir mengikuti hasil studi dan rekayasa.",
         "imageAlt": "Ilustrasi konsep Jalaranu: modul datacenter di bawah permukaan danau yang terhubung ke fasilitas pendukung di darat melalui jalur daya dan komunikasi yang terlindung."
@@ -62,7 +65,7 @@
         ],
         "cta": {
           "label": "Lihat Pendekatan Validasi",
-          "to": "/id/validasi/"
+          "to": "/id/validation/"
         }
       },
       "system": {
@@ -88,7 +91,7 @@
         ],
         "cta": {
           "label": "Pelajari Konsep Sistem",
-          "to": "/id/teknologi/#system"
+          "to": "/id/technology/#system"
         }
       },
       "validation": {
@@ -99,7 +102,7 @@
         ],
         "cta": {
           "label": "Jelajahi Validasi",
-          "to": "/id/validasi/"
+          "to": "/id/validation/"
         }
       },
       "partnerships": {
@@ -124,7 +127,7 @@
         ],
         "cta": {
           "label": "Temukan Jalur Kemitraan",
-          "to": "/id/kemitraan/"
+          "to": "/id/partnerships/"
         }
       },
       "closing": {
@@ -132,7 +135,7 @@
         "body": "Mari mulai dari kebutuhan, ruang lingkup evaluasi, dan kontribusi yang dapat dibangun bersama.",
         "cta": {
           "label": "Diskusikan Kemitraan",
-          "to": "/id/kemitraan/#contact"
+          "to": "/id/partnerships/#contact"
         }
       }
     },
@@ -194,7 +197,7 @@
         ],
         "cta": {
           "label": "Bahas Kebutuhan Teknis",
-          "to": "/id/kemitraan/#contact"
+          "to": "/id/partnerships/#contact"
         }
       }
     },
@@ -240,7 +243,9 @@
             "area": "Kesesuaian penggunaan",
             "question": "Untuk kebutuhan dan tingkat layanan apa hasil pengujian menunjukkan kecocokan?"
           }
-        ]
+        ],
+        "tableHeaderArea": "Bidang",
+        "tableHeaderQuestion": "Pertanyaan evaluasi"
       },
       "framework": {
         "h2": "Pengembangan bertahap, dengan keputusan pada setiap tahap.",
@@ -280,7 +285,7 @@
         "body": "Dokumen dan hasil yang dapat dibagikan akan ditampilkan setelah tersedia dan disetujui untuk publikasi.",
         "cta": {
           "label": "Diskusikan Program Validasi",
-          "to": "/id/kemitraan/#contact"
+          "to": "/id/partnerships/#contact"
         }
       },
       "faq": [
@@ -447,7 +452,7 @@
         "body": "Informasi mengenai tim, peran, dan badan usaha penanggung jawab akan ditampilkan setelah dikonfirmasi dan disetujui untuk publikasi.",
         "cta": {
           "label": "Kenali Peluang Kolaborasi",
-          "to": "/id/kemitraan/"
+          "to": "/id/partnerships/"
         }
       }
     },
@@ -462,7 +467,9 @@
     "notFound": {
       "h1": "Halaman tidak ditemukan",
       "body": "Halaman yang Anda cari tidak tersedia atau telah dipindahkan.",
-      "back": "Kembali ke Beranda"
+      "back": "Kembali ke Beranda",
+      "seoTitle": "Halaman Tidak Ditemukan — Jalaranu",
+      "seoDescription": "Halaman yang Anda cari tidak dapat ditemukan. Kembali ke situs Jalaranu."
     }
   },
   "footer": {
@@ -471,10 +478,10 @@
     "privacyNote": "Pemberitahuan Privasi akan diperbarui mengikuti praktik pengelolaan data yang berlaku."
   },
   "slugs": {
-    "technology": "teknologi",
-    "validation": "validasi",
-    "partnerships": "kemitraan",
-    "about": "tentang",
-    "privacy": "privasi"
+    "technology": "technology",
+    "validation": "validation",
+    "partnerships": "partnerships",
+    "about": "about",
+    "privacy": "privacy"
   }
 }

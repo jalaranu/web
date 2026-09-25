@@ -6,7 +6,7 @@ export default function Layout({ locale, content, currentPath, equivalentPath, c
   return (
     <div className="site">
       <a className="skip-link" href="#main-content">
-        Skip to main content
+        {content.site.skipLink}
       </a>
       <Header
         locale={locale}
