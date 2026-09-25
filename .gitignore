@@ -3,6 +3,7 @@ public/
 .cache/
 .DS_Store
 info.txt
+RECORD.md
 *.log
 .env
 .env.*
