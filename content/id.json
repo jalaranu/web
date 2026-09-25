@@ -708,19 +708,19 @@
             "name": "COCONUT Computer Club",
             "role": "Rekayasa",
             "url": "https://coconut.or.id",
-            "logo": "/assets/partners/coconut-logo-blue.png"
+            "logo": "/assets/partners/coconut-logo.png"
           },
           {
             "name": "PERKAMINDO",
             "role": "Keamanan informasi",
             "url": "https://perkamindo.org",
-            "logo": "/assets/partners/perkamindo.png"
+            "logo": "/assets/partners/perkamindo-logo.png"
           },
           {
             "name": "PT Lontar Riset Indonesia",
             "role": "Strategi dan bisnis",
             "url": "https://lontartech.co.id",
-            "logo": "/assets/partners/lontar.svg"
+            "logo": "/assets/partners/lontar-logo.png"
           }
         ],
         "cta": {

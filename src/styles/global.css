@@ -1671,6 +1671,9 @@ p {
 .partner-logo-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 72px;
   opacity: 0.85;
   transition: opacity 0.2s ease;
 }
@@ -1682,9 +1685,11 @@ p {
   outline-offset: 4px;
 }
 .partner-logo-link img {
-  height: 48px;
+  max-width: 150px;
+  max-height: 56px;
   width: auto;
-  max-width: 220px;
+  height: auto;
+  object-fit: contain;
 }
 @media (max-width: 767px) {
   .partner-grid {
