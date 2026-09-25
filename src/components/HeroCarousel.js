@@ -1,10 +1,12 @@
 import React, { useCallback, useEffect, useRef, useState } from "react";
+import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 
 const AUTOPLAY_MS = 6000;
 
 export default function HeroCarousel({ slides, labels }) {
   const [index, setIndex] = useState(0);
-  const [paused, setPaused] = useState(false);
+  const [userPaused, setUserPaused] = useState(false);
+  const [interactionPaused, setInteractionPaused] = useState(false);
   const [reducedMotion, setReducedMotion] = useState(false);
   const timerRef = useRef(null);
 
@@ -21,24 +23,28 @@ export default function HeroCarousel({ slides, labels }) {
   }, [slides.length]);
 
   useEffect(() => {
-    if (reducedMotion || paused) return undefined;
+    if (reducedMotion || userPaused || interactionPaused) return undefined;
     timerRef.current = setInterval(() => {
       setIndex((current) => (current + 1) % slides.length);
     }, AUTOPLAY_MS);
     return () => clearInterval(timerRef.current);
-  }, [reducedMotion, paused, slides.length]);
+  }, [reducedMotion, userPaused, interactionPaused, slides.length]);
 
-  const togglePause = () => setPaused((value) => !value);
+  const togglePause = () => setUserPaused((value) => !value);
 
   if (!slides || slides.length === 0) return null;
 
   return (
     <div
       className="hero-carousel"
-      onMouseEnter={() => setPaused(true)}
-      onMouseLeave={() => setPaused(false)}
-      onFocus={() => setPaused(true)}
-      onBlur={() => setPaused(false)}
+      onMouseEnter={() => setInteractionPaused(true)}
+      onMouseLeave={() => setInteractionPaused(false)}
+      onFocus={() => setInteractionPaused(true)}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) {
+          setInteractionPaused(false);
+        }
+      }}
     >
       {slides.map((slide, slideIndex) => (
         <div
@@ -62,7 +68,7 @@ export default function HeroCarousel({ slides, labels }) {
           aria-label={labels.carouselPrev}
           onClick={() => goTo(index - 1)}
         >
-          <span aria-hidden="true">&#8249;</span>
+          <ChevronLeft size={20} aria-hidden="true" />
         </button>
         <div className="hero-carousel__dots" role="group" aria-label={labels.carouselSlides}>
           {slides.map((slide, slideIndex) => (
@@ -82,15 +88,15 @@ export default function HeroCarousel({ slides, labels }) {
           aria-label={labels.carouselNext}
           onClick={() => goTo(index + 1)}
         >
-          <span aria-hidden="true">&#8250;</span>
+          <ChevronRight size={20} aria-hidden="true" />
         </button>
         <button
           type="button"
           className="hero-carousel__pause"
-          aria-label={paused ? labels.carouselPlay : labels.carouselPause}
+          aria-label={userPaused ? labels.carouselPlay : labels.carouselPause}
           onClick={togglePause}
         >
-          <span aria-hidden="true">{paused ? "\u25B6" : "\u275A\u275A"}</span>
+          {userPaused ? <Play size={14} aria-hidden="true" /> : <Pause size={14} aria-hidden="true" />}
         </button>
       </div>
 

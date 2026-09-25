@@ -18,7 +18,8 @@
     "carouselPlay": "Play slideshow",
     "carouselGoTo": "Go to slide",
     "carouselSlides": "Hero image slides",
-    "carouselCredit": "Photos: SiDanau BRIN"
+    "carouselCredit": "Photos: SiDanau BRIN",
+    "brandSlogan": "Cold, silent, a sustainable data realm."
   },
   "nav": {
     "technology": "Technology",
@@ -206,6 +207,31 @@
         "body": [
           "Evaluation should compare the underwater lake concept with land-based solutions using equivalent service requirements, workloads, and assumptions. Relevant comparisons include land-based facilities with conventional cooling and water-based cooling, where applicable to the site under study.",
           "Assessment covers energy, capital expenditure, operating costs, maintenance, connectivity, recovery, environmental effects, and end of life. Potential savings in one component do not in themselves demonstrate a lower total cost."
+        ]
+      },
+      "placements": {
+        "h2": "Placement alternatives, compared honestly.",
+        "intro": [
+          "The underlake concept is evaluated against three reference placements at equal service: a terrestrial facility, a hardened bunker, and an undersea deployment. Each trade-off below is an initial assessment to be tested, not a measured result."
+        ],
+        "note": "Initial framework assessment for discussion. Figures and rankings require measurement and site studies.",
+        "items": [
+          {
+            "title": "Terrestrial datacenter",
+            "body": "The mature reference point: established supply chains, easy access, and proven operations. Its costs include energy-intensive cooling, land requirements, and the concentration of strategic data in a few urban corridors."
+          },
+          {
+            "title": "Hardened bunker",
+            "body": "Strong physical protection for critical workloads. The trade-offs are high construction cost, more complex heat rejection, and a facility that is harder to scale than modular surface infrastructure."
+          },
+          {
+            "title": "Undersea datacenter",
+            "body": "Proven at sea by Project Natick: ocean water removes heat without mechanical cooling. But the maritime threat surface includes submarine cable interception, anchor drag, and contested jurisdiction, with saltwater corrosion and difficult access."
+          },
+          {
+            "title": "Underlake datacenter",
+            "body": "A lake is not a small ocean. Inland waters sit inside domestic jurisdiction, beyond submarine reach, in quiet freshwater near hydropower and existing communities. Open questions remain: thermal and ecological effects, seismic exposure, acoustic hardening, and retrieval procedures."
+          }
         ]
       },
       "scenarios": {

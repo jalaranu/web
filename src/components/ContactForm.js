@@ -31,7 +31,7 @@ export default function ContactForm({ contact, privacyPath }) {
     message: "",
   });
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState("idle");
+  const [status, setStatus] = useState("unavailable");
 
   useEffect(() => {
     const applyPreset = () => {
@@ -58,18 +58,10 @@ export default function ContactForm({ contact, privacyPath }) {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (!window.JLR_FORM_ENDPOINT) {
-      setStatus("unavailable");
+    if (window.JLR_FORM_ENDPOINT) {
+      setStatus("idle");
     }
   }, []);
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const firstError = FIELD_ORDER.find((key) => errors[key]);
-    if (!firstError) return;
-    const element = document.getElementById(`contact-${firstError}`);
-    if (element) element.focus();
-  }, [errors]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -100,7 +92,11 @@ export default function ContactForm({ contact, privacyPath }) {
     const nextErrors = validate();
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) {
-      setStatus("idle");
+      const firstError = FIELD_ORDER.find((key) => nextErrors[key]);
+      window.requestAnimationFrame(() => {
+        const element = document.getElementById(`contact-${firstError}`);
+        if (element) element.focus();
+      });
       return;
     }
 
@@ -134,7 +130,7 @@ export default function ContactForm({ contact, privacyPath }) {
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit} noValidate>
+    <form className="form" method="post" onSubmit={handleSubmit} noValidate>
       <div className="form__field">
         <label className="form__label" htmlFor="contact-name">
           {fields.name}

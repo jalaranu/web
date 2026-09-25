@@ -1,21 +1,57 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import Page from "../templates/Page";
+import en from "../../content/en.json";
+import id from "../../content/id.json";
+import siteConfig from "../../gatsby-config";
 
-export default function NotFoundRedirect() {
+const locales = { en, id };
+const siteUrl = siteConfig.siteMetadata.siteUrl;
+
+const localeFromPath = (pathname) => {
+  if (pathname === "/id" || pathname.startsWith("/id/")) return "id";
+  return "en";
+};
+
+const equivalentFor = (pathname, locale) => {
+  const other = locale === "en" ? "id" : "en";
+  if (pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)) {
+    return pathname.replace(`/${locale}`, `/${other}`);
+  }
+  return `/${other}/`;
+};
+
+export default function NotFound() {
+  const [route, setRoute] = useState({ locale: "en", currentPath: "/en/404/" });
+
   useEffect(() => {
-    const timer = setTimeout(() => {
-      window.location.replace("/en/404/");
-    }, 1500);
-    return () => clearTimeout(timer);
+    const pathname = window.location.pathname;
+    const locale = localeFromPath(pathname);
+    setRoute({ locale, currentPath: pathname });
   }, []);
 
+  const content = locales[route.locale];
+  const pageContext = {
+    locale: route.locale,
+    pageKey: "notFound",
+    content,
+    currentPath: route.currentPath,
+    equivalentPath: equivalentFor(route.currentPath, route.locale),
+    siteUrl,
+  };
+
+  return <Page pageContext={pageContext} />;
+}
+
+export function Head({ location }) {
+  const locale = localeFromPath(location.pathname);
+  const page = locales[locale].pages.notFound;
+
   return (
-    <main className="redirect-page" style={{ maxWidth: "720px", margin: "0 auto", padding: "96px 16px" }}>
-      <h1>Redirecting…</h1>
-      <p>
-        If you are not redirected automatically,{" "}
-        <a href="/en/404/">go to the English 404 page</a>.
-      </p>
-    </main>
+    <>
+      <html lang={locale} />
+      <title>{page.seoTitle}</title>
+      <meta name="description" content={page.seoDescription} />
+      <meta name="robots" content="noindex,follow" />
+    </>
   );
 }

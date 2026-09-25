@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Menu, X } from "lucide-react";
 import Button from "./Button";
 
 const navItems = (nav, locale) => [
@@ -82,7 +83,7 @@ export default function Header({ locale, content, currentPath, equivalentPath })
             })}
           </ul>
           <div className="site-header__nav-cta">
-            <Button to={`/${locale}/partnerships/#contact`} variant="primary">
+            <Button to={`/${locale}/partnerships/#contact`} variant="primary" arrow>
               {content.nav.primaryCta}
             </Button>
           </div>
@@ -93,6 +94,7 @@ export default function Header({ locale, content, currentPath, equivalentPath })
             <Button
               to={`/${locale}/partnerships/#contact`}
               variant="primary"
+              arrow
             >
               {content.nav.primaryCta}
             </Button>
@@ -113,7 +115,7 @@ export default function Header({ locale, content, currentPath, equivalentPath })
             aria-controls="site-nav"
             onClick={toggleMenu}
           >
-            <span aria-hidden="true" />
+            {open ? <X size={20} aria-hidden="true" /> : <Menu size={20} aria-hidden="true" />}
             <span className="sr-only">{content.site.menuToggle}</span>
           </button>
         </div>

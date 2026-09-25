@@ -18,7 +18,8 @@
     "carouselPlay": "Putar tampilan",
     "carouselGoTo": "Ke slide",
     "carouselSlides": "Slide gambar utama",
-    "carouselCredit": "Foto: SiDanau BRIN"
+    "carouselCredit": "Foto: SiDanau BRIN",
+    "brandSlogan": "Dingin, sunyi, jagat data lestari."
   },
   "nav": {
     "technology": "Teknologi",
@@ -206,6 +207,31 @@
         "body": [
           "Evaluasi perlu membandingkan konsep bawah danau dengan solusi darat pada kebutuhan layanan, beban, dan asumsi yang setara. Perbandingan mencakup fasilitas darat dengan pendinginan konvensional maupun pendinginan berbasis air, bila relevan untuk lokasi yang dikaji.",
           "Aspek penilaian meliputi energi, biaya investasi, biaya operasi, pemeliharaan, konektivitas, pemulihan, dampak lingkungan, dan akhir masa pakai. Potensi penghematan pada satu komponen tidak dengan sendirinya menunjukkan biaya total yang lebih rendah."
+        ]
+      },
+      "placements": {
+        "h2": "Alternatif penempatan, dibandingkan dengan jujur.",
+        "intro": [
+          "Konsep bawah danau dievaluasi terhadap tiga penempatan acuan pada tingkat layanan yang setara: fasilitas darat, bunker yang diperkuat, dan penempatan bawah laut. Setiap pertukaran di bawah ini adalah penilaian awal untuk diuji, bukan hasil pengukuran."
+        ],
+        "note": "Penilaian kerangka awal untuk diskusi. Angka dan peringkat memerlukan pengukuran serta kajian lokasi.",
+        "items": [
+          {
+            "title": "Datacenter darat",
+            "body": "Titik acuan yang matang: rantai pasok mapan, akses mudah, dan operasi terbukti. Biayanya mencakup pendinginan yang boros energi, kebutuhan lahan, serta konsentrasi data strategis di beberapa koridor perkotaan."
+          },
+          {
+            "title": "Bunker yang diperkuat",
+            "body": "Perlindungan fisik yang kuat untuk beban kerja kritis. Pertukarannya adalah biaya konstruksi tinggi, pembuangan panas yang lebih rumit, dan fasilitas yang lebih sulit diskalakan dibanding infrastruktur modular di permukaan."
+          },
+          {
+            "title": "Datacenter bawah laut",
+            "body": "Terbukti di laut melalui Project Natick: air laut membuang panas tanpa pendinginan mekanis. Namun permukaan ancaman maritim mencakup penyadapan kabel oleh kapal selam, seret jangkar, dan yurisdiksi yang diperebutkan, ditambah korosi air asin dan akses yang sulit."
+          },
+          {
+            "title": "Datacenter bawah danau",
+            "body": "Danau bukan samudra kecil. Perairan daratan berada di dalam yurisdiksi domestik, di luar jangkauan kapal selam, di air tawar yang tenang dekat pembangkit listrik tenaga air dan komunitas yang ada. Pertanyaan terbuka tetap ada: efek termal dan ekologis, paparan kegempaan, pengerasan akustik, dan prosedur pengambilan kembali."
+          }
         ]
       },
       "scenarios": {

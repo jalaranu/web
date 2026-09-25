@@ -17,7 +17,6 @@ const pageKeys = [
   "partnerships",
   "about",
   "privacy",
-  "notFound",
 ];
 
 const slimContent = (content, pageKey) => ({

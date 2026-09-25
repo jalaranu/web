@@ -27,7 +27,7 @@ function Home({ page, locale, content }) {
             ))}
           </div>
           <div className="hero__actions">
-            <Button to={hero.primaryCta.to} variant="primary">
+            <Button to={hero.primaryCta.to} variant="primary" arrow>
               {hero.primaryCta.label}
             </Button>
             <Button to={hero.secondaryCta.to} variant="secondary-on-dark">
@@ -140,6 +140,7 @@ function Home({ page, locale, content }) {
           src="/assets/jalaranu-vivid-logo-dark.svg"
           alt={content.site.logoAlt}
         />
+        <p className="brand-band__slogan">{content.site.brandSlogan}</p>
       </div>
     </>
   );
@@ -218,6 +219,21 @@ function Technology({ page, locale }) {
             </p>
           ))}
         </div>
+      </Section>
+
+      <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
+        <div className="section-head">
+          <h2>
+            <Rich text={page.placements.h2} />
+          </h2>
+          {page.placements.intro.map((paragraph, index) => (
+            <p key={index}>
+              <Rich text={paragraph} />
+            </p>
+          ))}
+        </div>
+        <CardGrid items={page.placements.items} />
+        <p className="caption visual-note">{page.placements.note}</p>
       </Section>
 
       <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
