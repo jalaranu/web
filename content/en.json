@@ -33,7 +33,7 @@
     "carouselPlay": "Play slideshow",
     "carouselGoTo": "Go to slide",
     "carouselSlides": "Hero image slides",
-    "brandSlogan": "Cold, silent, a sustainable data realm."
+    "brandSlogan": "Cold, silent, a sustainable data realm. The world's first underlake datacenter project."
   },
   "nav": {
     "technology": "Technology",
@@ -173,7 +173,7 @@
     },
     "technology": {
       "seoTitle": "Underlake Datacenter Technology | Jalaranu",
-      "seoDescription": "Explore the Jalaranu project: from shore facilities and computing modules to heat management, connectivity, and recovery.",
+      "seoDescription": "Explore the world's first underlake datacenter project: from shore facilities and computing modules to heat management, connectivity, and recovery.",
       "hero": {
         "h1": "Engineering starts with the right questions.",
         "body": "Jalaranu explores the underlake datacenter as **one complete system**. Module placement needs to be evaluated together with power, networking, heat management, maintenance, and recovery."
@@ -430,7 +430,7 @@
     },
     "validation": {
       "seoTitle": "Technical, Economic and Environmental Validation | Jalaranu",
-      "seoDescription": "Learn about Jalaranu's test questions and staged approach to evaluating the feasibility of an underlake datacenter.",
+      "seoDescription": "Learn how the world's first underlake datacenter project is validated: test questions and a staged approach to evaluating feasibility.",
       "hero": {
         "h1": "Evidence provides the basis for the next step.",
         "body": "The feasibility of an underlake datacenter needs to be assessed **technically, economically, and environmentally**. Jalaranu's validation approach focuses on testable questions, explainable methods, and findings presented alongside their limitations."
@@ -666,7 +666,7 @@
     },
     "about": {
       "seoTitle": "About Jalaranu | Identity and Development",
-      "seoDescription": "Discover Jalaranu's identity, development principles, and the people responsible for its underlake datacenter project.",
+      "seoDescription": "Discover the story behind the world's first underlake datacenter project: Jalaranu's identity, development principles, and the people responsible.",
       "hero": {
         "h1": "Rooted in Indonesian identity. Developed through evidence.",
         "body": "Jalaranu is developing an underlake datacenter and treats Indonesia's lakes as strategic national assets that must be understood before they are used. We turn that ambition into a **measurable process**: questions and methods are published up front, and findings are shared with their evidence and limits as they are approved for release. The project advances in stages, and we state plainly what is proven, what is not yet proven, and what we still do not know."
