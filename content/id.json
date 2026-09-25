@@ -37,7 +37,7 @@
   },
   "nav": {
     "technology": "Teknologi",
-    "validation": "Validasi",
+    "validation": "Milestone",
     "partnerships": "Kemitraan",
     "about": "Tentang",
     "primaryCta": "Diskusikan Kemitraan"
@@ -96,8 +96,8 @@
           }
         ],
         "cta": {
-          "label": "Lihat Pendekatan Validasi",
-          "to": "/id/validation/"
+          "label": "Lihat Milestone",
+          "to": "/id/milestones/"
         }
       },
       "system": {
@@ -133,8 +133,8 @@
           "Rencana pengujian, hasil pengukuran, dan keterbatasannya menjadi dasar keputusan untuk melanjutkan pengembangan."
         ],
         "cta": {
-          "label": "Jelajahi Validasi",
-          "to": "/id/validation/"
+          "label": "Jelajahi Milestone",
+          "to": "/id/milestones/"
         }
       },
       "partnerships": {
@@ -429,7 +429,7 @@
       }
     },
     "validation": {
-      "seoTitle": "Validasi Teknis, Ekonomi, dan Lingkungan | Jalaranu",
+      "seoTitle": "Milestone Pengembangan | Jalaranu",
       "seoDescription": "Kenali cara proyek datacenter bawah danau pertama di dunia divalidasi: pertanyaan pengujian dan pendekatan evaluasi bertahap.",
       "hero": {
         "h1": "Bukti menjadi dasar untuk melangkah.",
@@ -533,7 +533,7 @@
         "h2": "Ringkasan hasil dan dokumen",
         "body": "Dokumen dan hasil yang dapat dibagikan akan ditampilkan setelah tersedia dan disetujui untuk publikasi.",
         "cta": {
-          "label": "Diskusikan Program Validasi",
+          "label": "Diskusikan Program",
           "to": "/id/partnerships/#contact"
         }
       },
@@ -793,7 +793,7 @@
   },
   "slugs": {
     "technology": "technology",
-    "validation": "validation",
+    "validation": "milestones",
     "partnerships": "partnerships",
     "about": "about",
     "privacy": "privacy"

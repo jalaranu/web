@@ -5,7 +5,7 @@ import { Flag } from "./Flags";
 
 const navItems = (nav, locale) => [
   { key: "technology", label: nav.technology, to: `/${locale}/technology/` },
-  { key: "validation", label: nav.validation, to: `/${locale}/validation/` },
+  { key: "validation", label: nav.validation, to: `/${locale}/milestones/` },
   { key: "partnerships", label: nav.partnerships, to: `/${locale}/partnerships/` },
   { key: "about", label: nav.about, to: `/${locale}/about/` },
 ];

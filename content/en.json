@@ -37,7 +37,7 @@
   },
   "nav": {
     "technology": "Technology",
-    "validation": "Validation",
+    "validation": "Milestones",
     "partnerships": "Partnerships",
     "about": "About",
     "primaryCta": "Discuss a Partnership"
@@ -96,8 +96,8 @@
           }
         ],
         "cta": {
-          "label": "See the Validation Approach",
-          "to": "/en/validation/"
+          "label": "See the Milestones",
+          "to": "/en/milestones/"
         }
       },
       "system": {
@@ -133,8 +133,8 @@
           "Test plans, measured results, and their limitations provide the basis for decisions about further development."
         ],
         "cta": {
-          "label": "Explore Validation",
-          "to": "/en/validation/"
+          "label": "Explore Milestones",
+          "to": "/en/milestones/"
         }
       },
       "partnerships": {
@@ -429,7 +429,7 @@
       }
     },
     "validation": {
-      "seoTitle": "Technical, Economic and Environmental Validation | Jalaranu",
+      "seoTitle": "Development Milestones | Jalaranu",
       "seoDescription": "Learn how the world's first underlake datacenter project is validated: test questions and a staged approach to evaluating feasibility.",
       "hero": {
         "h1": "Evidence provides the basis for the next step.",
@@ -533,7 +533,7 @@
         "h2": "Findings and documents",
         "body": "Published findings and documents will appear here once they are available and approved for public release.",
         "cta": {
-          "label": "Discuss the Validation Programme",
+          "label": "Discuss the Programme",
           "to": "/en/partnerships/#contact"
         }
       },
@@ -793,7 +793,7 @@
   },
   "slugs": {
     "technology": "technology",
-    "validation": "validation",
+    "validation": "milestones",
     "partnerships": "partnerships",
     "about": "about",
     "privacy": "privacy"
