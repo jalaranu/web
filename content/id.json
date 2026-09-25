@@ -4,9 +4,9 @@
   "default": false,
   "site": {
     "title": "Jalaranu",
-    "tagline": "Konsep datacenter bawah danau",
-    "description": "Jelajahi konsep datacenter bawah danau Jalaranu, pendekatan validasi, dan peluang kemitraan untuk pengembangan infrastruktur komputasi di Indonesia.",
-    "footerTagline": "Jalaranu - pengembangan konsep datacenter bawah danau untuk ketahanan digital Indonesia.",
+    "tagline": "Proyek datacenter bawah danau",
+    "description": "Jelajahi proyek datacenter bawah danau Jalaranu, pendekatan validasi, dan peluang kemitraan untuk pengembangan infrastruktur komputasi di Indonesia.",
+    "footerTagline": "Jalaranu - pengembangan proyek datacenter bawah danau untuk ketahanan digital Indonesia.",
     "copyright": "Jalaranu",
     "logoAlt": "Jalaranu",
     "skipLink": "Langsung ke konten utama",
@@ -43,13 +43,13 @@
   },
   "pages": {
     "home": {
-      "seoTitle": "Jalaranu | Konsep Datacenter Bawah Danau",
-      "seoDescription": "Jelajahi konsep datacenter bawah danau Jalaranu, pendekatan validasi, dan peluang kemitraan untuk pengembangan infrastruktur komputasi di Indonesia.",
+      "seoTitle": "Jalaranu | Proyek Datacenter Bawah Danau",
+      "seoDescription": "Jelajahi proyek datacenter bawah danau Jalaranu, pendekatan validasi, dan peluang kemitraan untuk pengembangan infrastruktur komputasi di Indonesia.",
       "hero": {
-        "eyebrow": "Konsep datacenter bawah danau",
+        "eyebrow": "Proyek datacenter bawah danau",
         "h1": "Infrastruktur komputasi **bawah danau** untuk ==ketahanan digital Indonesia==.",
         "intro": [
-          "Jalaranu mengembangkan konsep datacenter modular bawah danau. Fokusnya adalah menguji **efisiensi termal, keandalan operasi**, dan kelayakan penerapannya dalam konteks Indonesia.",
+          "Jalaranu mengembangkan proyek datacenter modular bawah danau. Fokusnya adalah menguji **efisiensi termal, keandalan operasi**, dan kelayakan penerapannya dalam konteks Indonesia.",
           "Kami membuka ruang kolaborasi bagi investor, institusi, dan mitra teknologi untuk membangun dasar pengembangan yang terukur."
         ],
         "primaryCta": {
@@ -60,8 +60,8 @@
           "label": "Jelajahi Teknologi",
           "to": "/id/technology/"
         },
-        "caption": "Ilustrasi konsep. Konfigurasi akhir mengikuti hasil studi dan rekayasa.",
-        "imageAlt": "Ilustrasi konsep Jalaranu: modul datacenter di bawah permukaan danau yang terhubung ke fasilitas pendukung di darat melalui jalur daya dan komunikasi yang terlindung.",
+        "caption": "Ilustrasi proyek. Konfigurasi akhir mengikuti hasil studi dan rekayasa.",
+        "imageAlt": "Ilustrasi proyek Jalaranu: modul datacenter di bawah permukaan danau yang terhubung ke fasilitas pendukung di darat melalui jalur daya dan komunikasi yang terlindung.",
         "slides": [
           {
             "src": "/assets/hero/danau-batur.webp",
@@ -103,7 +103,7 @@
       },
       "system": {
         "h2": "Satu sistem, dari darat hingga modul bawah danau.",
-        "body": "Konsep Jalaranu menghubungkan fasilitas pendukung di darat dengan modul komputasi di bawah air. Perencanaan mencakup daya, konektivitas, pengelolaan panas, pemantauan, serta cara modul dipasang dan diambil kembali.",
+        "body": "Proyek Jalaranu menghubungkan fasilitas pendukung di darat dengan modul komputasi di bawah air. Perencanaan mencakup daya, konektivitas, pengelolaan panas, pemantauan, serta cara modul dipasang dan diambil kembali.",
         "items": [
           {
             "title": "Fasilitas darat",
@@ -123,7 +123,7 @@
           }
         ],
         "cta": {
-          "label": "Pelajari Konsep Sistem",
+          "label": "Pelajari Proyek",
           "to": "/id/technology/#system"
         }
       },
@@ -164,7 +164,7 @@
         }
       },
       "closing": {
-        "h2": "Apa yang perlu ==dibuktikan agar konsep ini relevan== bagi organisasi Anda?",
+        "h2": "Apa yang perlu ==dibuktikan agar proyek ini relevan== bagi organisasi Anda?",
         "body": "Mari mulai dari kebutuhan, ruang lingkup evaluasi, dan kontribusi yang dapat dibangun bersama.",
         "cta": {
           "label": "Diskusikan Kemitraan",
@@ -174,7 +174,7 @@
     },
     "technology": {
       "seoTitle": "Teknologi Datacenter Bawah Danau | Jalaranu",
-      "seoDescription": "Pelajari konsep sistem Jalaranu, dari fasilitas darat dan modul komputasi hingga pengelolaan panas, konektivitas, serta pemulihan.",
+      "seoDescription": "Pelajari proyek Jalaranu: dari fasilitas darat dan modul komputasi hingga pengelolaan panas, konektivitas, serta pemulihan.",
       "hero": {
         "h1": "Rekayasa yang dimulai dari pertanyaan yang tepat.",
         "body": "Jalaranu mengeksplorasi datacenter bawah danau sebagai **satu sistem utuh**. Penempatan modul perlu dievaluasi bersama daya, jaringan, pengelolaan panas, pemeliharaan, dan pemulihannya."
@@ -182,13 +182,13 @@
       "architecture": {
         "h2": "Dari antarmuka darat ke lingkungan bawah air.",
         "body": [
-          "Konsep arsitektur mencakup empat bagian: fasilitas pendukung darat, jalur daya dan komunikasi, modul komputasi, serta sistem pemantauan dan pengelolaan operasi. Keterkaitan antarbagiannya menentukan bagaimana keseluruhan fasilitas dapat bekerja dan dipulihkan.",
+          "Arsitektur proyek mencakup empat bagian: fasilitas pendukung darat, jalur daya dan komunikasi, modul komputasi, serta sistem pemantauan dan pengelolaan operasi. Keterkaitan antarbagiannya menentukan bagaimana keseluruhan fasilitas dapat bekerja dan dipulihkan.",
           "Visualisasi awal menggunakan bentuk limas segi empat terpancung. Bentuk tersebut merupakan eksplorasi desain; geometri, material, dan spesifikasi akhir mengikuti hasil rekayasa serta pengujian."
         ],
         "anchor": "system",
         "visualNote": "Diagram blok dan potongan, dengan jalur logis tanpa koordinat atau rincian pengamanan fasilitas.",
-        "imageAlt": "Gambar konsep rekayasa modul limas segi empat terpancung: tampak depan, potongan A-A, denah rangka atap, dan detail sambungan kedap.",
-        "imageCaption": "Konsep rekayasa berdimensi, bukan gambar fabrikasi."
+        "imageAlt": "Gambar rekayasa modul limas segi empat terpancung: tampak depan, potongan A-A, denah rangka atap, dan detail sambungan kedap.",
+        "imageCaption": "Rancangan rekayasa berdimensi, bukan gambar fabrikasi."
       },
       "engineering": {
         "h2": "Lima bidang yang perlu dievaluasi.",
@@ -218,14 +218,14 @@
       "comparison": {
         "h2": "Keunggulan harus dinilai terhadap alternatif yang relevan.",
         "body": [
-          "Evaluasi perlu membandingkan konsep bawah danau dengan solusi darat pada kebutuhan layanan, beban, dan asumsi yang setara. Perbandingan mencakup fasilitas darat dengan pendinginan konvensional maupun pendinginan berbasis air, bila relevan untuk lokasi yang dikaji.",
+          "Evaluasi perlu membandingkan proyek bawah danau dengan solusi darat pada kebutuhan layanan, beban, dan asumsi yang setara. Perbandingan mencakup fasilitas darat dengan pendinginan konvensional maupun pendinginan berbasis air, bila relevan untuk lokasi yang dikaji.",
           "Aspek penilaian meliputi energi, biaya investasi, biaya operasi, pemeliharaan, konektivitas, pemulihan, dampak lingkungan, dan akhir masa pakai. Potensi penghematan pada satu komponen tidak dengan sendirinya menunjukkan biaya total yang lebih rendah."
         ]
       },
       "placements": {
         "h2": "Alternatif penempatan, dibandingkan dengan jujur.",
         "intro": [
-          "Konsep bawah danau dievaluasi terhadap tiga penempatan acuan pada tingkat layanan yang setara: fasilitas darat, bunker yang diperkuat, dan penempatan bawah laut. Setiap pertukaran di bawah ini adalah penilaian awal untuk diuji, bukan hasil pengukuran.",
+          "Proyek bawah danau dievaluasi terhadap tiga penempatan acuan pada tingkat layanan yang setara: fasilitas darat, bunker yang diperkuat, dan penempatan bawah laut. Setiap pertukaran di bawah ini adalah penilaian awal untuk diuji, bukan hasil pengukuran.",
           "Model biaya sepuluh tahun pendamping pada tingkat layanan setara memberi 6,00 juta dolar untuk fasilitas darat dengan pendinginan konvensional, 6,34 untuk fasilitas darat yang diperkeras dengan pendinginan air danau, dan 7,85 untuk desain terendam. Submersion membeli kemampuan, bukan penghematan biaya."
         ],
         "note": "Penilaian kerangka awal untuk diskusi. Angka dan peringkat memerlukan pengukuran serta kajian lokasi. Angka termal penyaringan (anomali rata-rata cekungan sekitar 0,001 kelvin selama lima puluh tahun dan jejak dua belas bulan 228-509 meter) berstatus belum terbukti sampai diukur.",
@@ -251,7 +251,7 @@
       "scenarios": {
         "h2": "Skenario penggunaan yang dieksplorasi",
         "body": [
-          "Konsep ini dapat dievaluasi untuk komputasi khusus, penyimpanan, atau kebutuhan infrastruktur tertentu berdasarkan persyaratan organisasi. Kesesuaian setiap skenario harus ditentukan melalui evaluasi kebutuhan dan bukti pengujian.",
+          "Proyek ini dapat dievaluasi untuk komputasi khusus, penyimpanan, atau kebutuhan infrastruktur tertentu berdasarkan persyaratan organisasi. Kesesuaian setiap skenario harus ditentukan melalui evaluasi kebutuhan dan bukti pengujian.",
           "Penyebutan skenario penggunaan bukan pernyataan bahwa layanan tersebut sudah tersedia atau telah disetujui untuk menangani data sensitif."
         ],
         "cta": {
@@ -263,7 +263,7 @@
       "index": [
         {
           "id": "system",
-          "label": "Arsitektur konsep"
+          "label": "Arsitektur proyek"
         },
         {
           "id": "inside",
@@ -286,7 +286,7 @@
         "h2": "Di Dalam Jalaranu",
         "anchor": "inside",
         "intro": [
-          "Struktur acuan memecah modul menjadi 24 komponen bernomor dalam enam sistem. Figur ini adalah konsep rekayasa berdimensi, bukan gambar fabrikasi."
+          "Struktur acuan memecah modul menjadi 24 komponen bernomor dalam enam sistem. Figur ini adalah rancangan rekayasa berdimensi, bukan gambar fabrikasi."
         ],
         "items": [
           {
@@ -429,7 +429,7 @@
       "faq": [
         {
           "q": "Apakah Jalaranu sudah beroperasi secara komersial?",
-          "a": "**Website ini memperkenalkan konsep dan peluang pengembangan Jalaranu.** Ketersediaan layanan komersial akan disampaikan secara terpisah setelah kesiapan fasilitas dan layanannya dikonfirmasi."
+          "a": "**Website ini memperkenalkan proyek dan peluang pengembangan Jalaranu.** Ketersediaan layanan komersial akan disampaikan secara terpisah setelah kesiapan fasilitas dan layanannya dikonfirmasi."
         },
         {
           "q": "Mengapa menggunakan danau?",
@@ -463,7 +463,7 @@
       "seoDescription": "Jajaki kerja sama bersama Jalaranu sebagai investor, institusi pemerintah atau pertahanan, mitra industri, maupun mitra riset.",
       "hero": {
         "h1": "Mulai dari kebutuhan. Sepakati apa yang perlu dibuktikan.",
-        "body": "Jalaranu membuka percakapan dengan pihak yang ingin menilai, mengembangkan, atau mendukung konsep datacenter bawah danau. Kerja sama dimulai dengan **tujuan yang jelas, lingkup yang realistis, hasil yang dapat dievaluasi**."
+        "body": "Jalaranu membuka percakapan dengan pihak yang ingin menilai, mengembangkan, atau mendukung proyek datacenter bawah danau. Kerja sama dimulai dengan **tujuan yang jelas, lingkup yang realistis, hasil yang dapat dievaluasi**."
       },
       "tracks": [
         {
@@ -482,7 +482,7 @@
           "id": "institution",
           "h2": "Evaluasi kebutuhan strategis melalui kerja sama yang terarah.",
           "body": [
-            "Pembahasan dapat dimulai dari kebutuhan infrastruktur, kontinuitas layanan, kendali operasional, tata kelola data, dan kriteria evaluasi institusi. Kesesuaian konsep Jalaranu ditentukan melalui kajian kebutuhan dan pengujian yang relevan.",
+            "Pembahasan dapat dimulai dari kebutuhan infrastruktur, kontinuitas layanan, kendali operasional, tata kelola data, dan kriteria evaluasi institusi. Kesesuaian proyek Jalaranu ditentukan melalui kajian kebutuhan dan pengujian yang relevan.",
             "Kemungkinan ruang kerja sama mencakup studi kelayakan, penyusunan kebutuhan, dan pengembangan pilot terbatas. Persyaratan akses, penanganan informasi, serta tanggung jawab masing-masing pihak disepakati sesuai lingkup kerja sama."
           ],
           "cta": {
@@ -557,7 +557,7 @@
       "seoDescription": "Kenali Jalaranu, cerita identitasnya, prinsip pengembangan, dan pihak yang bertanggung jawab atas proyek datacenter bawah danau.",
       "hero": {
         "h1": "Berakar pada identitas Indonesia. Dibangun melalui pembuktian.",
-        "body": "Jalaranu adalah inisiatif pengembangan konsep datacenter bawah danau. Kami ingin mempertemukan **rekayasa, kebutuhan infrastruktur, serta pemahaman terhadap lingkungan** dalam satu proses pengembangan yang terukur."
+        "body": "Jalaranu adalah inisiatif pengembangan proyek datacenter bawah danau. Kami ingin mempertemukan **rekayasa, kebutuhan infrastruktur, serta pemahaman terhadap lingkungan** dalam satu proses pengembangan yang terukur."
       },
       "story": {
         "h2": "Pengetahuan yang dijaga.",

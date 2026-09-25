@@ -4,9 +4,9 @@
   "default": true,
   "site": {
     "title": "Jalaranu",
-    "tagline": "Underwater lake datacenter concept",
-    "description": "Explore Jalaranu's underwater lake datacenter concept, validation approach, and partnership opportunities for computing infrastructure in Indonesia.",
-    "footerTagline": "Jalaranu - developing an underwater lake datacenter concept to support Indonesia's digital resilience.",
+    "tagline": "Underlake datacenter project",
+    "description": "Explore Jalaranu's underlake datacenter project, validation approach, and partnership opportunities for computing infrastructure in Indonesia.",
+    "footerTagline": "Jalaranu - developing an underlake datacenter project to support Indonesia's digital resilience.",
     "copyright": "Jalaranu",
     "logoAlt": "Jalaranu",
     "skipLink": "Skip to main content",
@@ -43,13 +43,13 @@
   },
   "pages": {
     "home": {
-      "seoTitle": "Jalaranu | Underwater Lake Datacenter Concept",
-      "seoDescription": "Explore Jalaranu's underwater lake datacenter concept, validation approach, and partnership opportunities for computing infrastructure in Indonesia.",
+      "seoTitle": "Jalaranu | Underlake Datacenter Project",
+      "seoDescription": "Explore Jalaranu's underlake datacenter project, validation approach, and partnership opportunities for computing infrastructure in Indonesia.",
       "hero": {
-        "eyebrow": "Underwater lake datacenter concept",
+        "eyebrow": "Underlake datacenter project",
         "h1": "Computing infrastructure **beneath the lake**. Supporting Indonesia's ==digital resilience==.",
         "intro": [
-          "Jalaranu is developing a modular underwater lake datacenter concept. The focus is to evaluate **thermal efficiency, operational reliability**, and the feasibility of deployment in Indonesia.",
+          "Jalaranu is developing a modular underlake datacenter project. The focus is to evaluate **thermal efficiency, operational reliability**, and the feasibility of deployment in Indonesia.",
           "We welcome collaboration with investors, institutions, and technology partners to establish a measurable foundation for development."
         ],
         "primaryCta": {
@@ -60,8 +60,8 @@
           "label": "Explore the Technology",
           "to": "/en/technology/"
         },
-        "caption": "Concept illustration. Final configuration is subject to study and engineering findings.",
-        "imageAlt": "Concept illustration: the Jalaranu datacenter module beneath the lake surface, connected to shore-based support facilities by protected power and communication routes.",
+        "caption": "Project illustration. Final configuration is subject to study and engineering findings.",
+        "imageAlt": "Project illustration: the Jalaranu datacenter module beneath the lake surface, connected to shore-based support facilities by protected power and communication routes.",
         "slides": [
           {
             "src": "/assets/hero/danau-batur.webp",
@@ -103,7 +103,7 @@
       },
       "system": {
         "h2": "One system, from shore to submerged module.",
-        "body": "The Jalaranu concept connects shore-based support facilities with a computing module beneath the water. Planning covers power, connectivity, heat management, monitoring, and how the module is deployed and retrieved.",
+        "body": "The Jalaranu project connects shore-based support facilities with a computing module beneath the water. Planning covers power, connectivity, heat management, monitoring, and how the module is deployed and retrieved.",
         "items": [
           {
             "title": "Shore facilities",
@@ -123,7 +123,7 @@
           }
         ],
         "cta": {
-          "label": "Understand the System Concept",
+          "label": "Understand the Project",
           "to": "/en/technology/#system"
         }
       },
@@ -164,7 +164,7 @@
         }
       },
       "closing": {
-        "h2": "What would need to be ==demonstrated for this concept to be relevant== to your organisation?",
+        "h2": "What would need to be ==demonstrated for this project to be relevant== to your organisation?",
         "body": "Start with your requirements, the scope of evaluation, and the contribution we could develop together.",
         "cta": {
           "label": "Discuss a Partnership",
@@ -173,22 +173,22 @@
       }
     },
     "technology": {
-      "seoTitle": "Underwater Lake Datacenter Technology | Jalaranu",
-      "seoDescription": "Explore Jalaranu's system concept, from shore facilities and computing modules to heat management, connectivity, and recovery.",
+      "seoTitle": "Underlake Datacenter Technology | Jalaranu",
+      "seoDescription": "Explore the Jalaranu project: from shore facilities and computing modules to heat management, connectivity, and recovery.",
       "hero": {
         "h1": "Engineering starts with the right questions.",
-        "body": "Jalaranu explores the underwater lake datacenter as **one complete system**. Module placement needs to be evaluated together with power, networking, heat management, maintenance, and recovery."
+        "body": "Jalaranu explores the underlake datacenter as **one complete system**. Module placement needs to be evaluated together with power, networking, heat management, maintenance, and recovery."
       },
       "architecture": {
         "h2": "From shore interfaces to the underwater environment.",
         "body": [
-          "The concept architecture includes four elements: shore-based support facilities, power and communications connections, the computing module, and monitoring and operational management. Their relationships determine how the overall facility can function and recover.",
+          "The project architecture includes four elements: shore-based support facilities, power and communications connections, the computing module, and monitoring and operational management. Their relationships determine how the overall facility can function and recover.",
           "Early visualisations use a truncated square pyramid. This is a design exploration; final geometry, materials, and specifications will follow engineering and test findings."
         ],
         "anchor": "system",
         "visualNote": "A block diagram and cross-section showing logical connections, without coordinates or facility-security details.",
-        "imageAlt": "Engineering concept figure of the truncated-pyramid module: front elevation, section A-A, roof framing plan, and watertight joint detail.",
-        "imageCaption": "Dimensional engineering concept, not a fabrication drawing."
+        "imageAlt": "Engineering figure of the truncated-pyramid module: front elevation, section A-A, roof framing plan, and watertight joint detail.",
+        "imageCaption": "Dimensional engineering draft, not a fabrication drawing."
       },
       "engineering": {
         "h2": "Five areas to evaluate.",
@@ -218,14 +218,14 @@
       "comparison": {
         "h2": "Advantages need to be assessed against relevant alternatives.",
         "body": [
-          "Evaluation should compare the underwater lake concept with land-based solutions using equivalent service requirements, workloads, and assumptions. Relevant comparisons include land-based facilities with conventional cooling and water-based cooling, where applicable to the site under study.",
+          "Evaluation should compare the underlake project with land-based solutions using equivalent service requirements, workloads, and assumptions. Relevant comparisons include land-based facilities with conventional cooling and water-based cooling, where applicable to the site under study.",
           "Assessment covers energy, capital expenditure, operating costs, maintenance, connectivity, recovery, environmental effects, and end of life. Potential savings in one component do not in themselves demonstrate a lower total cost."
         ]
       },
       "placements": {
         "h2": "Placement alternatives, compared honestly.",
         "intro": [
-          "The underlake concept is evaluated against three reference placements at equal service: a terrestrial facility, a hardened bunker, and an undersea deployment. Each trade-off below is an initial assessment to be tested, not a measured result.",
+          "The underlake project is evaluated against three reference placements at equal service: a terrestrial facility, a hardened bunker, and an undersea deployment. Each trade-off below is an initial assessment to be tested, not a measured result.",
           "A companion ten-year cost model at equal service gives 6.00 million dollars for a terrestrial facility with conventional cooling, 6.34 for a hardened terrestrial facility with lake-water cooling, and 7.85 for the submerged design. Submersion buys capability, not cost saving."
         ],
         "note": "Initial framework assessment for discussion. Figures and rankings require measurement and site studies. Screening thermal numbers (a basin-average anomaly of about 0.001 kelvin over fifty years and a twelve-month footprint of 228-509 metres) carry unproven status until measured.",
@@ -251,7 +251,7 @@
       "scenarios": {
         "h2": "Use cases under exploration",
         "body": [
-          "The concept can be evaluated for dedicated computing, storage, or particular infrastructure requirements defined by an organisation. The suitability of each use case must be established through requirements assessment and test evidence.",
+          "The project can be evaluated for dedicated computing, storage, or particular infrastructure requirements defined by an organisation. The suitability of each use case must be established through requirements assessment and test evidence.",
           "A use case mentioned here is not a statement that the service is already available or approved to handle sensitive data."
         ],
         "cta": {
@@ -263,7 +263,7 @@
       "index": [
         {
           "id": "system",
-          "label": "Concept architecture"
+          "label": "Project architecture"
         },
         {
           "id": "inside",
@@ -286,7 +286,7 @@
         "h2": "Inside Jalaranu",
         "anchor": "inside",
         "intro": [
-          "The reference structure breaks the module into 24 numbered components across six systems. The figure is a dimensional engineering concept, not a fabrication drawing."
+          "The reference structure breaks the module into 24 numbered components across six systems. The figure is a dimensional engineering draft, not a fabrication drawing."
         ],
         "items": [
           {
@@ -319,10 +319,10 @@
     },
     "validation": {
       "seoTitle": "Technical, Economic and Environmental Validation | Jalaranu",
-      "seoDescription": "Learn about Jalaranu's test questions and staged approach to evaluating the feasibility of an underwater lake datacenter.",
+      "seoDescription": "Learn about Jalaranu's test questions and staged approach to evaluating the feasibility of an underlake datacenter.",
       "hero": {
         "h1": "Evidence provides the basis for the next step.",
-        "body": "The feasibility of an underwater lake datacenter needs to be assessed **technically, economically, and environmentally**. Jalaranu's validation approach focuses on testable questions, explainable methods, and findings presented alongside their limitations."
+        "body": "The feasibility of an underlake datacenter needs to be assessed **technically, economically, and environmentally**. Jalaranu's validation approach focuses on testable questions, explainable methods, and findings presented alongside their limitations."
       },
       "status": {
         "h2": "Development status",
@@ -429,7 +429,7 @@
       "faq": [
         {
           "q": "Is Jalaranu commercially operational?",
-          "a": "**This website introduces the Jalaranu concept and development opportunities.** Commercial service availability will be communicated separately once facility and service readiness have been confirmed."
+          "a": "**This website introduces the Jalaranu project and development opportunities.** Commercial service availability will be communicated separately once facility and service readiness have been confirmed."
         },
         {
           "q": "Why use a lake?",
@@ -463,7 +463,7 @@
       "seoDescription": "Explore collaboration with Jalaranu as an investor, government or defence institution, industry partner, or research organisation.",
       "hero": {
         "h1": "Start with the requirement. Agree on what needs to be demonstrated.",
-        "body": "Jalaranu welcomes conversations with organisations interested in evaluating, developing, or supporting the underwater lake datacenter concept. Collaboration begins with **clear goals, realistic scope, and measurable results**."
+        "body": "Jalaranu welcomes conversations with organisations interested in evaluating, developing, or supporting the underlake datacenter project. Collaboration begins with **clear goals, realistic scope, and measurable results**."
       },
       "tracks": [
         {
@@ -482,7 +482,7 @@
           "id": "institution",
           "h2": "Evaluate strategic requirements through focused collaboration.",
           "body": [
-            "Discussion can begin with infrastructure needs, service continuity, operational control, data governance, and institutional evaluation criteria. The suitability of the Jalaranu concept is determined through requirements assessment and relevant testing.",
+            "Discussion can begin with infrastructure needs, service continuity, operational control, data governance, and institutional evaluation criteria. The suitability of the Jalaranu project is determined through requirements assessment and relevant testing.",
             "Potential collaboration may include feasibility studies, requirements definition, and the development of a limited pilot. Access requirements, information handling, and each party's responsibilities are agreed according to the scope of collaboration."
           ],
           "cta": {
@@ -554,10 +554,10 @@
     },
     "about": {
       "seoTitle": "About Jalaranu | Identity and Development",
-      "seoDescription": "Discover Jalaranu's identity, development principles, and the people responsible for its underwater lake datacenter project.",
+      "seoDescription": "Discover Jalaranu's identity, development principles, and the people responsible for its underlake datacenter project.",
       "hero": {
         "h1": "Rooted in Indonesian identity. Developed through evidence.",
-        "body": "Jalaranu is an initiative developing an underwater lake datacenter concept. We aim to bring **engineering, infrastructure requirements, and an understanding of the environment** into a measurable development process."
+        "body": "Jalaranu is an initiative developing an underlake datacenter project. We aim to bring **engineering, infrastructure requirements, and an understanding of the environment** into a measurable development process."
       },
       "story": {
         "h2": "Knowledge, safeguarded.",

@@ -1,6 +1,6 @@
 # Jalaranu: Website
 
-Website bilingual (EN/ID) untuk konsep datacenter bawah danau (underlake datacenter) Jalaranu.
+Website bilingual (EN/ID) untuk proyek datacenter bawah danau (underlake datacenter) Jalaranu.
 Dibangun dengan Gatsby 5, deploy otomatis ke GitHub Pages (custom domain `jalaranu.org`) via GitHub Actions.
 
 ## Pengembangan lokal
