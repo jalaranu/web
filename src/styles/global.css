@@ -1663,10 +1663,14 @@ p {
 .partner-grid {
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 48px 72px;
+  gap: 0;
   margin-top: 0;
+}
+.partner-grid li + li {
+  border-left: 1px solid var(--jlr-border-subtle);
+  margin-left: 28px;
+  padding-left: 28px;
 }
 .partner-logo-link {
   display: inline-flex;
@@ -1684,15 +1688,17 @@ p {
   outline-offset: 4px;
 }
 .partner-logo-link img {
-  height: 44px;
+  height: clamp(18px, 6.5vw, 44px);
   width: auto;
-  max-width: 240px;
+  max-width: none;
 }
 @media (max-width: 767px) {
-  .partner-grid {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 28px;
+  .partner-grid li + li {
+    margin-left: 14px;
+    padding-left: 14px;
+  }
+  .partner-logo-link {
+    height: 48px;
   }
 }
 
