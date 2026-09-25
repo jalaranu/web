@@ -1083,6 +1083,16 @@ p {
   border-top: 1px solid var(--jlr-border-subtle);
 }
 
+.concept-diagram--full {
+  border: none;
+  background: transparent;
+}
+
+.concept-diagram--full .concept-diagram__caption {
+  border-top: none;
+  padding: 12px 0 0;
+}
+
 /* ---------- Brand band ---------- */
 
 .brand-band {

@@ -608,7 +608,7 @@ function UseCases({ page, locale }) {
             </p>
           ))}
         </div>
-        <figure className="concept-diagram">
+        <figure className="concept-diagram concept-diagram--full">
           <img
             src={`/assets/matano-site-${locale}.svg`}
             alt={page.data.illustrationAlt}
