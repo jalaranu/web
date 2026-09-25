@@ -293,6 +293,26 @@
               ]
             },
             {
+              "icon": "landmark",
+              "label": "Permukaan ancaman darat",
+              "values": [
+                "Akses perimeter langsung, keamanan tapak diperlukan",
+                "Diperkuat terhadap intrusi, akses terbatas",
+                "Jauh di laut, stasiun darat tetap terpapar",
+                "Modul terendam, stasiun darat tetap terpapar"
+              ]
+            },
+            {
+              "icon": "plane",
+              "label": "Permukaan ancaman udara",
+              "values": [
+                "Terpapar penuh dari udara",
+                "Diperkeras terhadap ancaman udara",
+                "Dukungan permukaan terpapar di laut",
+                "Modul terlindung kolom air, stasiun darat terpapar"
+              ]
+            },
+            {
               "icon": "anchor",
               "label": "Permukaan ancaman maritim",
               "values": [

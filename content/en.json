@@ -293,6 +293,26 @@
               ]
             },
             {
+              "icon": "landmark",
+              "label": "Land threat surface",
+              "values": [
+                "Direct perimeter access, site security required",
+                "Reinforced against intrusion, restricted access",
+                "Remote at sea, shore station remains exposed",
+                "Submerged module, shore station remains exposed"
+              ]
+            },
+            {
+              "icon": "plane",
+              "label": "Air threat surface",
+              "values": [
+                "Fully exposed from the air",
+                "Hardened against aerial threats",
+                "Exposed surface support at sea",
+                "Module shielded by the water column, shore station exposed"
+              ]
+            },
+            {
               "icon": "anchor",
               "label": "Maritime threat surface",
               "values": [
