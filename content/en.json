@@ -225,25 +225,26 @@
       "placements": {
         "h2": "Placement alternatives, compared honestly.",
         "intro": [
-          "The underlake concept is evaluated against three reference placements at equal service: a terrestrial facility, a hardened bunker, and an undersea deployment. Each trade-off below is an initial assessment to be tested, not a measured result."
+          "The underlake concept is evaluated against three reference placements at equal service: a terrestrial facility, a hardened bunker, and an undersea deployment. Each trade-off below is an initial assessment to be tested, not a measured result.",
+          "A companion ten-year cost model at equal service gives 6.00 million dollars for a terrestrial facility with conventional cooling, 6.34 for a hardened terrestrial facility with lake-water cooling, and 7.85 for the submerged design. Submersion buys capability, not cost saving."
         ],
-        "note": "Initial framework assessment for discussion. Figures and rankings require measurement and site studies.",
+        "note": "Initial framework assessment for discussion. Figures and rankings require measurement and site studies. Screening thermal numbers (a basin-average anomaly of about 0.001 kelvin over fifty years and a twelve-month footprint of 228-509 metres) carry unproven status until measured.",
         "items": [
           {
             "title": "Terrestrial datacenter",
-            "body": "The mature reference point: established supply chains, easy access, and proven operations. Its costs include energy-intensive cooling, land requirements, and the concentration of strategic data in a few urban corridors."
+            "body": "The mature reference point: established supply chains, easy access, and proven operations. Its costs include energy-intensive cooling, land requirements, and the concentration of strategic data in a few urban corridors. At equal service the ten-year model gives 6.00 million dollars with conventional cooling; the strategic weakness is concentration in a few urban corridors."
           },
           {
             "title": "Hardened bunker",
-            "body": "Strong physical protection for critical workloads. The trade-offs are high construction cost, more complex heat rejection, and a facility that is harder to scale than modular surface infrastructure."
+            "body": "Strong physical protection for critical workloads. The trade-offs are high construction cost, more complex heat rejection, and a facility that is harder to scale than modular surface infrastructure. At 6.34 million dollars with lake-water cooling it is the cheapest hardened comparator in the model, but it carries high construction cost and complex heat rejection."
           },
           {
             "title": "Undersea datacenter",
-            "body": "Proven at sea by Project Natick: ocean water removes heat without mechanical cooling. But the maritime threat surface includes submarine cable interception, anchor drag, and contested jurisdiction, with saltwater corrosion and difficult access."
+            "body": "Proven at sea by Project Natick: ocean water removes heat without mechanical cooling. But the maritime threat surface includes submarine cable interception, anchor drag, and contested jurisdiction, with saltwater corrosion and difficult access. Project Natick proved submerged heat rejection at sea; the paper's threat model nonetheless treats the maritime surface (submarine cable interception, anchor drag, contested jurisdiction) as the decisive difference."
           },
           {
             "title": "Underlake datacenter",
-            "body": "A lake is not a small ocean. Inland waters sit inside domestic jurisdiction, beyond submarine reach, in quiet freshwater near hydropower and existing communities. Open questions remain: thermal and ecological effects, seismic exposure, acoustic hardening, and retrieval procedures."
+            "body": "A lake is not a small ocean. Inland waters sit inside domestic jurisdiction, beyond submarine reach, in quiet freshwater near hydropower and existing communities. Open questions remain: thermal and ecological effects, seismic exposure, acoustic hardening, and retrieval procedures. The model prices the submerged design at 7.85 million dollars: submersion removes direct maritime access paths and keeps the facility in domestic jurisdiction, but thermal, ecological, seismic, acoustic, and retrieval questions remain open and unproven."
           }
         ]
       },
@@ -257,6 +258,63 @@
           "label": "Discuss Technical Requirements",
           "to": "/en/partnerships/#contact"
         }
+      },
+      "indexLabel": "On this page",
+      "index": [
+        {
+          "id": "system",
+          "label": "Concept architecture"
+        },
+        {
+          "id": "inside",
+          "label": "Inside Jalaranu"
+        },
+        {
+          "id": "comparison",
+          "label": "Comparing alternatives"
+        },
+        {
+          "id": "placements",
+          "label": "Placement comparison"
+        },
+        {
+          "id": "scenarios",
+          "label": "Use cases under exploration"
+        }
+      ],
+      "inside": {
+        "h2": "Inside Jalaranu",
+        "anchor": "inside",
+        "intro": [
+          "The reference structure breaks the module into 24 numbered components across six systems. The figure is a dimensional engineering concept, not a fabrication drawing."
+        ],
+        "items": [
+          {
+            "title": "Protective enclosure",
+            "body": "Stainless-steel shell, structural stiffeners, and corrosion protection, carried by a ballast skid. Lifting loads pass through four upper padeyes, while the service lid keeps two seals separated by a monitored interspace."
+          },
+          {
+            "title": "Computing cassette",
+            "body": "An 8U cassette holds three 2U servers with SSD/NVMe storage and a network switch, under a proposed nitrogen atmosphere with controlled humidity and A/B power and fibre feedthroughs."
+          },
+          {
+            "title": "Cooling loop",
+            "body": "A gas-to-liquid coil and fans move heat into a closed coolant circuit through A/B pumps and A/B external heat exchangers. Isolation valves separate branches, and lake water never mixes with internal coolant."
+          },
+          {
+            "title": "Power resilience",
+            "body": "An optional LiFePO4 battery UPS sits in a lower bay separated from the computing equipment, targeting a ten-minute reserve at the assumed 2.1 kW load."
+          },
+          {
+            "title": "Vibration isolation",
+            "body": "Four captive isolators with cushioned snubbers suspend the server cassette, with flexible connections, electrical bonding, and transport and service locks."
+          },
+          {
+            "title": "Monitoring and safety",
+            "body": "Temperature, humidity, oxygen, pressure, and motion sensors, a camera with window and wiper, and a leak-detection tray feed power distribution and safety controls."
+          }
+        ],
+        "note": "All stated values are design assumptions, not measurements. Watertightness, operating depth, lifting capacity, and seismic resistance remain to be established through analysis and integrated testing."
       }
     },
     "validation": {
@@ -332,10 +390,32 @@
         "note": "This sequence is a development framework, not a list of stages claimed to be complete."
       },
       "environment": {
-        "h2": "A lake is an environment to understand.",
+        "h2": "Environmental commitments",
         "body": [
           "Site studies need to consider water conditions, uses of the area, the needs of affected communities, and applicable requirements. The evaluation plan should cover baseline conditions, changes to monitor during testing, and the handling of facilities at end of life.",
           "Study findings inform site and design decisions, including a decision not to proceed with an option if it is unsuitable."
+        ],
+        "items": [
+          {
+            "title": "Ecological discipline",
+            "body": "The lake is the limiting resource; environmental benefit is never claimed without measurement."
+          },
+          {
+            "title": "A published thermal budget",
+            "body": "Screening calculations give a basin-average anomaly of about 0.001 kelvin over fifty years and a twelve-month heat-equivalent footprint of 228-509 metres. Both stay unproven until measured at a candidate site."
+          },
+          {
+            "title": "Baseline before deployment",
+            "body": "Baseline conditions, water conditions, area uses, and the needs of affected communities are part of the evaluation plan."
+          },
+          {
+            "title": "End of life",
+            "body": "Decommissioning, retrieval, and lake restoration are planned from the start."
+          },
+          {
+            "title": "No-proceed stays valid",
+            "body": "Where evidence is insufficient, an option is set aside rather than asserted."
+          }
         ]
       },
       "results": {

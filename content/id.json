@@ -225,25 +225,26 @@
       "placements": {
         "h2": "Alternatif penempatan, dibandingkan dengan jujur.",
         "intro": [
-          "Konsep bawah danau dievaluasi terhadap tiga penempatan acuan pada tingkat layanan yang setara: fasilitas darat, bunker yang diperkuat, dan penempatan bawah laut. Setiap pertukaran di bawah ini adalah penilaian awal untuk diuji, bukan hasil pengukuran."
+          "Konsep bawah danau dievaluasi terhadap tiga penempatan acuan pada tingkat layanan yang setara: fasilitas darat, bunker yang diperkuat, dan penempatan bawah laut. Setiap pertukaran di bawah ini adalah penilaian awal untuk diuji, bukan hasil pengukuran.",
+          "Model biaya sepuluh tahun pendamping pada tingkat layanan setara memberi 6,00 juta dolar untuk fasilitas darat dengan pendinginan konvensional, 6,34 untuk fasilitas darat yang diperkeras dengan pendinginan air danau, dan 7,85 untuk desain terendam. Submersion membeli kemampuan, bukan penghematan biaya."
         ],
-        "note": "Penilaian kerangka awal untuk diskusi. Angka dan peringkat memerlukan pengukuran serta kajian lokasi.",
+        "note": "Penilaian kerangka awal untuk diskusi. Angka dan peringkat memerlukan pengukuran serta kajian lokasi. Angka termal penyaringan (anomali rata-rata cekungan sekitar 0,001 kelvin selama lima puluh tahun dan jejak dua belas bulan 228-509 meter) berstatus belum terbukti sampai diukur.",
         "items": [
           {
             "title": "Datacenter darat",
-            "body": "Titik acuan yang matang: rantai pasok mapan, akses mudah, dan operasi terbukti. Biayanya mencakup pendinginan yang boros energi, kebutuhan lahan, serta konsentrasi data strategis di beberapa koridor perkotaan."
+            "body": "Titik acuan yang matang: rantai pasok mapan, akses mudah, dan operasi terbukti. Biayanya mencakup pendinginan yang boros energi, kebutuhan lahan, serta konsentrasi data strategis di beberapa koridor perkotaan. Pada tingkat layanan setara, model sepuluh tahun memberi 6,00 juta dolar dengan pendinginan konvensional; kelemahan strategisnya adalah konsentrasi di beberapa koridor perkotaan."
           },
           {
             "title": "Bunker yang diperkuat",
-            "body": "Perlindungan fisik yang kuat untuk beban kerja kritis. Pertukarannya adalah biaya konstruksi tinggi, pembuangan panas yang lebih rumit, dan fasilitas yang lebih sulit diskalakan dibanding infrastruktur modular di permukaan."
+            "body": "Perlindungan fisik yang kuat untuk beban kerja kritis. Pertukarannya adalah biaya konstruksi tinggi, pembuangan panas yang lebih rumit, dan fasilitas yang lebih sulit diskalakan dibanding infrastruktur modular di permukaan. Pada 6,34 juta dolar dengan pendinginan air danau, ini adalah pembanding yang diperkeras termurah dalam model, tetapi membawa biaya konstruksi tinggi dan pembuangan panas yang rumit."
           },
           {
             "title": "Datacenter bawah laut",
-            "body": "Terbukti di laut melalui Project Natick: air laut membuang panas tanpa pendinginan mekanis. Namun permukaan ancaman maritim mencakup penyadapan kabel oleh kapal selam, seret jangkar, dan yurisdiksi yang diperebutkan, ditambah korosi air asin dan akses yang sulit."
+            "body": "Terbukti di laut melalui Project Natick: air laut membuang panas tanpa pendinginan mekanis. Namun permukaan ancaman maritim mencakup penyadapan kabel oleh kapal selam, seret jangkar, dan yurisdiksi yang diperebutkan, ditambah korosi air asin dan akses yang sulit. Project Natick membuktikan pembuangan panas terendam di laut; meski demikian, model ancaman paper menempatkan permukaan maritim (penyadapan kabel kapal selam, seret jangkar, yurisdiksi yang diperebutkan) sebagai pembeda yang menentukan."
           },
           {
             "title": "Datacenter bawah danau",
-            "body": "Danau bukan samudra kecil. Perairan daratan berada di dalam yurisdiksi domestik, di luar jangkauan kapal selam, di air tawar yang tenang dekat pembangkit listrik tenaga air dan komunitas yang ada. Pertanyaan terbuka tetap ada: efek termal dan ekologis, paparan kegempaan, pengerasan akustik, dan prosedur pengambilan kembali."
+            "body": "Danau bukan samudra kecil. Perairan daratan berada di dalam yurisdiksi domestik, di luar jangkauan kapal selam, di air tawar yang tenang dekat pembangkit listrik tenaga air dan komunitas yang ada. Pertanyaan terbuka tetap ada: efek termal dan ekologis, paparan kegempaan, pengerasan akustik, dan prosedur pengambilan kembali. Model mematok desain terendam pada 7,85 juta dolar: submersion menghilangkan jalur akses maritim langsung dan menjaga fasilitas dalam yurisdiksi domestik, tetapi pertanyaan termal, ekologis, kegempaan, akustik, dan pengambilan kembali tetap terbuka dan belum terbukti."
           }
         ]
       },
@@ -257,6 +258,63 @@
           "label": "Bahas Kebutuhan Teknis",
           "to": "/id/partnerships/#contact"
         }
+      },
+      "indexLabel": "Di halaman ini",
+      "index": [
+        {
+          "id": "system",
+          "label": "Arsitektur konsep"
+        },
+        {
+          "id": "inside",
+          "label": "Di Dalam Jalaranu"
+        },
+        {
+          "id": "comparison",
+          "label": "Membandingkan alternatif"
+        },
+        {
+          "id": "placements",
+          "label": "Perbandingan penempatan"
+        },
+        {
+          "id": "scenarios",
+          "label": "Skenario penggunaan"
+        }
+      ],
+      "inside": {
+        "h2": "Di Dalam Jalaranu",
+        "anchor": "inside",
+        "intro": [
+          "Struktur acuan memecah modul menjadi 24 komponen bernomor dalam enam sistem. Figur ini adalah konsep rekayasa berdimensi, bukan gambar fabrikasi."
+        ],
+        "items": [
+          {
+            "title": "Selubung pelindung",
+            "body": "Cangkang baja tahan karat, pengaku struktural, dan pelindung antikorosi yang ditopang skid ballast. Beban pengangkatan melewati empat padeye atas, sementara tutup servis menjaga dua seal yang dipisahkan ruang antar-seal terpantau."
+          },
+          {
+            "title": "Kaset komputasi",
+            "body": "Kaset 8U menampung tiga server 2U dengan penyimpanan SSD/NVMe dan switch jaringan, di bawah usulan atmosfer nitrogen dengan kelembapan terkendali serta penetrator daya A/B dan serat optik."
+          },
+          {
+            "title": "Sirkuit pendinginan",
+            "body": "Coil gas-cairan dan kipas memindahkan panas ke sirkuit coolant tertutup melalui pompa A/B dan penukar panas eksternal A/B. Katup isolasi memisahkan cabang, dan air danau tidak pernah bercampur dengan coolant internal."
+          },
+          {
+            "title": "Ketahanan daya",
+            "body": "UPS baterai LiFePO4 opsional ditempatkan di ruang bawah yang terpisah dari perangkat komputasi, dengan target cadangan sepuluh menit pada beban asumsi 2,1 kW."
+          },
+          {
+            "title": "Isolasi getaran",
+            "body": "Empat isolator captive dengan snubber berperedam menopang kaset server, dengan sambungan fleksibel, bonding listrik, serta pengunci transportasi dan servis."
+          },
+          {
+            "title": "Pemantauan dan keselamatan",
+            "body": "Sensor temperatur, kelembapan, oksigen, tekanan, dan gerak, kamera dengan jendela dan wiper, serta tray pendeteksi kebocoran memberi masukan bagi distribusi daya dan kontrol keselamatan."
+          }
+        ],
+        "note": "Seluruh nilai adalah asumsi desain, bukan hasil pengukuran. Kedap air, kedalaman operasi, kapasitas angkat, dan ketahanan gempa harus ditetapkan melalui analisis dan pengujian rakitan terintegrasi."
       }
     },
     "validation": {
@@ -332,10 +390,32 @@
         "note": "Urutan ini adalah kerangka pengembangan, bukan daftar tahap yang dinyatakan telah selesai."
       },
       "environment": {
-        "h2": "Danau adalah lingkungan yang harus dipahami.",
+        "h2": "Komitmen lingkungan",
         "body": [
           "Kajian lokasi perlu mempertimbangkan kondisi perairan, penggunaan kawasan, kebutuhan masyarakat terkait, serta persyaratan yang berlaku. Rencana evaluasi harus mencakup kondisi awal, perubahan yang dipantau selama pengujian, dan penanganan fasilitas pada akhir masa pakai.",
           "Hasil kajian menjadi masukan untuk keputusan lokasi dan desain, termasuk keputusan untuk tidak melanjutkan suatu opsi bila tidak layak."
+        ],
+        "items": [
+          {
+            "title": "Disiplin ekologis",
+            "body": "Danau adalah sumber daya pembatas; manfaat lingkungan tidak pernah diklaim tanpa pengukuran."
+          },
+          {
+            "title": "Anggaran termal yang dipublikasikan",
+            "body": "Perhitungan penyaringan memberi anomali rata-rata cekungan sekitar 0,001 kelvin selama lima puluh tahun dan jejak setara panas dua belas bulan 228-509 meter. Keduanya berstatus belum terbukti sampai diukur di lokasi kandidat."
+          },
+          {
+            "title": "Baseline sebelum penempatan",
+            "body": "Kondisi awal, kondisi air, penggunaan kawasan, dan kebutuhan masyarakat terdampak menjadi bagian dari rencana evaluasi."
+          },
+          {
+            "title": "Akhir masa pakai",
+            "body": "Pengakhiran, pengambilan kembali, dan pemulihan danau direncanakan sejak awal."
+          },
+          {
+            "title": "Tidak melanjutkan tetap sah",
+            "body": "Jika bukti tidak mencukupi, opsi disingkirkan alih-alih dipaksakan."
+          }
         ]
       },
       "results": {

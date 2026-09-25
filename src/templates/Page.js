@@ -159,6 +159,17 @@ function Technology({ page, locale }) {
               <Rich text={page.hero.body} />
             </p>
           </div>
+          {page.index ? (
+            <nav className="inpage-nav" aria-label={page.indexLabel}>
+              <ul>
+                {page.index.map((entry) => (
+                  <li key={entry.id}>
+                    <a href={`#${entry.id}`}>{entry.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          ) : null}
         </div>
       </div>
 
@@ -186,7 +197,26 @@ function Technology({ page, locale }) {
         <p className="caption visual-note">{page.architecture.visualNote}</p>
       </Section>
 
-      <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
+      <Section
+        className="section--alt"
+        style={{ background: "var(--jlr-surface-alt)" }}
+        id={page.inside.anchor}
+      >
+        <div className="section-head">
+          <h2>
+            <Rich text={page.inside.h2} />
+          </h2>
+          {page.inside.intro.map((paragraph, index) => (
+            <p key={index}>
+              <Rich text={paragraph} />
+            </p>
+          ))}
+        </div>
+        <CardGrid items={page.inside.items} />
+        <p className="caption visual-note">{page.inside.note}</p>
+      </Section>
+
+      <Section>
         <div className="section-head">
           <h2>
             <Rich text={page.engineering.h2} />
@@ -208,7 +238,11 @@ function Technology({ page, locale }) {
         </ol>
       </Section>
 
-      <Section>
+      <Section
+        className="section--alt"
+        style={{ background: "var(--jlr-surface-alt)" }}
+        id="comparison"
+      >
         <div className="section-head">
           <h2>
             <Rich text={page.comparison.h2} />
@@ -221,7 +255,7 @@ function Technology({ page, locale }) {
         </div>
       </Section>
 
-      <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
+      <Section id="placements">
         <div className="section-head">
           <h2>
             <Rich text={page.placements.h2} />
@@ -236,7 +270,11 @@ function Technology({ page, locale }) {
         <p className="caption visual-note">{page.placements.note}</p>
       </Section>
 
-      <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
+      <Section
+        className="section--alt"
+        style={{ background: "var(--jlr-surface-alt)" }}
+        id="scenarios"
+      >
         <div className="section-head">
           <h2>
             <Rich text={page.scenarios.h2} />
@@ -342,7 +380,11 @@ function Validation({ page }) {
         <p className="caption visual-note">{page.framework.note}</p>
       </Section>
 
-      <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
+      <Section
+        className="section--alt"
+        style={{ background: "var(--jlr-surface-alt)" }}
+        id="environment"
+      >
         <div className="section-head">
           <h2>
             <Rich text={page.environment.h2} />
@@ -353,6 +395,9 @@ function Validation({ page }) {
             </p>
           ))}
         </div>
+        {page.environment.items ? (
+          <CardGrid items={page.environment.items} />
+        ) : null}
       </Section>
 
       <Section>
