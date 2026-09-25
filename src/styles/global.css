@@ -1666,7 +1666,7 @@ p {
   flex-wrap: wrap;
   align-items: center;
   gap: 40px 56px;
-  margin-top: 16px;
+  margin-top: 0;
 }
 .partner-logo-link {
   display: inline-flex;
@@ -1692,6 +1692,13 @@ p {
     align-items: flex-start;
     gap: 28px;
   }
+}
+
+.team-section .section-head {
+  margin-bottom: 28px;
+}
+.team-section .btn {
+  margin-top: 48px;
 }
 
 /* ---------- Redirect page ---------- */

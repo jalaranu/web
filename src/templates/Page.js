@@ -653,7 +653,11 @@ function About({ page, content }) {
         </a>
       </Section>
 
-      <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
+      <Section
+        className="team-section section--alt"
+        style={{ background: "var(--jlr-surface-alt)" }}
+        id="team"
+      >
         <div className="section-head">
           <h2>
             <Rich text={page.team.h2} />
