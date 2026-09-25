@@ -317,7 +317,8 @@
           "q": "Bagaimana memperoleh informasi lebih lanjut?",
           "a": "Gunakan formulir kemitraan untuk menjelaskan organisasi dan tujuan diskusi. Informasi yang dapat dibagikan akan ditentukan berdasarkan kebutuhan pembahasan dan ketersediaan dokumen."
         }
-      ]
+      ],
+      "faqTitle": "Pertanyaan yang sering diajukan"
     },
     "partnerships": {
       "seoTitle": "Kemitraan Pengembangan Datacenter — Jalaranu",
@@ -462,6 +463,38 @@
       "h1": "Pemberitahuan Privasi",
       "body": [
         "Pemberitahuan Privasi ini akan diperbarui sebelum formulir kontak diluncurkan. Halaman ini akan menjelaskan pengelola data, tujuan pemrosesan, penyedia layanan, retensi, serta kanal permintaan terkait data Anda setelah praktiknya ditetapkan."
+      ],
+      "sections": [
+        {
+          "title": "Ruang lingkup pemberitahuan ini",
+          "body": [
+            "Halaman ini menjelaskan cara informasi kontak akan dikelola setelah formulir kontak Jalaranu dan proses terkaitnya aktif. Saat ini situs bersifat statis dan tidak mengumpulkan data pribadi dengan sendirinya."
+          ]
+        },
+        {
+          "title": "Informasi yang direncanakan untuk dikumpulkan",
+          "body": [
+            "Ketika formulir kemitraan aktif, informasi yang diminta akan dibatasi pada hal yang diperlukan untuk meninjau permintaan: nama lengkap, nama organisasi, email yang dapat dihubungi, jenis kerja sama, dan pesan yang menjelaskan kebutuhan organisasi."
+          ]
+        },
+        {
+          "title": "Cara informasi akan digunakan",
+          "body": [
+            "Informasi akan digunakan semata-mata untuk meninjau dan menanggapi permintaan kemitraan serta menyiapkan pembahasan lanjutan. Informasi tidak akan digunakan untuk pemasaran tanpa persetujuan dan tidak akan dijual kepada pihak ketiga."
+          ]
+        },
+        {
+          "title": "Penyimpanan, retensi, dan akses",
+          "body": [
+            "Lokasi penyimpanan, masa retensi, kontrol akses, dan penanggung jawab data akan dipublikasikan di halaman ini setelah formulir dan praktik pemrosesannya ditetapkan. Sebelum itu, tidak ada data formulir yang diproses."
+          ]
+        },
+        {
+          "title": "Hak Anda dan kontak",
+          "body": [
+            "Setelah pemrosesan dimulai, Anda dapat meminta informasi tentang data Anda, perbaikan, atau penghapusan melalui kanal kontak yang dipublikasikan di halaman ini. Gunakan formulir kontak pada halaman kemitraan untuk menghubungi tim terkait pemberitahuan ini."
+          ]
+        }
       ]
     },
     "notFound": {
@@ -475,7 +508,8 @@
   "footer": {
     "privacy": "Privasi",
     "contact": "Kontak",
-    "privacyNote": "Pemberitahuan Privasi akan diperbarui mengikuti praktik pengelolaan data yang berlaku."
+    "privacyNote": "Pemberitahuan Privasi akan diperbarui mengikuti praktik pengelolaan data yang berlaku.",
+    "legalHeading": "Hukum"
   },
   "slugs": {
     "technology": "technology",

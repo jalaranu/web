@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "./Button";
 
 const navItems = (nav, locale) => [
@@ -10,6 +10,14 @@ const navItems = (nav, locale) => [
 
 export default function Header({ locale, content, currentPath, equivalentPath }) {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    const onKey = (event) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, []);
 
   const logoHref = `/${locale}/`;
   const otherLocale = locale === "en" ? "id" : "en";
@@ -47,6 +55,11 @@ export default function Header({ locale, content, currentPath, equivalentPath })
               );
             })}
           </ul>
+          <div className="site-header__nav-cta">
+            <Button to={`/${locale}/partnerships/#contact`} variant="primary">
+              {content.nav.primaryCta}
+            </Button>
+          </div>
         </nav>
 
         <div className="site-header__actions">

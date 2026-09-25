@@ -317,7 +317,8 @@
           "q": "How can I obtain more information?",
           "a": "Use the partnership form to introduce your organisation and the purpose of the discussion. Information that can be shared will depend on the needs of the discussion and document availability."
         }
-      ]
+      ],
+      "faqTitle": "Frequently asked questions"
     },
     "partnerships": {
       "seoTitle": "Datacenter Development Partnerships — Jalaranu",
@@ -462,6 +463,38 @@
       "h1": "Privacy Notice",
       "body": [
         "This Privacy Notice will be updated before the contact form is launched. It will explain the operator, the purposes of processing, service providers, retention, and the channel for your data-related requests once the actual practices are established."
+      ],
+      "sections": [
+        {
+          "title": "Scope of this notice",
+          "body": [
+            "This page explains how contact information would be handled once the Jalaranu contact form and related processes are active. The current website is static and does not collect personal data by itself."
+          ]
+        },
+        {
+          "title": "Information we plan to collect",
+          "body": [
+            "When the partnership form becomes active, the information requested will be limited to what is needed to review an enquiry: full name, organisation name, contact email, type of collaboration, and a message describing the organisation's needs."
+          ]
+        },
+        {
+          "title": "How the information would be used",
+          "body": [
+            "The information would be used solely to review and respond to partnership enquiries, and to prepare follow-up discussions. It would not be used for marketing without consent and would not be sold to third parties."
+          ]
+        },
+        {
+          "title": "Storage, retention and access",
+          "body": [
+            "Storage location, retention period, access controls, and the responsible data controller will be published here once the form and its processing practices are established. Until then, no form data is processed."
+          ]
+        },
+        {
+          "title": "Your rights and contact",
+          "body": [
+            "Once processing begins, you will be able to request information about your data, corrections, or deletion through the contact channel published on this page. Use the partnership page contact form to reach the team about this notice."
+          ]
+        }
       ]
     },
     "notFound": {
@@ -475,7 +508,8 @@
   "footer": {
     "privacy": "Privacy",
     "contact": "Contact",
-    "privacyNote": "The Privacy Notice will be updated to reflect actual data-handling practices."
+    "privacyNote": "The Privacy Notice will be updated to reflect actual data-handling practices.",
+    "legalHeading": "Legal"
   },
   "slugs": {
     "technology": "technology",

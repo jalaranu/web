@@ -103,7 +103,13 @@ function Home({ page, locale, content }) {
 
       <div className="brand-band">
         <img
+          className="brand-band__split"
           src="/assets/jalaranu-vivid-split-dark.svg"
+          alt={content.site.logoAlt}
+        />
+        <img
+          className="brand-band__vertical"
+          src="/assets/jalaranu-vivid-logo-dark.svg"
           alt={content.site.logoAlt}
         />
       </div>
@@ -211,22 +217,24 @@ function Validation({ page }) {
           <h2>{page.plan.h2}</h2>
           <p>{page.plan.body}</p>
         </div>
-        <table className="plan-table">
-          <thead>
-            <tr>
-              <th>{page.plan.tableHeaderArea || "Area"}</th>
-              <th>{page.plan.tableHeaderQuestion || "Question"}</th>
-            </tr>
-          </thead>
-          <tbody>
-            {page.plan.table.map((row) => (
-              <tr key={row.area}>
-                <td>{row.area}</td>
-                <td>{row.question}</td>
+        <div className="table-wrap">
+          <table className="plan-table">
+            <thead>
+              <tr>
+                <th>{page.plan.tableHeaderArea || "Area"}</th>
+                <th>{page.plan.tableHeaderQuestion || "Question"}</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {page.plan.table.map((row) => (
+                <tr key={row.area}>
+                  <td>{row.area}</td>
+                  <td>{row.question}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </Section>
 
       <Section>
@@ -266,6 +274,9 @@ function Validation({ page }) {
       </Section>
 
       <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
+        <div className="section-head">
+          <h2>{page.faqTitle}</h2>
+        </div>
         <FAQ items={page.faq} />
       </Section>
     </>
@@ -374,16 +385,28 @@ function About({ page, content }) {
 
 function Privacy({ page }) {
   return (
-    <div className="hero">
-      <div className="container">
-        <h1>{page.h1}</h1>
-        <div className="hero__intro">
-          {page.body.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
-          ))}
+    <>
+      <div className="hero">
+        <div className="container">
+          <h1>{page.h1}</h1>
+          <div className="hero__intro">
+            {page.body.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+      <Section>
+        {page.sections.map((section) => (
+          <div className="privacy-section" key={section.title}>
+            <h2>{section.title}</h2>
+            {section.body.map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        ))}
+      </Section>
+    </>
   );
 }
 
