@@ -52,6 +52,7 @@ legacy paths (all configured via the Cloudflare API).
 | Styling | Vanilla CSS, no framework (design tokens in `src/styles/global.css`, prefix `--jlr-`) |
 | Fonts | Inter, self-hosted woff2 (`static/fonts/`) |
 | Icons | `lucide-react` (UI icons); brand/social logos are local inline SVGs |
+| Service worker | `gatsby-plugin-offline` (Workbox) + `gatsby-plugin-manifest` |
 | Content | Plain JSON (`content/en.json`, `content/id.json`), no CMS |
 | Contact form | Cloudflare Turnstile (captcha) + EmailJS (email) behind a Cloudflare Worker |
 | Edge | Cloudflare Worker `jalaranu-contact` (module format, deployed with `wrangler`) |
@@ -111,6 +112,24 @@ legacy paths (all configured via the Cloudflare API).
   siteverify, EmailJS REST send (with `Origin` header), generic error responses.
 - `.github/workflows/deploy.yml` - build with `GATSBY_TURNSTILE_SITE_KEY` from secrets,
   deploy `public/` to `gh-pages`.
+
+## Offline support and service worker
+
+The site ships a Workbox service worker through `gatsby-plugin-offline` (with
+`gatsby-plugin-manifest` for the web app manifest). The home pages `/en/` and
+`/id/` are precached; every other page and Gatsby asset is cached at runtime, so
+repeat visits and offline browsing work after the first visit. `sw.js` is
+served by GitHub Pages with `max-age=600`, so a deploy takes at most ~10
+minutes to propagate through the CDN.
+
+- `gatsby-browser.js` exports `onServiceWorkerUpdateReady`: when a new worker
+  is waiting, a dark banner ("A new version is available" / "Versi baru
+  tersedia") is shown. "Refresh" posts `SKIP_WAITING` to the waiting worker and
+  reloads; the banner can also be dismissed.
+- Rollback: `gatsby-plugin-remove-serviceworker` is installed as a dependency
+  but intentionally not in `gatsby-config.js`. To drop offline support,
+  replace `gatsby-plugin-offline` with `gatsby-plugin-remove-serviceworker` in
+  the plugin list and redeploy; it unregisters existing workers.
 
 ## Partnership contact form
 

@@ -2398,6 +2398,61 @@ p {
   color: var(--jlr-dark-muted);
 }
 
+/* ---------- Service worker update banner ---------- */
+
+.sw-update {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 20px;
+  padding: 12px 24px;
+  background: var(--jlr-dark-bg);
+  color: var(--jlr-dark-text);
+  border-top: 1px solid var(--jlr-dark-border);
+  font-size: 0.875rem;
+}
+
+.sw-update__refresh {
+  font-family: var(--jlr-font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 10px 20px;
+  min-height: 40px;
+  border: 1px solid var(--jlr-accent-interactive);
+  background: var(--jlr-accent-interactive);
+  color: var(--jlr-on-accent);
+  cursor: pointer;
+}
+
+.sw-update__refresh:hover {
+  background: var(--jlr-accent-interactive-hover);
+  border-color: var(--jlr-accent-interactive-hover);
+}
+
+.sw-update__dismiss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--jlr-dark-border);
+  background: transparent;
+  color: var(--jlr-dark-text);
+  cursor: pointer;
+}
+
+.sw-update__dismiss:hover {
+  background: var(--jlr-dark-text);
+  color: var(--jlr-dark-bg);
+}
+
 /* ---------- Utility ---------- */
 
 .jlr-mark {
