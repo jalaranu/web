@@ -72,7 +72,10 @@ export default {
 
       const sendRes = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Origin': 'https://jalaranu.org',
+        },
         body: JSON.stringify({
           lib_version: '4.4.1',
           user_id: env.EMAILJS_PUBLIC_KEY,
