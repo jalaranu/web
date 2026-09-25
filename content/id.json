@@ -5,7 +5,7 @@
   "site": {
     "title": "Jalaranu",
     "tagline": "Proyek datacenter bawah danau",
-    "description": "Jelajahi proyek datacenter bawah danau Jalaranu, pendekatan validasi, dan peluang kemitraan untuk pengembangan infrastruktur komputasi di Indonesia.",
+    "description": "Jelajahi proyek datacenter bawah danau pertama di dunia: pendekatan validasi Jalaranu dan peluang kemitraan untuk infrastruktur komputasi di Indonesia.",
     "footerTagline": "Jalaranu - pengembangan proyek datacenter bawah danau untuk ketahanan digital Indonesia. Proyek ini mengevaluasi efisiensi termal, keandalan operasi, dan dampak lingkungan melalui program bertahap berbasis bukti sebelum ada komitmen konstruksi.",
     "copyright": "Jalaranu",
     "logoAlt": "Jalaranu",
@@ -45,12 +45,12 @@
   "pages": {
     "home": {
       "seoTitle": "Jalaranu | Proyek Datacenter Bawah Danau",
-      "seoDescription": "Jelajahi proyek datacenter bawah danau Jalaranu, pendekatan validasi, dan peluang kemitraan untuk pengembangan infrastruktur komputasi di Indonesia.",
+      "seoDescription": "Jelajahi proyek datacenter bawah danau pertama di dunia: pendekatan validasi Jalaranu dan peluang kemitraan untuk infrastruktur komputasi di Indonesia.",
       "hero": {
         "eyebrow": "Proyek datacenter bawah danau",
         "h1": "Infrastruktur komputasi **bawah danau** untuk ==ketahanan digital Indonesia==.",
         "intro": [
-          "Jalaranu mengembangkan proyek datacenter modular bawah danau. Fokusnya adalah menguji **efisiensi termal, keandalan operasi**, dan kelayakan penerapannya dalam konteks Indonesia.",
+          "Jalaranu mengembangkan datacenter bawah danau modular ramah lingkungan pertama di dunia untuk mengevaluasi efisiensi termal, keandalan operasi, dan kelayakan penerapan di Indonesia.",
           "Kami membuka ruang kolaborasi bagi investor, institusi, dan mitra teknologi untuk membangun dasar pengembangan yang terukur."
         ],
         "primaryCta": {

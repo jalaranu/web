@@ -5,7 +5,7 @@
   "site": {
     "title": "Jalaranu",
     "tagline": "Underlake datacenter project",
-    "description": "Explore Jalaranu's underlake datacenter project, validation approach, and partnership opportunities for computing infrastructure in Indonesia.",
+    "description": "Explore the world's first underlake datacenter project: Jalaranu's validation approach and partnership opportunities for computing infrastructure in Indonesia.",
     "footerTagline": "Jalaranu - developing an underlake datacenter project to support Indonesia's digital resilience. The project evaluates thermal efficiency, operational reliability, and environmental effects through a staged, evidence-led program before any commitment to construction.",
     "copyright": "Jalaranu",
     "logoAlt": "Jalaranu",
@@ -45,12 +45,12 @@
   "pages": {
     "home": {
       "seoTitle": "Jalaranu | Underlake Datacenter Project",
-      "seoDescription": "Explore Jalaranu's underlake datacenter project, validation approach, and partnership opportunities for computing infrastructure in Indonesia.",
+      "seoDescription": "Explore the world's first underlake datacenter project: Jalaranu's validation approach and partnership opportunities for computing infrastructure in Indonesia.",
       "hero": {
         "eyebrow": "Underlake datacenter project",
         "h1": "Computing infrastructure **beneath the lake**. Supporting Indonesia's ==digital resilience==.",
         "intro": [
-          "Jalaranu is developing a modular underlake datacenter project. The focus is to evaluate **thermal efficiency, operational reliability**, and the feasibility of deployment in Indonesia.",
+          "Jalaranu is developing the world's first eco-friendly modular underlake datacenter to evaluate thermal efficiency, operational reliability, and deployment feasibility in Indonesia.",
           "We welcome collaboration with investors, institutions, and technology partners to establish a measurable foundation for development."
         ],
         "primaryCta": {
