@@ -78,7 +78,6 @@ export default function Header({ locale, content, currentPath, equivalentPath })
 
   const closeMenu = () => {
     setOpen(false);
-    burgerRef.current?.focus();
   };
 
   const toggleLanguage = () => {
