@@ -1,13 +1,18 @@
 import React from "react";
+import Rich from "./Rich";
 
 export default function FAQ({ items = [] }) {
   return (
     <div className="faq">
       {items.map((item) => (
         <details key={item.q}>
-          <summary>{item.q}</summary>
+          <summary>
+            <Rich text={item.q} />
+          </summary>
           <div className="faq__answer">
-            <p>{item.a}</p>
+            <p>
+              <Rich text={item.a} />
+            </p>
           </div>
         </details>
       ))}

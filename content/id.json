@@ -6,12 +6,19 @@
     "title": "Jalaranu",
     "tagline": "Konsep datacenter bawah danau",
     "description": "Jelajahi konsep datacenter bawah danau Jalaranu, pendekatan validasi, dan peluang kemitraan untuk pengembangan infrastruktur komputasi di Indonesia.",
-    "footerTagline": "Jalaranu — pengembangan konsep datacenter bawah danau untuk ketahanan digital Indonesia.",
+    "footerTagline": "Jalaranu - pengembangan konsep datacenter bawah danau untuk ketahanan digital Indonesia.",
     "copyright": "Jalaranu",
     "logoAlt": "Jalaranu",
     "skipLink": "Langsung ke konten utama",
     "menuToggle": "Buka atau tutup menu",
-    "languageSwitch": "Ganti bahasa ke"
+    "languageSwitch": "Ganti bahasa ke",
+    "carouselPrev": "Slide sebelumnya",
+    "carouselNext": "Slide berikutnya",
+    "carouselPause": "Jeda tampilan",
+    "carouselPlay": "Putar tampilan",
+    "carouselGoTo": "Ke slide",
+    "carouselSlides": "Slide gambar utama",
+    "carouselCredit": "Foto: SiDanau BRIN"
   },
   "nav": {
     "technology": "Teknologi",
@@ -22,13 +29,13 @@
   },
   "pages": {
     "home": {
-      "seoTitle": "Jalaranu — Konsep Datacenter Bawah Danau",
+      "seoTitle": "Jalaranu | Konsep Datacenter Bawah Danau",
       "seoDescription": "Jelajahi konsep datacenter bawah danau Jalaranu, pendekatan validasi, dan peluang kemitraan untuk pengembangan infrastruktur komputasi di Indonesia.",
       "hero": {
         "eyebrow": "Konsep datacenter bawah danau",
-        "h1": "Infrastruktur komputasi bawah danau untuk ketahanan digital Indonesia.",
+        "h1": "Infrastruktur komputasi **bawah danau** untuk ==ketahanan digital Indonesia==.",
         "intro": [
-          "Jalaranu mengembangkan konsep datacenter modular bawah danau. Fokusnya adalah menguji efisiensi termal, keandalan operasi, dan kelayakan penerapannya dalam konteks Indonesia.",
+          "Jalaranu mengembangkan konsep datacenter modular bawah danau. Fokusnya adalah menguji **efisiensi termal, keandalan operasi**, dan kelayakan penerapannya dalam konteks Indonesia.",
           "Kami membuka ruang kolaborasi bagi investor, institusi, dan mitra teknologi untuk membangun dasar pengembangan yang terukur."
         ],
         "primaryCta": {
@@ -40,10 +47,22 @@
           "to": "/id/technology/"
         },
         "caption": "Ilustrasi konsep. Konfigurasi akhir mengikuti hasil studi dan rekayasa.",
-        "imageAlt": "Ilustrasi konsep Jalaranu: modul datacenter di bawah permukaan danau yang terhubung ke fasilitas pendukung di darat melalui jalur daya dan komunikasi yang terlindung."
+        "imageAlt": "Ilustrasi konsep Jalaranu: modul datacenter di bawah permukaan danau yang terhubung ke fasilitas pendukung di darat melalui jalur daya dan komunikasi yang terlindung.",
+        "slides": [
+          {
+            "src": "/assets/hero/danau-batur.webp",
+            "alt": "Danau Batur, Bali, dilihat dari tepian vulkaniknya",
+            "credit": "Danau Batur"
+          },
+          {
+            "src": "/assets/hero/danau-matano.webp",
+            "alt": "Danau Matano, Sulawesi Selatan, danau purba berair dalam",
+            "credit": "Danau Matano"
+          }
+        ]
       },
       "why": {
-        "h2": "Mengapa mempertimbangkan bawah danau?",
+        "h2": "Mengapa mempertimbangkan **bawah danau**?",
         "body": [
           "Penempatan bawah danau menawarkan pendekatan yang berbeda terhadap pengelolaan panas, ruang fisik, dan akses ke infrastruktur. Manfaatnya perlu dinilai bersama konsekuensi pemasangan, pemeliharaan, konektivitas, dan pemulihan.",
           "Pertanyaan utamanya: pada kondisi apa pendekatan ini lebih layak daripada datacenter darat dengan pendinginan berbasis air?",
@@ -52,15 +71,15 @@
         "focuses": [
           {
             "title": "Kinerja termal",
-            "body": "Menilai perpindahan panas dan kebutuhan energi pada kondisi lokasi dan beban yang ditentukan."
+            "body": "**Menilai perpindahan panas** dan kebutuhan energi pada kondisi lokasi dan beban yang ditentukan."
           },
           {
             "title": "Keandalan operasi",
-            "body": "Menguji bagaimana sistem dipantau, dipelihara, dan dipulihkan ketika terjadi gangguan."
+            "body": "**Menguji bagaimana sistem dipantau, dipelihara, dan dipulihkan** ketika terjadi gangguan."
           },
           {
             "title": "Kelayakan menyeluruh",
-            "body": "Membandingkan biaya sepanjang umur fasilitas serta tanggung jawab terhadap lingkungan."
+            "body": "**Membandingkan biaya sepanjang umur fasilitas** serta tanggung jawab terhadap lingkungan."
           }
         ],
         "cta": {
@@ -131,7 +150,7 @@
         }
       },
       "closing": {
-        "h2": "Apa yang perlu dibuktikan agar konsep ini relevan bagi organisasi Anda?",
+        "h2": "Apa yang perlu ==dibuktikan agar konsep ini relevan== bagi organisasi Anda?",
         "body": "Mari mulai dari kebutuhan, ruang lingkup evaluasi, dan kontribusi yang dapat dibangun bersama.",
         "cta": {
           "label": "Diskusikan Kemitraan",
@@ -140,11 +159,11 @@
       }
     },
     "technology": {
-      "seoTitle": "Teknologi Datacenter Bawah Danau — Jalaranu",
+      "seoTitle": "Teknologi Datacenter Bawah Danau | Jalaranu",
       "seoDescription": "Pelajari konsep sistem Jalaranu, dari fasilitas darat dan modul komputasi hingga pengelolaan panas, konektivitas, serta pemulihan.",
       "hero": {
         "h1": "Rekayasa yang dimulai dari pertanyaan yang tepat.",
-        "body": "Jalaranu mengeksplorasi datacenter bawah danau sebagai satu sistem utuh. Penempatan modul perlu dievaluasi bersama daya, jaringan, pengelolaan panas, pemeliharaan, dan pemulihannya."
+        "body": "Jalaranu mengeksplorasi datacenter bawah danau sebagai **satu sistem utuh**. Penempatan modul perlu dievaluasi bersama daya, jaringan, pengelolaan panas, pemeliharaan, dan pemulihannya."
       },
       "architecture": {
         "h2": "Dari antarmuka darat ke lingkungan bawah air.",
@@ -162,23 +181,23 @@
         "items": [
           {
             "title": "Pengelolaan panas",
-            "body": "Kondisi air, perpindahan panas, beban komputasi, dan energi yang diperlukan sistem pendukung."
+            "body": "**Kondisi air, perpindahan panas**, beban komputasi, dan energi yang diperlukan sistem pendukung."
           },
           {
             "title": "Integritas modul",
-            "body": "Kemampuan struktur, sambungan, serta antarmuka sistem menghadapi kondisi operasi yang ditetapkan."
+            "body": "**Kemampuan struktur, sambungan, serta antarmuka sistem** menghadapi kondisi operasi yang ditetapkan."
           },
           {
             "title": "Daya dan konektivitas",
-            "body": "Kebutuhan layanan, pilihan redundansi, perilaku ketika jalur terganggu, dan prosedur pemulihan."
+            "body": "**Kebutuhan layanan, pilihan redundansi**, perilaku ketika jalur terganggu, dan prosedur pemulihan."
           },
           {
             "title": "Pemeliharaan",
-            "body": "Apa yang dapat dipantau dari jarak jauh, kapan intervensi diperlukan, serta bagaimana modul ditangani atau diangkat."
+            "body": "**Apa yang dapat dipantau dari jarak jauh**, kapan intervensi diperlukan, serta bagaimana modul ditangani atau diangkat."
           },
           {
             "title": "Keamanan dan kendali",
-            "body": "Akses administratif, pemantauan kejadian, pengelolaan kunci, tanggung jawab operator, serta perlindungan antarmuka fisik dan digital."
+            "body": "**Akses administratif, pemantauan kejadian, pengelolaan kunci**, tanggung jawab operator, serta perlindungan antarmuka fisik dan digital."
           }
         ]
       },
@@ -202,11 +221,11 @@
       }
     },
     "validation": {
-      "seoTitle": "Validasi Teknis, Ekonomi, dan Lingkungan — Jalaranu",
+      "seoTitle": "Validasi Teknis, Ekonomi, dan Lingkungan | Jalaranu",
       "seoDescription": "Kenali pertanyaan pengujian dan pendekatan evaluasi Jalaranu untuk menilai kelayakan datacenter bawah danau secara bertahap.",
       "hero": {
         "h1": "Bukti menjadi dasar untuk melangkah.",
-        "body": "Kelayakan datacenter bawah danau perlu dinilai secara teknis, ekonomi, dan lingkungan. Pendekatan validasi Jalaranu berfokus pada pertanyaan yang dapat diuji, metode yang dapat dijelaskan, serta hasil yang disampaikan bersama batasannya."
+        "body": "Kelayakan datacenter bawah danau perlu dinilai secara **teknis, ekonomi, dan lingkungan**. Pendekatan validasi Jalaranu berfokus pada pertanyaan yang dapat diuji, metode yang dapat dijelaskan, serta hasil yang disampaikan bersama batasannya."
       },
       "status": {
         "h2": "Status pengembangan",
@@ -291,41 +310,41 @@
       "faq": [
         {
           "q": "Apakah Jalaranu sudah beroperasi secara komersial?",
-          "a": "Website ini memperkenalkan konsep dan peluang pengembangan Jalaranu. Ketersediaan layanan komersial akan disampaikan secara terpisah setelah kesiapan fasilitas dan layanannya dikonfirmasi."
+          "a": "**Website ini memperkenalkan konsep dan peluang pengembangan Jalaranu.** Ketersediaan layanan komersial akan disampaikan secara terpisah setelah kesiapan fasilitas dan layanannya dikonfirmasi."
         },
         {
           "q": "Mengapa menggunakan danau?",
-          "a": "Danau merupakan konteks penempatan yang sedang dieksplorasi. Kesesuaiannya perlu dinilai berdasarkan kondisi perairan, akses, energi, jaringan, lingkungan, dan kebutuhan penggunaan. Pemilihan danau tidak dengan sendirinya membuktikan keunggulan terhadap lokasi atau desain lain."
+          "a": "**Danau merupakan konteks penempatan yang sedang dieksplorasi.** Kesesuaiannya perlu dinilai berdasarkan kondisi perairan, akses, energi, jaringan, lingkungan, dan kebutuhan penggunaan. Pemilihan danau tidak dengan sendirinya membuktikan keunggulan terhadap lokasi atau desain lain."
         },
         {
           "q": "Apakah pendinginannya gratis atau tanpa energi?",
-          "a": "Potensi pemanfaatan lingkungan perairan harus dinilai bersama sistem perpindahan panas dan kebutuhan energi seluruh fasilitas. Jalaranu belum menyatakan penghematan tertentu tanpa hasil pengukuran dan pembanding yang jelas."
+          "a": "**Potensi pemanfaatan lingkungan perairan harus dinilai bersama sistem perpindahan panas dan kebutuhan energi seluruh fasilitas.** Jalaranu belum menyatakan penghematan tertentu tanpa hasil pengukuran dan pembanding yang jelas."
         },
         {
           "q": "Bagaimana jika modul memerlukan perbaikan?",
-          "a": "Kemampuan pemantauan, penanganan gangguan, pengambilan kembali, dan penggantian komponen merupakan bagian dari evaluasi desain. Prosedur rinci akan mengikuti rancangan yang telah diuji serta kebutuhan layanan yang disepakati."
+          "a": "**Kemampuan pemantauan, penanganan gangguan, pengambilan kembali, dan penggantian komponen merupakan bagian dari evaluasi desain.** Prosedur rinci akan mengikuti rancangan yang telah diuji serta kebutuhan layanan yang disepakati."
         },
         {
           "q": "Apakah dapat digunakan untuk data sensitif atau kebutuhan pertahanan?",
-          "a": "Kesesuaian penggunaan perlu dievaluasi berdasarkan klasifikasi data, arsitektur sistem, kontrol akses, tata kelola, dan persyaratan institusi terkait. Website ini tidak menyatakan persetujuan atau kesiapan untuk menangani informasi dengan klasifikasi tertentu."
+          "a": "**Kesesuaian penggunaan perlu dievaluasi berdasarkan klasifikasi data, arsitektur sistem, kontrol akses, tata kelola, dan persyaratan institusi terkait.** Website ini tidak menyatakan persetujuan atau kesiapan untuk menangani informasi dengan klasifikasi tertentu."
         },
         {
           "q": "Bagaimana dampak terhadap danau dinilai?",
-          "a": "Pendekatan kajian mencakup kondisi awal, perubahan yang perlu dipantau, serta evaluasi selama pengujian dan pada akhir masa pakai. Ruang lingkupnya harus disesuaikan dengan lokasi dan kegiatan yang direncanakan."
+          "a": "**Pendekatan kajian mencakup kondisi awal, perubahan yang perlu dipantau, serta evaluasi selama pengujian dan pada akhir masa pakai.** Ruang lingkupnya harus disesuaikan dengan lokasi dan kegiatan yang direncanakan."
         },
         {
           "q": "Bagaimana memperoleh informasi lebih lanjut?",
-          "a": "Gunakan formulir kemitraan untuk menjelaskan organisasi dan tujuan diskusi. Informasi yang dapat dibagikan akan ditentukan berdasarkan kebutuhan pembahasan dan ketersediaan dokumen."
+          "a": "**Gunakan formulir kemitraan untuk menjelaskan organisasi dan tujuan diskusi.** Informasi yang dapat dibagikan akan ditentukan berdasarkan kebutuhan pembahasan dan ketersediaan dokumen."
         }
       ],
       "faqTitle": "Pertanyaan yang sering diajukan"
     },
     "partnerships": {
-      "seoTitle": "Kemitraan Pengembangan Datacenter — Jalaranu",
+      "seoTitle": "Kemitraan Pengembangan Datacenter | Jalaranu",
       "seoDescription": "Jajaki kerja sama bersama Jalaranu sebagai investor, institusi pemerintah atau pertahanan, mitra industri, maupun mitra riset.",
       "hero": {
         "h1": "Mulai dari kebutuhan. Sepakati apa yang perlu dibuktikan.",
-        "body": "Jalaranu membuka percakapan dengan pihak yang ingin menilai, mengembangkan, atau mendukung konsep datacenter bawah danau. Kerja sama dimulai dengan tujuan yang jelas, lingkup yang realistis, dan hasil yang dapat dievaluasi."
+        "body": "Jalaranu membuka percakapan dengan pihak yang ingin menilai, mengembangkan, atau mendukung konsep datacenter bawah danau. Kerja sama dimulai dengan **tujuan yang jelas, lingkup yang realistis, hasil yang dapat dievaluasi**."
       },
       "tracks": [
         {
@@ -395,6 +414,7 @@
           "org": "Nama organisasi",
           "email": "Email yang dapat dihubungi",
           "type": "Jenis kerja sama",
+          "selectPlaceholder": "Pilih jenis kerja sama",
           "typeOptions": [
             "Investor",
             "Pemerintah atau institusi pertahanan",
@@ -408,16 +428,17 @@
         },
         "success": "Terima kasih. Permintaan diskusi Anda telah diterima. Tim Jalaranu akan meninjau informasi yang Anda kirimkan.",
         "error": "Permintaan belum terkirim. Silakan coba lagi.",
+        "unavailable": "Formulir diskusi belum aktif. Tidak ada data yang dikirimkan dari halaman ini. Kanal kontak akan diumumkan setelah tersedia.",
         "requiredError": "Lengkapi kolom ini.",
         "emailError": "Masukkan alamat email yang valid."
       }
     },
     "about": {
-      "seoTitle": "Tentang Jalaranu — Identitas dan Pengembangan",
+      "seoTitle": "Tentang Jalaranu | Identitas dan Pengembangan",
       "seoDescription": "Kenali Jalaranu, cerita identitasnya, prinsip pengembangan, dan pihak yang bertanggung jawab atas proyek datacenter bawah danau.",
       "hero": {
         "h1": "Berakar pada identitas Indonesia. Dibangun melalui pembuktian.",
-        "body": "Jalaranu adalah inisiatif pengembangan konsep datacenter bawah danau. Kami ingin mempertemukan rekayasa, kebutuhan infrastruktur, serta pemahaman terhadap lingkungan dalam satu proses pengembangan yang terukur."
+        "body": "Jalaranu adalah inisiatif pengembangan konsep datacenter bawah danau. Kami ingin mempertemukan **rekayasa, kebutuhan infrastruktur, serta pemahaman terhadap lingkungan** dalam satu proses pengembangan yang terukur."
       },
       "story": {
         "h2": "Pengetahuan yang dijaga.",
@@ -458,7 +479,7 @@
       }
     },
     "privacy": {
-      "seoTitle": "Privasi — Jalaranu",
+      "seoTitle": "Privasi | Jalaranu",
       "seoDescription": "Pemberitahuan Privasi Jalaranu akan menjelaskan pengelolaan data formulir kontak setelah praktiknya ditetapkan.",
       "h1": "Pemberitahuan Privasi",
       "body": [
@@ -501,7 +522,7 @@
       "h1": "Halaman tidak ditemukan",
       "body": "Halaman yang Anda cari tidak tersedia atau telah dipindahkan.",
       "back": "Kembali ke Beranda",
-      "seoTitle": "Halaman Tidak Ditemukan — Jalaranu",
+      "seoTitle": "Halaman Tidak Ditemukan | Jalaranu",
       "seoDescription": "Halaman yang Anda cari tidak dapat ditemukan. Kembali ke situs Jalaranu."
     }
   },

@@ -5,45 +5,59 @@ import Button from "../components/Button";
 import CardGrid from "../components/CardGrid";
 import FAQ from "../components/FAQ";
 import ContactForm from "../components/ContactForm";
+import Rich from "../components/Rich";
+import HeroCarousel from "../components/HeroCarousel";
 
 function Home({ page, locale, content }) {
   const hero = page.hero;
   return (
     <>
-      <div className="hero">
-        <div className="container">
+      <div className="hero hero--cinematic dark">
+        <HeroCarousel slides={hero.slides} labels={content.site} />
+        <div className="container hero__content">
           <span className="overline">{hero.eyebrow}</span>
-          <h1>{hero.h1}</h1>
+          <h1>
+            <Rich text={hero.h1} />
+          </h1>
           <div className="hero__intro">
             {hero.intro.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+              <p key={index}>
+                <Rich text={paragraph} />
+              </p>
             ))}
           </div>
           <div className="hero__actions">
             <Button to={hero.primaryCta.to} variant="primary">
               {hero.primaryCta.label}
             </Button>
-            <Button to={hero.secondaryCta.to} variant="secondary">
+            <Button to={hero.secondaryCta.to} variant="secondary-on-dark">
               {hero.secondaryCta.label}
             </Button>
           </div>
-          <figure className="concept-diagram">
-            <img
-              src={`/assets/matano-site-${locale}.svg`}
-              alt={hero.imageAlt}
-            />
-            <figcaption className="caption concept-diagram__caption">
-              {hero.caption}
-            </figcaption>
-          </figure>
         </div>
       </div>
 
       <Section>
+        <figure className="concept-diagram">
+          <img
+            src={`/assets/matano-site-${locale}.svg`}
+            alt={hero.imageAlt}
+          />
+          <figcaption className="caption concept-diagram__caption">
+            {hero.caption}
+          </figcaption>
+        </figure>
+      </Section>
+
+      <Section>
         <div className="section-head">
-          <h2>{page.why.h2}</h2>
+          <h2>
+            <Rich text={page.why.h2} />
+          </h2>
           {page.why.body.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <p key={index}>
+              <Rich text={paragraph} />
+            </p>
           ))}
         </div>
         <CardGrid items={page.why.focuses} />
@@ -56,8 +70,12 @@ function Home({ page, locale, content }) {
 
       <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
         <div className="section-head">
-          <h2>{page.system.h2}</h2>
-          <p>{page.system.body}</p>
+          <h2>
+            <Rich text={page.system.h2} />
+          </h2>
+          <p>
+            <Rich text={page.system.body} />
+          </p>
         </div>
         <CardGrid items={page.system.items} />
         <div className="cta-row">
@@ -69,9 +87,13 @@ function Home({ page, locale, content }) {
 
       <Section>
         <div className="section-head">
-          <h2>{page.validation.h2}</h2>
+          <h2>
+            <Rich text={page.validation.h2} />
+          </h2>
           {page.validation.body.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <p key={index}>
+              <Rich text={paragraph} />
+            </p>
           ))}
         </div>
         <Button to={page.validation.cta.to} variant="secondary">
@@ -81,7 +103,9 @@ function Home({ page, locale, content }) {
 
       <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
         <div className="section-head">
-          <h2>{page.partnerships.h2}</h2>
+          <h2>
+            <Rich text={page.partnerships.h2} />
+          </h2>
         </div>
         <CardGrid items={page.partnerships.tracks} />
         <div className="cta-row">
@@ -93,8 +117,12 @@ function Home({ page, locale, content }) {
 
       <div className="section closing dark">
         <div className="container">
-          <h2 className="closing__h2">{page.closing.h2}</h2>
-          <p>{page.closing.body}</p>
+          <h2 className="closing__h2">
+            <Rich text={page.closing.h2} />
+          </h2>
+          <p>
+            <Rich text={page.closing.body} />
+          </p>
           <Button to={page.closing.cta.to} variant="primary">
             {page.closing.cta.label}
           </Button>
@@ -122,18 +150,26 @@ function Technology({ page, locale }) {
     <>
       <div className="hero">
         <div className="container">
-          <h1 style={{ fontSize: "var(--jlr-fs-h1)" }}>{page.hero.h1}</h1>
+          <h1 style={{ fontSize: "var(--jlr-fs-h1)" }}>
+            <Rich text={page.hero.h1} />
+          </h1>
           <div className="hero__intro">
-            <p>{page.hero.body}</p>
+            <p>
+              <Rich text={page.hero.body} />
+            </p>
           </div>
         </div>
       </div>
 
       <Section id={page.architecture.anchor}>
         <div className="section-head">
-          <h2>{page.architecture.h2}</h2>
+          <h2>
+            <Rich text={page.architecture.h2} />
+          </h2>
           {page.architecture.body.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <p key={index}>
+              <Rich text={paragraph} />
+            </p>
           ))}
         </div>
         <figure className="concept-diagram">
@@ -151,14 +187,20 @@ function Technology({ page, locale }) {
 
       <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
         <div className="section-head">
-          <h2>{page.engineering.h2}</h2>
+          <h2>
+            <Rich text={page.engineering.h2} />
+          </h2>
         </div>
         <ol className="numbered-list">
           {page.engineering.items.map((item) => (
             <li key={item.title} className="numbered-item">
               <div>
-                <h3>{item.title}</h3>
-                <p>{item.body}</p>
+                <h3>
+                  <Rich text={item.title} />
+                </h3>
+                <p>
+                  <Rich text={item.body} />
+                </p>
               </div>
             </li>
           ))}
@@ -167,18 +209,26 @@ function Technology({ page, locale }) {
 
       <Section>
         <div className="section-head">
-          <h2>{page.comparison.h2}</h2>
+          <h2>
+            <Rich text={page.comparison.h2} />
+          </h2>
           {page.comparison.body.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <p key={index}>
+              <Rich text={paragraph} />
+            </p>
           ))}
         </div>
       </Section>
 
       <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
         <div className="section-head">
-          <h2>{page.scenarios.h2}</h2>
+          <h2>
+            <Rich text={page.scenarios.h2} />
+          </h2>
           {page.scenarios.body.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <p key={index}>
+              <Rich text={paragraph} />
+            </p>
           ))}
         </div>
         <Button to={page.scenarios.cta.to} variant="secondary">
@@ -194,28 +244,40 @@ function Validation({ page }) {
     <>
       <div className="hero">
         <div className="container">
-          <h1 style={{ fontSize: "var(--jlr-fs-h1)" }}>{page.hero.h1}</h1>
+          <h1 style={{ fontSize: "var(--jlr-fs-h1)" }}>
+            <Rich text={page.hero.h1} />
+          </h1>
           <div className="hero__intro">
-            <p>{page.hero.body}</p>
+            <p>
+              <Rich text={page.hero.body} />
+            </p>
           </div>
         </div>
       </div>
 
       <Section>
         <div className="section-head">
-          <h2>{page.status.h2}</h2>
+          <h2>
+            <Rich text={page.status.h2} />
+          </h2>
         </div>
         <ul className="status-list">
           {page.status.items.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li key={index}>
+              <Rich text={item} />
+            </li>
           ))}
         </ul>
       </Section>
 
       <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
         <div className="section-head">
-          <h2>{page.plan.h2}</h2>
-          <p>{page.plan.body}</p>
+          <h2>
+            <Rich text={page.plan.h2} />
+          </h2>
+          <p>
+            <Rich text={page.plan.body} />
+          </p>
         </div>
         <div className="table-wrap">
           <table className="plan-table">
@@ -228,8 +290,12 @@ function Validation({ page }) {
             <tbody>
               {page.plan.table.map((row) => (
                 <tr key={row.area}>
-                  <td>{row.area}</td>
-                  <td>{row.question}</td>
+                  <td>
+                    <Rich text={row.area} />
+                  </td>
+                  <td>
+                    <Rich text={row.question} />
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -239,14 +305,20 @@ function Validation({ page }) {
 
       <Section>
         <div className="section-head">
-          <h2>{page.framework.h2}</h2>
+          <h2>
+            <Rich text={page.framework.h2} />
+          </h2>
         </div>
         <ol className="numbered-list">
           {page.framework.steps.map((step) => (
             <li key={step.title} className="numbered-item">
               <div>
-                <h3>{step.title}</h3>
-                <p>{step.body}</p>
+                <h3>
+                  <Rich text={step.title} />
+                </h3>
+                <p>
+                  <Rich text={step.body} />
+                </p>
               </div>
             </li>
           ))}
@@ -256,17 +328,25 @@ function Validation({ page }) {
 
       <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
         <div className="section-head">
-          <h2>{page.environment.h2}</h2>
+          <h2>
+            <Rich text={page.environment.h2} />
+          </h2>
           {page.environment.body.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <p key={index}>
+              <Rich text={paragraph} />
+            </p>
           ))}
         </div>
       </Section>
 
       <Section>
         <div className="section-head">
-          <h2>{page.results.h2}</h2>
-          <p>{page.results.body}</p>
+          <h2>
+            <Rich text={page.results.h2} />
+          </h2>
+          <p>
+            <Rich text={page.results.body} />
+          </p>
         </div>
         <Button to={page.results.cta.to} variant="secondary">
           {page.results.cta.label}
@@ -275,7 +355,9 @@ function Validation({ page }) {
 
       <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
         <div className="section-head">
-          <h2>{page.faqTitle}</h2>
+          <h2>
+            <Rich text={page.faqTitle} />
+          </h2>
         </div>
         <FAQ items={page.faq} />
       </Section>
@@ -288,9 +370,13 @@ function Partnerships({ page, locale }) {
     <>
       <div className="hero">
         <div className="container">
-          <h1 style={{ fontSize: "var(--jlr-fs-h1)" }}>{page.hero.h1}</h1>
+          <h1 style={{ fontSize: "var(--jlr-fs-h1)" }}>
+            <Rich text={page.hero.h1} />
+          </h1>
           <div className="hero__intro">
-            <p>{page.hero.body}</p>
+            <p>
+              <Rich text={page.hero.body} />
+            </p>
           </div>
         </div>
       </div>
@@ -298,11 +384,15 @@ function Partnerships({ page, locale }) {
       <Section>
         {page.tracks.map((track) => (
           <div className="track" id={track.id} key={track.id}>
-            <h2>{track.h2}</h2>
+            <h2>
+              <Rich text={track.h2} />
+            </h2>
             {track.body.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+              <p key={index}>
+                <Rich text={paragraph} />
+              </p>
             ))}
-            <Button to={`#contact?type=${track.cta.formPreset}`} variant="secondary">
+            <Button to={`?type=${track.cta.formPreset}#contact`} variant="secondary">
               {track.cta.label}
             </Button>
           </div>
@@ -311,13 +401,17 @@ function Partnerships({ page, locale }) {
 
       <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
         <div className="section-head">
-          <h2>{page.process.h2}</h2>
+          <h2>
+            <Rich text={page.process.h2} />
+          </h2>
         </div>
         <ol className="numbered-list">
           {page.process.steps.map((step) => (
             <li key={step} className="numbered-item">
               <div>
-                <p>{step}</p>
+                <p>
+                  <Rich text={step} />
+                </p>
               </div>
             </li>
           ))}
@@ -326,8 +420,12 @@ function Partnerships({ page, locale }) {
 
       <Section id="contact">
         <div className="section-head">
-          <h2>{page.contact.h2}</h2>
-          <p>{page.contact.body}</p>
+          <h2>
+            <Rich text={page.contact.h2} />
+          </h2>
+          <p>
+            <Rich text={page.contact.body} />
+          </p>
         </div>
         <ContactForm contact={page.contact} privacyPath={`/${locale}/privacy/`} />
       </Section>
@@ -340,16 +438,22 @@ function About({ page, content }) {
     <>
       <div className="hero">
         <div className="container">
-          <h1 style={{ fontSize: "var(--jlr-fs-h1)" }}>{page.hero.h1}</h1>
+          <h1 style={{ fontSize: "var(--jlr-fs-h1)" }}>
+            <Rich text={page.hero.h1} />
+          </h1>
           <div className="hero__intro">
-            <p>{page.hero.body}</p>
+            <p>
+              <Rich text={page.hero.body} />
+            </p>
           </div>
         </div>
       </div>
 
       <Section>
         <div className="section-head">
-          <h2>{page.story.h2}</h2>
+          <h2>
+            <Rich text={page.story.h2} />
+          </h2>
         </div>
         <img
           className="about-mark"
@@ -358,22 +462,30 @@ function About({ page, content }) {
         />
         <div className="prose">
           {page.story.body.map((paragraph, index) => (
-            <p key={index}>{paragraph}</p>
+            <p key={index}>
+              <Rich text={paragraph} />
+            </p>
           ))}
         </div>
       </Section>
 
       <Section className="section--alt" style={{ background: "var(--jlr-surface-alt)" }}>
         <div className="section-head">
-          <h2>{page.principles.h2}</h2>
+          <h2>
+            <Rich text={page.principles.h2} />
+          </h2>
         </div>
         <CardGrid items={page.principles.items} />
       </Section>
 
       <Section>
         <div className="section-head">
-          <h2>{page.team.h2}</h2>
-          <p>{page.team.body}</p>
+          <h2>
+            <Rich text={page.team.h2} />
+          </h2>
+          <p>
+            <Rich text={page.team.body} />
+          </p>
         </div>
         <Button to={page.team.cta.to} variant="secondary">
           {page.team.cta.label}
@@ -388,10 +500,14 @@ function Privacy({ page }) {
     <>
       <div className="hero">
         <div className="container">
-          <h1>{page.h1}</h1>
+          <h1>
+            <Rich text={page.h1} />
+          </h1>
           <div className="hero__intro">
             {page.body.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+              <p key={index}>
+                <Rich text={paragraph} />
+              </p>
             ))}
           </div>
         </div>
@@ -399,9 +515,13 @@ function Privacy({ page }) {
       <Section>
         {page.sections.map((section) => (
           <div className="privacy-section" key={section.title}>
-            <h2>{section.title}</h2>
+            <h2>
+              <Rich text={section.title} />
+            </h2>
             {section.body.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
+              <p key={index}>
+                <Rich text={paragraph} />
+              </p>
             ))}
           </div>
         ))}
@@ -414,9 +534,13 @@ function NotFound({ page, locale }) {
   return (
     <div className="hero">
       <div className="container">
-        <h1>{page.h1}</h1>
+        <h1>
+          <Rich text={page.h1} />
+        </h1>
         <div className="hero__intro">
-          <p>{page.body}</p>
+          <p>
+            <Rich text={page.body} />
+          </p>
         </div>
         <Button to={`/${locale}/`} variant="primary">
           {page.back}
@@ -477,20 +601,27 @@ export function Head(props) {
   const seoDescription = page.seoDescription || content.site.description;
   const canonical = `${siteUrl}${currentPath}`;
   const alternate = `${siteUrl}${equivalentPath}`;
+  const isNotFound = pageKey === "notFound";
+  const xDefault = `${siteUrl}${locale === "en" ? currentPath : equivalentPath}`;
 
   return (
     <>
       <html lang={locale} />
       <title>{seoTitle}</title>
       <meta name="description" content={seoDescription} />
-      <link rel="canonical" href={canonical} />
-      <link rel="alternate" hreflang={locale} href={canonical} />
-      <link rel="alternate" hreflang={locale === "en" ? "id" : "en"} href={alternate} />
-      <link rel="alternate" hreflang="x-default" href={`${siteUrl}/en/`} />
+      {isNotFound ? <meta name="robots" content="noindex,follow" /> : null}
+      {!isNotFound ? <link rel="canonical" href={canonical} /> : null}
+      {!isNotFound ? <link rel="alternate" hreflang={locale} href={canonical} /> : null}
+      {!isNotFound ? (
+        <link rel="alternate" hreflang={locale === "en" ? "id" : "en"} href={alternate} />
+      ) : null}
+      {!isNotFound ? (
+        <link rel="alternate" hreflang="x-default" href={xDefault} />
+      ) : null}
       <meta property="og:title" content={seoTitle} />
       <meta property="og:description" content={seoDescription} />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={canonical} />
+      {!isNotFound ? <meta property="og:url" content={canonical} /> : null}
       <meta property="og:locale" content={locale === "en" ? "en_US" : "id_ID"} />
       <meta property="og:site_name" content={content.site.title} />
     </>

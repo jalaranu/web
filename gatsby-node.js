@@ -20,6 +20,17 @@ const pageKeys = [
   "notFound",
 ];
 
+const slimContent = (content, pageKey) => ({
+  locale: content.locale,
+  langLabel: content.langLabel,
+  default: content.default,
+  slugs: content.slugs,
+  site: content.site,
+  nav: content.nav,
+  footer: content.footer,
+  pages: { [pageKey]: content.pages[pageKey] },
+});
+
 const slugFor = (locale, pageKey, content) => {
   if (pageKey === "home") return `/${locale}/`;
   if (pageKey === "notFound") return `/${locale}/404/`;
@@ -50,7 +61,7 @@ exports.createPages = async ({ actions }) => {
         context: {
           locale,
           pageKey,
-          content,
+          content: slimContent(content, pageKey),
           currentPath,
           equivalentPath,
           siteUrl: siteConfig.siteMetadata.siteUrl,

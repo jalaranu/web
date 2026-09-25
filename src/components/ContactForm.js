@@ -9,13 +9,12 @@ const PRESET_TO_OPTION = {
   research: 3,
 };
 
-function readHashPreset() {
+const FIELD_ORDER = ["name", "org", "email", "type", "message"];
+
+function readSearchPreset() {
   if (typeof window === "undefined") return null;
-  const hash = window.location.hash || "";
-  const queryIndex = hash.indexOf("?");
-  if (queryIndex === -1) return null;
-  const query = hash.slice(queryIndex + 1);
-  const params = new URLSearchParams(query);
+  const search = window.location.search || "";
+  const params = new URLSearchParams(search);
   const type = params.get("type");
   if (!type) return null;
   return PRESET_TO_OPTION[type] ?? null;
@@ -36,7 +35,7 @@ export default function ContactForm({ contact, privacyPath }) {
 
   useEffect(() => {
     const applyPreset = () => {
-      const presetIndex = readHashPreset();
+      const presetIndex = readSearchPreset();
       if (presetIndex !== null) {
         setValues((previous) => ({
           ...previous,
@@ -45,9 +44,32 @@ export default function ContactForm({ contact, privacyPath }) {
       }
     };
     applyPreset();
-    window.addEventListener("hashchange", applyPreset);
-    return () => window.removeEventListener("hashchange", applyPreset);
+
+    const timer = window.setTimeout(() => {
+      if (window.location.hash !== "#contact") return;
+      const target = document.getElementById("contact");
+      if (!target) return;
+      const rect = target.getBoundingClientRect();
+      const inViewport = rect.top < window.innerHeight && rect.bottom > 0;
+      if (!inViewport) target.scrollIntoView();
+    }, 300);
+    return () => window.clearTimeout(timer);
   }, [fields.typeOptions]);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (!window.JLR_FORM_ENDPOINT) {
+      setStatus("unavailable");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const firstError = FIELD_ORDER.find((key) => errors[key]);
+    if (!firstError) return;
+    const element = document.getElementById(`contact-${firstError}`);
+    if (element) element.focus();
+  }, [errors]);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -73,6 +95,8 @@ export default function ContactForm({ contact, privacyPath }) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    if (status === "unavailable") return;
+
     const nextErrors = validate();
     setErrors(nextErrors);
     if (Object.keys(nextErrors).length > 0) {
@@ -82,7 +106,7 @@ export default function ContactForm({ contact, privacyPath }) {
 
     const endpoint = typeof window !== "undefined" ? window.JLR_FORM_ENDPOINT : null;
     if (!endpoint) {
-      setStatus("error");
+      setStatus("unavailable");
       return;
     }
 
@@ -123,6 +147,8 @@ export default function ContactForm({ contact, privacyPath }) {
           autoComplete="name"
           value={values.name}
           onChange={handleChange}
+          required
+          aria-required="true"
           aria-invalid={errors.name ? "true" : undefined}
           aria-describedby={errors.name ? "contact-name-error" : undefined}
         />
@@ -145,6 +171,8 @@ export default function ContactForm({ contact, privacyPath }) {
           autoComplete="organization"
           value={values.org}
           onChange={handleChange}
+          required
+          aria-required="true"
           aria-invalid={errors.org ? "true" : undefined}
           aria-describedby={errors.org ? "contact-org-error" : undefined}
         />
@@ -167,6 +195,8 @@ export default function ContactForm({ contact, privacyPath }) {
           autoComplete="email"
           value={values.email}
           onChange={handleChange}
+          required
+          aria-required="true"
           aria-invalid={errors.email ? "true" : undefined}
           aria-describedby={errors.email ? "contact-email-error" : undefined}
         />
@@ -187,10 +217,12 @@ export default function ContactForm({ contact, privacyPath }) {
           name="type"
           value={values.type}
           onChange={handleChange}
+          required
+          aria-required="true"
           aria-invalid={errors.type ? "true" : undefined}
           aria-describedby={errors.type ? "contact-type-error" : undefined}
         >
-          <option value="">—</option>
+          <option value="">{fields.selectPlaceholder}</option>
           {fields.typeOptions.map((option) => (
             <option key={option} value={option}>
               {option}
@@ -215,8 +247,14 @@ export default function ContactForm({ contact, privacyPath }) {
           value={values.message}
           placeholder={fields.messagePlaceholder}
           onChange={handleChange}
+          required
+          aria-required="true"
           aria-invalid={errors.message ? "true" : undefined}
-          aria-describedby={errors.message ? "contact-message-error" : "contact-message-help"}
+          aria-describedby={
+            errors.message
+              ? "contact-message-help contact-message-error"
+              : "contact-message-help"
+          }
         />
         {errors.message ? (
           <span className="form__error" id="contact-message-error">
@@ -226,10 +264,19 @@ export default function ContactForm({ contact, privacyPath }) {
         <span className="form__help" id="contact-message-help">{contact.helpText}</span>
       </div>
 
-      <button className="btn btn--primary" type="submit" disabled={status === "submitting"}>
+      <button
+        className="btn btn--primary"
+        type="submit"
+        disabled={status === "submitting" || status === "unavailable"}
+      >
         {status === "submitting" ? "…" : fields.submit}
       </button>
 
+      {status === "unavailable" ? (
+        <div className="form__status form__status--info" role="status">
+          {contact.unavailable}
+        </div>
+      ) : null}
       {status === "error" ? (
         <div className="form__status form__status--error" role="alert">
           {contact.error}

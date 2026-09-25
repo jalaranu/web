@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Button from "./Button";
 
 const navItems = (nav, locale) => [
@@ -10,14 +10,39 @@ const navItems = (nav, locale) => [
 
 export default function Header({ locale, content, currentPath, equivalentPath }) {
   const [open, setOpen] = useState(false);
+  const openRef = useRef(false);
+  const navRef = useRef(null);
+  const burgerRef = useRef(null);
+
+  useEffect(() => {
+    openRef.current = open;
+  }, [open]);
 
   useEffect(() => {
     const onKey = (event) => {
-      if (event.key === "Escape") setOpen(false);
+      if (event.key === "Escape" && openRef.current) {
+        setOpen(false);
+        burgerRef.current?.focus();
+      }
     };
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, []);
+
+  const toggleMenu = () => {
+    const next = !open;
+    setOpen(next);
+    if (next) {
+      window.requestAnimationFrame(() => {
+        navRef.current?.querySelector("a")?.focus();
+      });
+    }
+  };
+
+  const closeMenu = () => {
+    setOpen(false);
+    burgerRef.current?.focus();
+  };
 
   const logoHref = `/${locale}/`;
   const otherLocale = locale === "en" ? "id" : "en";
@@ -36,6 +61,7 @@ export default function Header({ locale, content, currentPath, equivalentPath })
         <nav
           className="site-header__nav"
           id="site-nav"
+          ref={navRef}
           data-open={open ? "true" : "false"}
           aria-label="Main navigation"
         >
@@ -47,7 +73,7 @@ export default function Header({ locale, content, currentPath, equivalentPath })
                   <a
                     href={item.to}
                     aria-current={isCurrent ? "page" : undefined}
-                    onClick={() => setOpen(false)}
+                    onClick={closeMenu}
                   >
                     {item.label}
                   </a>
@@ -82,9 +108,10 @@ export default function Header({ locale, content, currentPath, equivalentPath })
           <button
             type="button"
             className="burger"
+            ref={burgerRef}
             aria-expanded={open}
             aria-controls="site-nav"
-            onClick={() => setOpen((value) => !value)}
+            onClick={toggleMenu}
           >
             <span aria-hidden="true" />
             <span className="sr-only">{content.site.menuToggle}</span>

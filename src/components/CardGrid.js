@@ -1,4 +1,5 @@
 import React from "react";
+import Rich from "./Rich";
 
 export default function CardGrid({ items = [], columns }) {
   const count = items.length;
@@ -9,8 +10,12 @@ export default function CardGrid({ items = [], columns }) {
     <div className="card-grid">
       {items.map((item) => (
         <div key={item.title} className={`card ${countClass}`.trim()}>
-          <h3>{item.title}</h3>
-          <p>{item.body}</p>
+          <h3>
+            <Rich text={item.title} />
+          </h3>
+          <p>
+            <Rich text={item.body} />
+          </p>
         </div>
       ))}
     </div>

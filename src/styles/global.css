@@ -1,5 +1,29 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/inter-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/fonts/inter-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/fonts/inter-700.woff2") format("woff2");
+}
+
 /* ============================================================
-   JALARANU — Swiss Grid / Sharp Cards theme
+   JALARANU: Swiss Grid / Sharp Cards theme
    Pure rectangles, hairline rules, whitespace as separator.
    ============================================================ */
 
@@ -9,12 +33,16 @@
   --jlr-surface-alt: #F2F2F2;
   --jlr-text: #202C3C;
   --jlr-text-secondary: #44546A;
-  --jlr-text-muted: #77869B;
+  --jlr-text-muted: #52637A;
   --jlr-border: #202C3C;
   --jlr-border-subtle: #D9DEE7;
   --jlr-accent: #EF4136;
   --jlr-accent-hover: #D6382E;
   --jlr-accent-active: #B02F28;
+  --jlr-accent-text: #C23329;
+  --jlr-accent-interactive: #D6382E;
+  --jlr-accent-interactive-hover: #A02A22;
+  --jlr-accent-interactive-active: #7E211C;
   --jlr-blue: #008FBF;
   --jlr-on-accent: #FFFFFF;
   --jlr-focus: #202C3C;
@@ -97,7 +125,7 @@ a {
 }
 
 a:hover {
-  color: var(--jlr-accent);
+  color: var(--jlr-accent-text);
 }
 
 h1,
@@ -142,6 +170,10 @@ p {
 
 .section {
   padding: var(--jlr-section-padding) 0;
+}
+
+.section--alt {
+  background: var(--jlr-surface-alt);
 }
 
 @media (max-width: 767px) {
@@ -283,11 +315,11 @@ p {
 }
 
 .site-header__nav a:hover {
-  color: var(--jlr-accent);
+  color: var(--jlr-accent-text);
 }
 
 .site-header__nav a[aria-current="page"] {
-  color: var(--jlr-accent);
+  color: var(--jlr-accent-text);
   border-bottom: 2px solid var(--jlr-accent);
 }
 
@@ -389,6 +421,8 @@ p {
     background: var(--jlr-surface);
     border-bottom: 1px solid var(--jlr-border);
     display: none;
+    max-height: calc(100vh - var(--jlr-navbar-height));
+    overflow-y: auto;
   }
 
   .site-header__nav[data-open="true"] {
@@ -454,20 +488,20 @@ p {
 }
 
 .btn--primary {
-  background: var(--jlr-accent);
+  background: var(--jlr-accent-interactive);
   color: var(--jlr-on-accent);
-  border-color: var(--jlr-accent);
+  border-color: var(--jlr-accent-interactive);
 }
 
 .btn--primary:hover {
-  background: var(--jlr-accent-hover);
-  border-color: var(--jlr-accent-hover);
+  background: var(--jlr-accent-interactive-hover);
+  border-color: var(--jlr-accent-interactive-hover);
   color: var(--jlr-on-accent);
 }
 
 .btn--primary:active {
-  background: var(--jlr-accent-active);
-  border-color: var(--jlr-accent-active);
+  background: var(--jlr-accent-interactive-active);
+  border-color: var(--jlr-accent-interactive-active);
 }
 
 .btn--secondary {
@@ -482,15 +516,20 @@ p {
 }
 
 .btn--on-dark {
-  background: var(--jlr-accent);
+  background: var(--jlr-accent-interactive);
   color: var(--jlr-on-accent);
-  border-color: var(--jlr-accent);
+  border-color: var(--jlr-accent-interactive);
 }
 
 .btn--on-dark:hover {
-  background: var(--jlr-accent-hover);
-  border-color: var(--jlr-accent-hover);
+  background: var(--jlr-accent-interactive-hover);
+  border-color: var(--jlr-accent-interactive-hover);
   color: var(--jlr-on-accent);
+}
+
+.btn--on-dark:active {
+  background: var(--jlr-accent-interactive-active);
+  border-color: var(--jlr-accent-interactive-active);
 }
 
 .btn--secondary-on-dark {
@@ -622,11 +661,11 @@ p {
 }
 
 .faq summary:hover {
-  color: var(--jlr-accent);
+  color: var(--jlr-accent-text);
 }
 
 .faq details[open] summary {
-  color: var(--jlr-accent);
+  color: var(--jlr-accent-text);
 }
 
 .faq .faq__answer {
@@ -703,7 +742,7 @@ p {
   display: block;
   margin-top: 6px;
   font-size: var(--jlr-fs-caption);
-  color: var(--jlr-error);
+  color: var(--jlr-accent-text);
 }
 
 .form__status {
@@ -715,12 +754,17 @@ p {
 
 .form__status--error {
   border-color: var(--jlr-error);
-  color: var(--jlr-error);
+  color: var(--jlr-accent-text);
 }
 
 .form__status--success {
   border-color: var(--jlr-success);
   color: var(--jlr-success);
+}
+
+.form__status--info {
+  border-color: var(--jlr-info);
+  color: var(--jlr-info);
 }
 
 .form__privacy {
@@ -752,6 +796,150 @@ p {
 .hero {
   padding: var(--jlr-section-padding) 0;
   border-bottom: 1px solid var(--jlr-border-subtle);
+}
+
+/* ---------- Cinematic hero carousel ---------- */
+
+.hero--cinematic {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--jlr-dark-border);
+}
+
+.hero--cinematic .hero__content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero--cinematic .hero__intro {
+  color: var(--jlr-dark-text);
+  max-width: 720px;
+}
+
+.hero--cinematic .hero__intro p {
+  color: var(--jlr-dark-text);
+  text-shadow: 0 1px 8px rgba(16, 24, 32, 0.6);
+}
+
+.hero-carousel {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-carousel__slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 1200ms var(--jlr-ease-standard);
+}
+
+.hero-carousel__slide.is-active {
+  opacity: 1;
+}
+
+.hero-carousel__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-carousel__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(16, 24, 32, 0.82) 0%,
+    rgba(16, 24, 32, 0.52) 42%,
+    rgba(16, 24, 32, 0.88) 100%
+  );
+}
+
+.hero-carousel__controls {
+  position: absolute;
+  right: var(--jlr-gutter);
+  bottom: 24px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-carousel__arrow,
+.hero-carousel__pause,
+.hero-carousel__dot {
+  background: transparent;
+  border: 1px solid var(--jlr-dark-border);
+  color: var(--jlr-dark-text);
+  cursor: pointer;
+  min-width: 44px;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 0 12px;
+}
+
+.hero-carousel__arrow:hover,
+.hero-carousel__pause:hover,
+.hero-carousel__dot:hover {
+  background: var(--jlr-dark-text);
+  color: var(--jlr-dark-bg);
+}
+
+.hero-carousel__dot {
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
+  border: none;
+  position: relative;
+}
+
+.hero-carousel__dot::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--jlr-dark-text);
+}
+
+.hero-carousel__dot.is-active::before {
+  background: var(--jlr-accent);
+  border-color: var(--jlr-accent);
+}
+
+.hero-carousel__pause {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.hero-carousel__credit {
+  position: absolute;
+  right: var(--jlr-gutter);
+  bottom: 8px;
+  z-index: 2;
+  font-size: var(--jlr-fs-caption);
+  color: rgba(241, 245, 250, 0.72);
+}
+
+@media (max-width: 767px) {
+  .hero-carousel__controls {
+    right: var(--jlr-gutter-mobile);
+    bottom: 16px;
+  }
+
+  .hero-carousel__credit {
+    right: var(--jlr-gutter-mobile);
+    bottom: 4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-carousel__slide {
+    transition: none;
+  }
 }
 
 @media (max-width: 767px) {
@@ -915,7 +1103,7 @@ p {
   content: counter(jlr-step, decimal-leading-zero);
   font-size: 1rem;
   font-weight: 700;
-  color: var(--jlr-accent);
+  color: var(--jlr-accent-text);
   flex-shrink: 0;
   min-width: 40px;
 }
@@ -975,10 +1163,12 @@ p {
 }
 
 .status-list li::before {
-  content: "—";
+  content: "\25A0";
   position: absolute;
   left: 0;
+  top: 0.7em;
   color: var(--jlr-accent);
+  font-size: 0.5rem;
   font-weight: 700;
 }
 
@@ -1065,7 +1255,7 @@ p {
 }
 
 .site-footer__col a:hover {
-  color: var(--jlr-accent);
+  color: var(--jlr-accent-text);
   text-decoration: underline;
   text-underline-offset: 4px;
 }
@@ -1171,6 +1361,14 @@ p {
 }
 
 /* ---------- Utility ---------- */
+
+.jlr-mark {
+  background: linear-gradient(transparent 62%, rgba(239,65,54,0.22) 62%);
+  padding: 0 0.05em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  border-radius: 0;
+}
 
 .text-center {
   text-align: center;

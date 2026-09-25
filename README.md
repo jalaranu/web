@@ -1,4 +1,4 @@
-# Jalaranu — Website
+# Jalaranu: Website
 
 Website bilingual (EN/ID) untuk konsep datacenter bawah danau (underlake datacenter) Jalaranu.
 Dibangun dengan Gatsby 5, deploy otomatis ke GitHub Pages (custom domain `jalaranu.org`) via GitHub Actions.
@@ -20,12 +20,12 @@ menerbitkan ke branch `gh-pages` (GitHub Pages). Custom domain: `jalaranu.org` (
 
 ## Struktur
 
-- `content/en.json`, `content/id.json` — seluruh salinan publik (teks, CTA, SEO, form). Slug URL
+- `content/en.json`, `content/id.json`: seluruh salinan publik (teks, CTA, SEO, form). Slug URL
   seragam bahasa Inggris untuk kedua bahasa (`/id/technology/`, `/id/partnerships/`, dst).
-- `src/templates/Page.js` — satu template untuk semua halaman; `src/pages/404.js` + redirect root.
-- `static/assets/` — logo brand dan figur Matano (site section + struktur 4-panel), salinan dari
+- `src/templates/Page.js`: satu template untuk semua halaman; `src/pages/404.js` + redirect root.
+- `static/assets/`: logo brand dan figur Matano (site section + struktur 4-panel), salinan dari
   folder `Matano_*` dan `brand-aset/`.
-- Tema: swiss-grid "sharp card" — radius 0, tanpa shadow, border hairline, aksen merah `#EF4136`.
+- Tema: swiss-grid "sharp card": radius 0, tanpa shadow, border hairline, aksen merah `#EF4136`.
 
 ## Formulir kemitraan
 

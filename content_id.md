@@ -1,11 +1,11 @@
-# Jalaranu — Struktur dan draft konten website
+# Jalaranu: Struktur dan draft konten website
 
 Bahasa: Indonesia  
-Versi: 1.0 — draft untuk penyuntingan dan implementasi  
+Versi: 1.0 - draft untuk penyuntingan dan implementasi  
 Identitas visual: **Jalaranu Vivid, tipografi serif**  
 Dokumen pasangan: `content_en.md`
 
-> **CATATAN EDITORIAL — bukan teks website.** Draft ini memakai posisi paling konservatif yang didukung percakapan: Jalaranu adalah proyek pengembangan konsep datacenter bawah danau. Tahap prototipe, lokasi, badan usaha, fasilitas operasional, hasil pengujian, pendanaan, izin, pelanggan, sertifikasi, dan kemitraan belum dikonfirmasi. Jangan menampilkan unsur tersebut sebagai pencapaian. Semua penanda `[KONFIRMASI: ...]` harus diselesaikan atau bagiannya dihilangkan sebelum publikasi. Paragraf di bawah label **Teks publik** adalah kandidat teks siap sunting; tabel struktur, arahan visual, dan catatan implementasi bukan konten publik.
+> **CATATAN EDITORIAL - bukan teks website.** Draft ini memakai posisi paling konservatif yang didukung percakapan: Jalaranu adalah proyek pengembangan konsep datacenter bawah danau. Tahap prototipe, lokasi, badan usaha, fasilitas operasional, hasil pengujian, pendanaan, izin, pelanggan, sertifikasi, dan kemitraan belum dikonfirmasi. Jangan menampilkan unsur tersebut sebagai pencapaian. Semua penanda `[KONFIRMASI: ...]` harus diselesaikan atau bagiannya dihilangkan sebelum publikasi. Paragraf di bawah label **Teks publik** adalah kandidat teks siap sunting; tabel struktur, arahan visual, dan catatan implementasi bukan konten publik.
 
 ## 01. Tujuan dan prinsip editorial
 
@@ -49,8 +49,8 @@ Paket yang dipakai: `jalaranu-vivid-brand-pack.zip`. Gunakan versi serif, bukan 
 |---|---|
 | Logo horizontal pada latar terang | `jalaranu-vivid-horizontal-light.svg` |
 | Logo horizontal pada latar gelap | `jalaranu-vivid-horizontal-dark.svg` |
-| JALA — simbol — RANU pada latar terang | `jalaranu-vivid-split-light.svg` |
-| JALA — simbol — RANU pada latar gelap | `jalaranu-vivid-split-dark.svg` |
+| JALA: simbol: RANU pada latar terang | `jalaranu-vivid-split-light.svg` |
+| JALA: simbol: RANU pada latar gelap | `jalaranu-vivid-split-dark.svg` |
 | Susunan vertikal | `jalaranu-vivid-logo-light.svg` / `jalaranu-vivid-logo-dark.svg` |
 | Simbol saja | `jalaranu-vivid-mark.svg` |
 
@@ -66,9 +66,9 @@ Logo penuh memiliki detail ornamental. Pastikan detailnya terbaca pada ukuran ta
 
 **Arahan visual utama:** diagram potongan sistem lebih penting daripada animasi dekoratif. Setiap render diberi label “Ilustrasi konsep”. Jangan menampilkan logo instansi, investor, pelanggan, atau sertifikasi sebagai dekorasi kepercayaan tanpa dasar dan izin penggunaannya.
 
-## 04. Beranda — `/id/`
+## 04. Beranda: `/id/`
 
-### H01 — Pembuka
+### H01: Pembuka
 
 **Teks publik**
 
@@ -87,7 +87,7 @@ Kami membuka ruang kolaborasi bagi investor, institusi, dan mitra teknologi untu
 
 **Visual:** satu ilustrasi potongan yang menunjukkan permukaan danau, modul di bawah air, serta hubungan ke fasilitas darat. Caption: “Ilustrasi konsep. Konfigurasi akhir mengikuti hasil studi dan rekayasa.”
 
-### H02 — Alasan pengembangan
+### H02: Alasan pengembangan
 
 **Teks publik**
 
@@ -107,7 +107,7 @@ Jalaranu menempatkan perbandingan tersebut sebagai dasar evaluasi.
 
 **CTA:** Lihat Pendekatan Validasi → `/id/validasi/`
 
-### H03 — Gambaran sistem
+### H03: Gambaran sistem
 
 **Teks publik**
 
@@ -122,7 +122,7 @@ Konsep Jalaranu menghubungkan fasilitas pendukung di darat dengan modul komputas
 
 **CTA:** Pelajari Konsep Sistem → `/id/teknologi/#sistem`
 
-### H04 — Pendekatan pembuktian
+### H04: Pendekatan pembuktian
 
 **Teks publik**
 
@@ -136,7 +136,7 @@ Rencana pengujian, hasil pengukuran, dan keterbatasannya menjadi dasar keputusan
 
 **Catatan editorial:** setelah ada bukti, tampilkan maksimal tiga kartu: nama pengujian, tanggal, hasil ringkas, metode, keterbatasan, tautan dokumen. Jika belum tersedia, gunakan teks di atas tanpa kartu pencapaian atau angka simulasi yang menyerupai hasil lapangan.
 
-### H05 — Jalur kemitraan
+### H05: Jalur kemitraan
 
 **Teks publik**
 
@@ -149,7 +149,7 @@ Rencana pengujian, hasil pengukuran, dan keterbatasannya menjadi dasar keputusan
 
 **CTA:** Temukan Jalur Kemitraan → `/id/kemitraan/`
 
-### H06 — Penutup
+### H06: Penutup
 
 **Teks publik**
 
@@ -159,9 +159,9 @@ Mari mulai dari kebutuhan, ruang lingkup evaluasi, dan kontribusi yang dapat dib
 
 **CTA:** Diskusikan Kemitraan → `/id/kemitraan/#kontak`
 
-## 05. Teknologi — `/id/teknologi/`
+## 05. Teknologi: `/id/teknologi/`
 
-### T01 — Pembuka
+### T01: Pembuka
 
 **Teks publik**
 
@@ -169,7 +169,7 @@ Mari mulai dari kebutuhan, ruang lingkup evaluasi, dan kontribusi yang dapat dib
 
 Jalaranu mengeksplorasi datacenter bawah danau sebagai satu sistem utuh. Penempatan modul perlu dievaluasi bersama daya, jaringan, pengelolaan panas, pemeliharaan, dan pemulihannya.
 
-### T02 — Arsitektur konsep `{#sistem}`
+### T02: Arsitektur konsep `{#sistem}`
 
 **Teks publik**
 
@@ -181,7 +181,7 @@ Visualisasi awal menggunakan bentuk limas segi empat terpancung. Bentuk tersebut
 
 **Visual:** diagram blok dan potongan, dengan jalur logis tanpa koordinat atau rincian pengamanan fasilitas.
 
-### T03 — Pertanyaan rekayasa
+### T03: Pertanyaan rekayasa
 
 **Teks publik**
 
@@ -193,7 +193,7 @@ Visualisasi awal menggunakan bentuk limas segi empat terpancung. Bentuk tersebut
 4. **Pemeliharaan:** apa yang dapat dipantau dari jarak jauh, kapan intervensi diperlukan, serta bagaimana modul ditangani atau diangkat.
 5. **Keamanan dan kendali:** akses administratif, pemantauan kejadian, pengelolaan kunci, tanggung jawab operator, serta perlindungan antarmuka fisik dan digital.
 
-### T04 — Perbandingan alternatif
+### T04: Perbandingan alternatif
 
 **Teks publik**
 
@@ -203,7 +203,7 @@ Evaluasi perlu membandingkan konsep bawah danau dengan solusi darat pada kebutuh
 
 Aspek penilaian meliputi energi, biaya investasi, biaya operasi, pemeliharaan, konektivitas, pemulihan, dampak lingkungan, dan akhir masa pakai. Potensi penghematan pada satu komponen tidak dengan sendirinya menunjukkan biaya total yang lebih rendah.
 
-### T05 — Skenario penggunaan yang dieksplorasi
+### T05: Skenario penggunaan yang dieksplorasi
 
 **Teks publik**
 
@@ -213,9 +213,9 @@ Penyebutan skenario penggunaan bukan pernyataan bahwa layanan tersebut sudah ter
 
 **CTA:** Bahas Kebutuhan Teknis → `/id/kemitraan/#kontak`
 
-## 06. Validasi — `/id/validasi/`
+## 06. Validasi: `/id/validasi/`
 
-### V01 — Pembuka
+### V01: Pembuka
 
 **Teks publik**
 
@@ -223,9 +223,9 @@ Penyebutan skenario penggunaan bukan pernyataan bahwa layanan tersebut sudah ter
 
 Kelayakan datacenter bawah danau perlu dinilai secara teknis, ekonomi, dan lingkungan. Pendekatan validasi Jalaranu berfokus pada pertanyaan yang dapat diuji, metode yang dapat dijelaskan, serta hasil yang disampaikan bersama batasannya.
 
-### V02 — Status pengembangan
+### V02: Status pengembangan
 
-**Catatan editorial — wajib dikonfirmasi:** tampilkan tahap aktual, tanggal pembaruan, dan dokumen pendukung jika tersedia. Jangan otomatis menandai tahap awal sebagai selesai. Bila status belum terverifikasi, jangan publikasikan timeline pencapaian.
+**Catatan editorial - wajib dikonfirmasi:** tampilkan tahap aktual, tanggal pembaruan, dan dokumen pendukung jika tersedia. Jangan otomatis menandai tahap awal sebagai selesai. Bila status belum terverifikasi, jangan publikasikan timeline pencapaian.
 
 **Template teks publik setelah dikonfirmasi:**
 
@@ -234,7 +234,7 @@ Kelayakan datacenter bawah danau perlu dinilai secara teknis, ekonomi, dan lingk
 - Pembaruan terakhir: `[KONFIRMASI: tanggal]`.
 - Bukti yang dapat dibagikan: `[KONFIRMASI: dokumen atau hasil yang boleh dipublikasikan]`.
 
-### V03 — Rencana evaluasi
+### V03: Rencana evaluasi
 
 **Teks publik**
 
@@ -251,7 +251,7 @@ Kelayakan datacenter bawah danau perlu dinilai secara teknis, ekonomi, dan lingk
 
 Kriteria keberhasilan, metode, dan tanggung jawab perlu ditetapkan sebelum pengujian dimulai.
 
-### V04 — Kerangka menuju pilot
+### V04: Kerangka menuju pilot
 
 **Teks publik**
 
@@ -265,7 +265,7 @@ Kriteria keberhasilan, metode, dan tanggung jawab perlu ditetapkan sebelum pengu
 
 Urutan ini adalah kerangka pengembangan, bukan daftar tahap yang dinyatakan telah selesai.
 
-### V05 — Lingkungan dan tanggung jawab
+### V05: Lingkungan dan tanggung jawab
 
 **Teks publik**
 
@@ -275,15 +275,15 @@ Kajian lokasi perlu mempertimbangkan kondisi perairan, penggunaan kawasan, kebut
 
 Hasil kajian menjadi masukan untuk keputusan lokasi dan desain, termasuk keputusan untuk tidak melanjutkan suatu opsi bila tidak layak.
 
-### V06 — Ringkasan hasil dan dokumen
+### V06: Ringkasan hasil dan dokumen
 
 **Catatan editorial:** aktifkan bagian ini hanya ketika dokumen tersedia. Setiap entri memuat judul, jenis bukti, tanggal, versi, penanggung jawab, metode, temuan, keterbatasan, dan akses publik/terbatas. Simulasi harus disebut simulasi; laporan mitra tidak boleh disajikan sebagai sertifikasi. Jangan memasang tombol unduh tanpa berkas.
 
 **CTA yang selalu dapat dipakai:** Diskusikan Program Validasi → `/id/kemitraan/#kontak`
 
-## 07. Kemitraan — `/id/kemitraan/`
+## 07. Kemitraan: `/id/kemitraan/`
 
-### P01 — Pembuka
+### P01: Pembuka
 
 **Teks publik**
 
@@ -291,7 +291,7 @@ Hasil kajian menjadi masukan untuk keputusan lokasi dan desain, termasuk keputus
 
 Jalaranu membuka percakapan dengan pihak yang ingin menilai, mengembangkan, atau mendukung konsep datacenter bawah danau. Kerja sama dimulai dengan tujuan yang jelas, lingkup yang realistis, dan hasil yang dapat dievaluasi.
 
-### P02 — Investor `{#investor}`
+### P02: Investor `{#investor}`
 
 **Teks publik**
 
@@ -301,11 +301,11 @@ Kami mengundang pembahasan tentang kebutuhan pasar, model bisnis, tahapan pendan
 
 Ruang pembahasan mencakup calon pengguna, alternatif yang tersedia, estimasi biaya beserta asumsi, kebutuhan modal, serta milestone untuk keputusan investasi berikutnya.
 
-**CTA:** Bahas Peluang Investasi → `#kontak` — pilihan awal formulir: Investor.
+**CTA:** Bahas Peluang Investasi → `#kontak` - pilihan awal formulir: Investor.
 
 **Catatan editorial:** sebelum pendekatan investasi formal, siapkan ringkasan model pendapatan, pelanggan sasaran, dasar estimasi pasar, penggunaan dana, cap table bila relevan, dan skenario biaya. Jangan mengarang traction, valuasi, return, atau komitmen investasi. Tombol ini mengundang diskusi, bukan menyatakan penawaran investasi publik.
 
-### P03 — Pemerintah dan institusi pertahanan `{#institusi}`
+### P03: Pemerintah dan institusi pertahanan `{#institusi}`
 
 **Teks publik**
 
@@ -315,11 +315,11 @@ Pembahasan dapat dimulai dari kebutuhan infrastruktur, kontinuitas layanan, kend
 
 Kemungkinan ruang kerja sama mencakup studi kelayakan, penyusunan kebutuhan, dan pengembangan pilot terbatas. Persyaratan akses, penanganan informasi, serta tanggung jawab masing-masing pihak disepakati sesuai lingkup kerja sama.
 
-**CTA:** Jajaki Kerja Sama Institusi → `#kontak` — pilihan awal formulir: Pemerintah / institusi pertahanan.
+**CTA:** Jajaki Kerja Sama Institusi → `#kontak` - pilihan awal formulir: Pemerintah / institusi pertahanan.
 
 **Catatan editorial:** jangan menyiratkan penunjukan, dukungan, kontrak, persetujuan keamanan, atau jalur pengadaan khusus. Logo dan nama institusi hanya dicantumkan sesuai hubungan nyata dan izin publikasi.
 
-### P04 — Mitra industri `{#industri}`
+### P04: Mitra industri `{#industri}`
 
 **Teks publik**
 
@@ -329,9 +329,9 @@ Kami membuka pembahasan dengan calon mitra di bidang energi, konektivitas, struk
 
 Kontribusi dapat dibahas berdasarkan kebutuhan pengembangan, batas antarmuka, tanggung jawab integrasi, serta hasil pengujian yang ingin dicapai bersama.
 
-**CTA:** Bahas Kontribusi Teknologi → `#kontak` — pilihan awal formulir: Mitra industri / teknologi.
+**CTA:** Bahas Kontribusi Teknologi → `#kontak` - pilihan awal formulir: Mitra industri / teknologi.
 
-### P05 — Mitra riset `{#riset}`
+### P05: Mitra riset `{#riset}`
 
 **Teks publik**
 
@@ -339,9 +339,9 @@ Kontribusi dapat dibahas berdasarkan kebutuhan pengembangan, batas antarmuka, ta
 
 Perguruan tinggi dan lembaga riset dapat menjajaki kajian termal, struktur, keandalan, ekonomi, serta lingkungan. Ruang lingkup penelitian, penggunaan data, publikasi, dan hak atas hasil perlu disepakati sejak awal.
 
-**CTA:** Jajaki Kolaborasi Riset → `#kontak` — pilihan awal formulir: Mitra riset.
+**CTA:** Jajaki Kolaborasi Riset → `#kontak` - pilihan awal formulir: Mitra riset.
 
-### P06 — Alur penjajakan
+### P06: Alur penjajakan
 
 **Teks publik**
 
@@ -352,7 +352,7 @@ Perguruan tinggi dan lembaga riset dapat menjajaki kajian termal, struktur, kean
 3. Rumuskan ruang lingkup, kontribusi, dan kriteria evaluasi.
 4. Tentukan langkah berikutnya berdasarkan kesiapan kedua pihak.
 
-### P07 — Formulir kontak `{#kontak}`
+### P07: Formulir kontak `{#kontak}`
 
 **Teks publik**
 
@@ -381,9 +381,9 @@ Sampaikan konteks singkat dan bentuk kerja sama yang ingin dijajaki. Jangan meny
 
 **Catatan implementasi:** tidak ada unggahan file atau kolom telepon wajib pada tahap awal. Jangan menjanjikan waktu respons tertentu sebelum prosesnya tersedia. Jangan menampilkan pesan sukses hanya berdasarkan klik. Jangan memasang formulir aktif sebelum penanggung jawab, tujuan pemrosesan, akses, retensi, dan pemberitahuan privasinya ditetapkan. Bila belum siap, gunakan kontak email yang sudah dikonfirmasi sebagai jalur sementara. Pemberitahuan privasi perlu ditinjau berdasarkan praktik nyata; draft ini bukan dokumen kepatuhan final.
 
-## 08. Tentang — `/id/tentang/`
+## 08. Tentang: `/id/tentang/`
 
-### A01 — Pembuka
+### A01: Pembuka
 
 **Teks publik**
 
@@ -391,7 +391,7 @@ Sampaikan konteks singkat dan bentuk kerja sama yang ingin dijajaki. Jangan meny
 
 Jalaranu adalah inisiatif pengembangan konsep datacenter bawah danau. Kami ingin mempertemukan rekayasa, kebutuhan infrastruktur, serta pemahaman terhadap lingkungan dalam satu proses pengembangan yang terukur.
 
-### A02 — Cerita nama dan simbol
+### A02: Cerita nama dan simbol
 
 **Teks publik**
 
@@ -405,7 +405,7 @@ Makna tersebut diterjemahkan dalam cara proyek dikembangkan: pertanyaan yang jel
 
 **Catatan editorial:** cerita nama mengikuti penjelasan pendiri, bukan klaim verifikasi etimologi atau penggambaran dewi tertentu dalam sejarah.
 
-### A03 — Prinsip pengembangan
+### A03: Prinsip pengembangan
 
 **Teks publik**
 
@@ -414,9 +414,9 @@ Makna tersebut diterjemahkan dalam cara proyek dikembangkan: pertanyaan yang jel
 - **Kolaborasi dengan peran yang jelas.** Kontribusi, antarmuka, dan tanggung jawab disepakati sejak awal.
 - **Keterbukaan yang proporsional.** Informasi publik menjelaskan dasar proyek; pembahasan terperinci mengikuti kebutuhan dan kewenangan akses.
 
-### A04 — Tim dan organisasi
+### A04: Tim dan organisasi
 
-**Template editorial — jangan publikasikan kartu kosong:**
+**Template editorial - jangan publikasikan kartu kosong:**
 
 - Nama: `[KONFIRMASI: nama lengkap]`.
 - Peran aktual: `[KONFIRMASI: jabatan atau tanggung jawab]`.
@@ -433,31 +433,31 @@ Jangan menjadikan pengalaman pribadi di organisasi lain sebagai dukungan resmi o
 
 Letakkan pada halaman Validasi atau bagian bawah Teknologi; tidak perlu menu baru.
 
-### F01 — Apakah Jalaranu sudah beroperasi secara komersial?
+### F01: Apakah Jalaranu sudah beroperasi secara komersial?
 
 Website ini memperkenalkan konsep dan peluang pengembangan Jalaranu. Ketersediaan layanan komersial akan disampaikan secara terpisah setelah kesiapan fasilitas dan layanannya dikonfirmasi.
 
-### F02 — Mengapa menggunakan danau?
+### F02: Mengapa menggunakan danau?
 
 Danau merupakan konteks penempatan yang sedang dieksplorasi. Kesesuaiannya perlu dinilai berdasarkan kondisi perairan, akses, energi, jaringan, lingkungan, dan kebutuhan penggunaan. Pemilihan danau tidak dengan sendirinya membuktikan keunggulan terhadap lokasi atau desain lain.
 
-### F03 — Apakah pendinginannya gratis atau tanpa energi?
+### F03: Apakah pendinginannya gratis atau tanpa energi?
 
 Potensi pemanfaatan lingkungan perairan harus dinilai bersama sistem perpindahan panas dan kebutuhan energi seluruh fasilitas. Jalaranu belum menyatakan penghematan tertentu tanpa hasil pengukuran dan pembanding yang jelas.
 
-### F04 — Bagaimana jika modul memerlukan perbaikan?
+### F04: Bagaimana jika modul memerlukan perbaikan?
 
 Kemampuan pemantauan, penanganan gangguan, pengambilan kembali, dan penggantian komponen merupakan bagian dari evaluasi desain. Prosedur rinci akan mengikuti rancangan yang telah diuji serta kebutuhan layanan yang disepakati.
 
-### F05 — Apakah dapat digunakan untuk data sensitif atau kebutuhan pertahanan?
+### F05: Apakah dapat digunakan untuk data sensitif atau kebutuhan pertahanan?
 
 Kesesuaian penggunaan perlu dievaluasi berdasarkan klasifikasi data, arsitektur sistem, kontrol akses, tata kelola, dan persyaratan institusi terkait. Website ini tidak menyatakan persetujuan atau kesiapan untuk menangani informasi dengan klasifikasi tertentu.
 
-### F06 — Bagaimana dampak terhadap danau dinilai?
+### F06: Bagaimana dampak terhadap danau dinilai?
 
 Pendekatan kajian mencakup kondisi awal, perubahan yang perlu dipantau, serta evaluasi selama pengujian dan pada akhir masa pakai. Ruang lingkupnya harus disesuaikan dengan lokasi dan kegiatan yang direncanakan.
 
-### F07 — Bagaimana memperoleh informasi lebih lanjut?
+### F07: Bagaimana memperoleh informasi lebih lanjut?
 
 Gunakan formulir kemitraan untuk menjelaskan organisasi dan tujuan diskusi. Informasi yang dapat dibagikan akan ditentukan berdasarkan kebutuhan pembahasan dan ketersediaan dokumen.
 
@@ -465,7 +465,7 @@ Gunakan formulir kemitraan untuk menjelaskan organisasi dan tujuan diskusi. Info
 
 **Teks footer publik:**
 
-Jalaranu — pengembangan konsep datacenter bawah danau untuk ketahanan digital Indonesia.
+Jalaranu - pengembangan konsep datacenter bawah danau untuk ketahanan digital Indonesia.
 
 Teknologi · Validasi · Kemitraan · Tentang · Privasi · Kontak
 
@@ -476,11 +476,11 @@ Teknologi · Validasi · Kemitraan · Tentang · Privasi · Kontak
 
 | Halaman | Judul SEO | Deskripsi meta |
 |---|---|---|
-| Beranda | Jalaranu — Konsep Datacenter Bawah Danau | Jelajahi konsep datacenter bawah danau Jalaranu, pendekatan validasi, dan peluang kemitraan untuk pengembangan infrastruktur komputasi di Indonesia. |
-| Teknologi | Teknologi Datacenter Bawah Danau — Jalaranu | Pelajari konsep sistem Jalaranu, dari fasilitas darat dan modul komputasi hingga pengelolaan panas, konektivitas, serta pemulihan. |
-| Validasi | Validasi Teknis, Ekonomi, dan Lingkungan — Jalaranu | Kenali pertanyaan pengujian dan pendekatan evaluasi Jalaranu untuk menilai kelayakan datacenter bawah danau secara bertahap. |
-| Kemitraan | Kemitraan Pengembangan Datacenter — Jalaranu | Jajaki kerja sama bersama Jalaranu sebagai investor, institusi pemerintah atau pertahanan, mitra industri, maupun mitra riset. |
-| Tentang | Tentang Jalaranu — Identitas dan Pengembangan | Kenali Jalaranu, cerita identitasnya, prinsip pengembangan, dan pihak yang bertanggung jawab atas proyek datacenter bawah danau. |
+| Beranda | Jalaranu: Konsep Datacenter Bawah Danau | Jelajahi konsep datacenter bawah danau Jalaranu, pendekatan validasi, dan peluang kemitraan untuk pengembangan infrastruktur komputasi di Indonesia. |
+| Teknologi | Teknologi Datacenter Bawah Danau: Jalaranu | Pelajari konsep sistem Jalaranu, dari fasilitas darat dan modul komputasi hingga pengelolaan panas, konektivitas, serta pemulihan. |
+| Validasi | Validasi Teknis, Ekonomi, dan Lingkungan: Jalaranu | Kenali pertanyaan pengujian dan pendekatan evaluasi Jalaranu untuk menilai kelayakan datacenter bawah danau secara bertahap. |
+| Kemitraan | Kemitraan Pengembangan Datacenter: Jalaranu | Jajaki kerja sama bersama Jalaranu sebagai investor, institusi pemerintah atau pertahanan, mitra industri, maupun mitra riset. |
+| Tentang | Tentang Jalaranu: Identitas dan Pengembangan | Kenali Jalaranu, cerita identitasnya, prinsip pengembangan, dan pihak yang bertanggung jawab atas proyek datacenter bawah danau. |
 
 ## 11. Catatan pelaksanaan dan pemeriksaan sebelum terbit
 
@@ -500,5 +500,5 @@ Bagian ini hanya untuk tim konten/desain/pengembangan.
 
 Referensi berikut dapat membantu tim menyusun materi Validasi; bukan bukti kinerja Jalaranu atau pernyataan hubungan kemitraan. Periksa kembali sebelum mengutip dalam publikasi.
 
-- Microsoft Research, Project Natick: https://www.microsoft.com/en-us/research/project/natick/ — contoh penyajian proyek riset bawah air dan hasil dengan lingkup eksperimen tertentu. Jangan memindahkan hasilnya ke konteks danau atau Jalaranu tanpa pengujian.
-- Uptime Institute, Tier Certification: https://uptimeinstitute.com/tier-certification — rujukan untuk membedakan status desain, fasilitas, dan operasi ketika membahas sertifikasi. Tidak menyatakan bahwa Jalaranu telah tersertifikasi.
+- Microsoft Research, Project Natick: https://www.microsoft.com/en-us/research/project/natick/ - contoh penyajian proyek riset bawah air dan hasil dengan lingkup eksperimen tertentu. Jangan memindahkan hasilnya ke konteks danau atau Jalaranu tanpa pengujian.
+- Uptime Institute, Tier Certification: https://uptimeinstitute.com/tier-certification - rujukan untuk membedakan status desain, fasilitas, dan operasi ketika membahas sertifikasi. Tidak menyatakan bahwa Jalaranu telah tersertifikasi.

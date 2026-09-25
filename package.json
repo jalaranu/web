@@ -1,7 +1,7 @@
 {
   "name": "jalaranu-web",
   "private": true,
-  "description": "Jalaranu — underwater lake datacenter concept website",
+  "description": "Jalaranu: underwater lake datacenter concept website",
   "version": "1.0.0",
   "scripts": {
     "dev": "gatsby develop -p 8787 -H localhost",

@@ -6,12 +6,19 @@
     "title": "Jalaranu",
     "tagline": "Underwater lake datacenter concept",
     "description": "Explore Jalaranu's underwater lake datacenter concept, validation approach, and partnership opportunities for computing infrastructure in Indonesia.",
-    "footerTagline": "Jalaranu — developing an underwater lake datacenter concept to support Indonesia's digital resilience.",
+    "footerTagline": "Jalaranu - developing an underwater lake datacenter concept to support Indonesia's digital resilience.",
     "copyright": "Jalaranu",
     "logoAlt": "Jalaranu",
     "skipLink": "Skip to main content",
     "menuToggle": "Toggle menu",
-    "languageSwitch": "Switch language to"
+    "languageSwitch": "Switch language to",
+    "carouselPrev": "Previous slide",
+    "carouselNext": "Next slide",
+    "carouselPause": "Pause slideshow",
+    "carouselPlay": "Play slideshow",
+    "carouselGoTo": "Go to slide",
+    "carouselSlides": "Hero image slides",
+    "carouselCredit": "Photos: SiDanau BRIN"
   },
   "nav": {
     "technology": "Technology",
@@ -22,13 +29,13 @@
   },
   "pages": {
     "home": {
-      "seoTitle": "Jalaranu — Underwater Lake Datacenter Concept",
+      "seoTitle": "Jalaranu | Underwater Lake Datacenter Concept",
       "seoDescription": "Explore Jalaranu's underwater lake datacenter concept, validation approach, and partnership opportunities for computing infrastructure in Indonesia.",
       "hero": {
         "eyebrow": "Underwater lake datacenter concept",
-        "h1": "Computing infrastructure beneath the lake. Supporting Indonesia's digital resilience.",
+        "h1": "Computing infrastructure **beneath the lake**. Supporting Indonesia's ==digital resilience==.",
         "intro": [
-          "Jalaranu is developing a modular underwater lake datacenter concept. The focus is to evaluate thermal efficiency, operational reliability, and the feasibility of deployment in Indonesia.",
+          "Jalaranu is developing a modular underwater lake datacenter concept. The focus is to evaluate **thermal efficiency, operational reliability**, and the feasibility of deployment in Indonesia.",
           "We welcome collaboration with investors, institutions, and technology partners to establish a measurable foundation for development."
         ],
         "primaryCta": {
@@ -40,10 +47,22 @@
           "to": "/en/technology/"
         },
         "caption": "Concept illustration. Final configuration is subject to study and engineering findings.",
-        "imageAlt": "Concept illustration: the Jalaranu datacenter module beneath the lake surface, connected to shore-based support facilities by protected power and communication routes."
+        "imageAlt": "Concept illustration: the Jalaranu datacenter module beneath the lake surface, connected to shore-based support facilities by protected power and communication routes.",
+        "slides": [
+          {
+            "src": "/assets/hero/danau-batur.webp",
+            "alt": "Lake Batur, Bali, seen from its volcanic shore",
+            "credit": "Lake Batur"
+          },
+          {
+            "src": "/assets/hero/danau-matano.webp",
+            "alt": "Lake Matano, South Sulawesi, an ancient deep-water lake",
+            "credit": "Lake Matano"
+          }
+        ]
       },
       "why": {
-        "h2": "Why consider a location beneath a lake?",
+        "h2": "Why consider a location **beneath a lake**?",
         "body": [
           "Underwater placement offers a different approach to heat management, physical space, and infrastructure access. Its potential benefits need to be assessed alongside the implications for deployment, maintenance, connectivity, and recovery.",
           "The central question is: under what conditions would this approach be more feasible than a land-based datacenter using water-based cooling?",
@@ -52,15 +71,15 @@
         "focuses": [
           {
             "title": "Thermal performance",
-            "body": "Assessing heat transfer and energy demand under defined site conditions and workloads."
+            "body": "**Assessing heat transfer** and energy demand under defined site conditions and workloads."
           },
           {
             "title": "Operational reliability",
-            "body": "Testing how the system can be monitored, maintained, and recovered when disruptions occur."
+            "body": "**Testing how the system can be monitored, maintained, and recovered** when disruptions occur."
           },
           {
             "title": "Overall feasibility",
-            "body": "Comparing whole-life costs and responsibilities towards the environment."
+            "body": "**Comparing whole-life costs** and responsibilities towards the environment."
           }
         ],
         "cta": {
@@ -131,7 +150,7 @@
         }
       },
       "closing": {
-        "h2": "What would need to be demonstrated for this concept to be relevant to your organisation?",
+        "h2": "What would need to be ==demonstrated for this concept to be relevant== to your organisation?",
         "body": "Start with your requirements, the scope of evaluation, and the contribution we could develop together.",
         "cta": {
           "label": "Discuss a Partnership",
@@ -140,11 +159,11 @@
       }
     },
     "technology": {
-      "seoTitle": "Underwater Lake Datacenter Technology — Jalaranu",
+      "seoTitle": "Underwater Lake Datacenter Technology | Jalaranu",
       "seoDescription": "Explore Jalaranu's system concept, from shore facilities and computing modules to heat management, connectivity, and recovery.",
       "hero": {
         "h1": "Engineering starts with the right questions.",
-        "body": "Jalaranu explores the underwater lake datacenter as an integrated system. Module placement needs to be evaluated together with power, networking, heat management, maintenance, and recovery."
+        "body": "Jalaranu explores the underwater lake datacenter as **one complete system**. Module placement needs to be evaluated together with power, networking, heat management, maintenance, and recovery."
       },
       "architecture": {
         "h2": "From shore interfaces to the underwater environment.",
@@ -162,23 +181,23 @@
         "items": [
           {
             "title": "Heat management",
-            "body": "Water conditions, heat transfer, computing loads, and the energy required by supporting systems."
+            "body": "**Water conditions, heat transfer**, computing loads, and the energy required by supporting systems."
           },
           {
             "title": "Module integrity",
-            "body": "The ability of structures, joints, and system interfaces to withstand the defined operating conditions."
+            "body": "**The ability of structures, joints, and system interfaces** to withstand the defined operating conditions."
           },
           {
             "title": "Power and connectivity",
-            "body": "Service needs, redundancy options, behaviour during connection failures, and recovery procedures."
+            "body": "**Service needs, redundancy options**, behaviour during connection failures, and recovery procedures."
           },
           {
             "title": "Maintenance",
-            "body": "What can be monitored remotely, when intervention is required, and how the module can be handled or retrieved."
+            "body": "**What can be monitored remotely**, when intervention is required, and how the module can be handled or retrieved."
           },
           {
             "title": "Security and control",
-            "body": "Administrative access, event monitoring, key management, operator responsibilities, and protection of physical and digital interfaces."
+            "body": "**Administrative access, event monitoring, key management**, operator responsibilities, and protection of physical and digital interfaces."
           }
         ]
       },
@@ -202,11 +221,11 @@
       }
     },
     "validation": {
-      "seoTitle": "Technical, Economic and Environmental Validation — Jalaranu",
+      "seoTitle": "Technical, Economic and Environmental Validation | Jalaranu",
       "seoDescription": "Learn about Jalaranu's test questions and staged approach to evaluating the feasibility of an underwater lake datacenter.",
       "hero": {
         "h1": "Evidence provides the basis for the next step.",
-        "body": "The feasibility of an underwater lake datacenter needs to be assessed technically, economically, and environmentally. Jalaranu's validation approach focuses on testable questions, explainable methods, and findings presented alongside their limitations."
+        "body": "The feasibility of an underwater lake datacenter needs to be assessed **technically, economically, and environmentally**. Jalaranu's validation approach focuses on testable questions, explainable methods, and findings presented alongside their limitations."
       },
       "status": {
         "h2": "Development status",
@@ -291,41 +310,41 @@
       "faq": [
         {
           "q": "Is Jalaranu commercially operational?",
-          "a": "This website introduces the Jalaranu concept and development opportunities. Commercial service availability will be communicated separately once facility and service readiness have been confirmed."
+          "a": "**This website introduces the Jalaranu concept and development opportunities.** Commercial service availability will be communicated separately once facility and service readiness have been confirmed."
         },
         {
           "q": "Why use a lake?",
-          "a": "A lake is the deployment context being explored. Suitability needs to be assessed against water conditions, access, energy, networking, environmental factors, and intended use. Selecting a lake does not in itself demonstrate an advantage over another location or design."
+          "a": "**A lake is the deployment context being explored.** Suitability needs to be assessed against water conditions, access, energy, networking, environmental factors, and intended use. Selecting a lake does not in itself demonstrate an advantage over another location or design."
         },
         {
           "q": "Is the cooling free or energy-free?",
-          "a": "The potential use of the water environment must be assessed alongside heat-transfer systems and the energy requirements of the whole facility. Jalaranu does not claim specific savings without measured results and a clearly defined comparison."
+          "a": "**The potential use of the water environment must be assessed alongside heat-transfer systems and the energy requirements of the whole facility.** Jalaranu does not claim specific savings without measured results and a clearly defined comparison."
         },
         {
           "q": "What happens if the module needs repair?",
-          "a": "Monitoring, incident handling, retrieval, and component replacement are part of design evaluation. Detailed procedures will follow the tested design and agreed service requirements."
+          "a": "**Monitoring, incident handling, retrieval, and component replacement are part of design evaluation.** Detailed procedures will follow the tested design and agreed service requirements."
         },
         {
           "q": "Can it support sensitive data or defence requirements?",
-          "a": "Suitability needs to be assessed against data classification, system architecture, access controls, governance, and the requirements of the relevant institution. This website does not claim approval or readiness to handle information at a particular classification level."
+          "a": "**Suitability needs to be assessed against data classification, system architecture, access controls, governance, and the requirements of the relevant institution.** This website does not claim approval or readiness to handle information at a particular classification level."
         },
         {
           "q": "How are effects on the lake assessed?",
-          "a": "The study approach covers baseline conditions, changes to monitor, and evaluation during testing and at end of life. Its scope must be adapted to the location and planned activities."
+          "a": "**The study approach covers baseline conditions, changes to monitor, and evaluation during testing and at end of life.** Its scope must be adapted to the location and planned activities."
         },
         {
           "q": "How can I obtain more information?",
-          "a": "Use the partnership form to introduce your organisation and the purpose of the discussion. Information that can be shared will depend on the needs of the discussion and document availability."
+          "a": "**Use the partnership form to introduce your organisation and the purpose of the discussion.** Information that can be shared will depend on the needs of the discussion and document availability."
         }
       ],
       "faqTitle": "Frequently asked questions"
     },
     "partnerships": {
-      "seoTitle": "Datacenter Development Partnerships — Jalaranu",
+      "seoTitle": "Datacenter Development Partnerships | Jalaranu",
       "seoDescription": "Explore collaboration with Jalaranu as an investor, government or defence institution, industry partner, or research organisation.",
       "hero": {
         "h1": "Start with the requirement. Agree on what needs to be demonstrated.",
-        "body": "Jalaranu welcomes conversations with organisations interested in evaluating, developing, or supporting the underwater lake datacenter concept. Collaboration begins with clear objectives, realistic scope, and outcomes that can be assessed."
+        "body": "Jalaranu welcomes conversations with organisations interested in evaluating, developing, or supporting the underwater lake datacenter concept. Collaboration begins with **clear goals, realistic scope, and measurable results**."
       },
       "tracks": [
         {
@@ -395,6 +414,7 @@
           "org": "Organisation name",
           "email": "Contact email",
           "type": "Partnership type",
+          "selectPlaceholder": "Select collaboration type",
           "typeOptions": [
             "Investor",
             "Government or defence institution",
@@ -408,16 +428,17 @@
         },
         "success": "Thank you. Your discussion request has been received. The Jalaranu team will review the information you submitted.",
         "error": "Your request has not been sent. Please try again.",
+        "unavailable": "The discussion form is not yet active. No data is transmitted from this page. The contact channel will be announced once established.",
         "requiredError": "Please complete this field.",
         "emailError": "Enter a valid email address."
       }
     },
     "about": {
-      "seoTitle": "About Jalaranu — Identity and Development",
+      "seoTitle": "About Jalaranu | Identity and Development",
       "seoDescription": "Discover Jalaranu's identity, development principles, and the people responsible for its underwater lake datacenter project.",
       "hero": {
         "h1": "Rooted in Indonesian identity. Developed through evidence.",
-        "body": "Jalaranu is an initiative developing an underwater lake datacenter concept. We aim to bring engineering, infrastructure requirements, and an understanding of the environment into a measurable development process."
+        "body": "Jalaranu is an initiative developing an underwater lake datacenter concept. We aim to bring **engineering, infrastructure requirements, and an understanding of the environment** into a measurable development process."
       },
       "story": {
         "h2": "Knowledge, safeguarded.",
@@ -458,7 +479,7 @@
       }
     },
     "privacy": {
-      "seoTitle": "Privacy — Jalaranu",
+      "seoTitle": "Privacy | Jalaranu",
       "seoDescription": "The Jalaranu Privacy Notice will explain how contact-form information is handled once the practices are established.",
       "h1": "Privacy Notice",
       "body": [
@@ -501,7 +522,7 @@
       "h1": "Page not found",
       "body": "The page you are looking for does not exist or has moved.",
       "back": "Back to Home",
-      "seoTitle": "Page Not Found — Jalaranu",
+      "seoTitle": "Page Not Found | Jalaranu",
       "seoDescription": "The page you are looking for could not be found. Return to the Jalaranu website."
     }
   },
