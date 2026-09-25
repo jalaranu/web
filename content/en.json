@@ -9,6 +9,7 @@
     "footerTagline": "Jalaranu - developing an underlake datacenter project to support Indonesia's digital resilience. The project evaluates thermal efficiency, operational reliability, and environmental effects through a staged, evidence-led program before any commitment to construction.",
     "copyright": "Jalaranu",
     "logoAlt": "Jalaranu",
+    "ogImageAlt": "Jalaranu wordmark on a dark background with the headline Computing infrastructure beneath the lake.",
     "skipLink": "Skip to main content",
     "menuToggle": "Toggle menu",
     "socialFollow": "Follow Jalaranu",
@@ -256,7 +257,7 @@
               "icon": "history",
               "label": "Operational maturity",
               "values": [
-                "Conceptual; unbuilt",
+                "Prototype and testing in progress",
                 "Proven at sea (Project Natick)",
                 "Proven operations",
                 "Proven for critical workloads"
@@ -316,7 +317,10 @@
               "icon": "anchor",
               "label": "Maritime threat surface",
               "values": [
-                "Out of submarine reach",
+                {
+                  "text": "Out of submarine reach",
+                  "highlight": true
+                },
                 "Submarine cable interception, anchor drag",
                 "None",
                 "None"
@@ -434,13 +438,13 @@
       "status": {
         "h2": "Development status",
         "items": [
-          "The development stage will be announced once it has been confirmed.",
-          "The current focus, the latest update, and any evidence approved for sharing will be published as they become available."
+          "Jalaranu is now in the prototype and testing stage. The current stage is announced here and will be kept up to date.",
+          "Test questions, methods, and any evidence approved for sharing will be published as they become available."
         ]
       },
       "plan": {
         "h2": "Questions that shape the test programme.",
-        "body": "Success criteria, methods, and responsibilities need to be defined before testing begins.",
+        "body": "Success criteria, methods, and responsibilities are defined ahead of each test step, so every result can be judged against published criteria.",
         "table": [
           {
             "area": "Thermal performance and energy",
@@ -664,7 +668,7 @@
       "seoDescription": "Discover Jalaranu's identity, development principles, and the people responsible for its underlake datacenter project.",
       "hero": {
         "h1": "Rooted in Indonesian identity. Developed through evidence.",
-        "body": "Jalaranu is an initiative developing an underlake datacenter project. We aim to bring **engineering, infrastructure requirements, and an understanding of the environment** into a measurable development process."
+        "body": "Jalaranu is developing an underlake datacenter and treats Indonesia's lakes as strategic national assets that must be understood before they are used. We turn that ambition into a **measurable process**: questions and methods are published up front, and findings are shared with their evidence and limits as they are approved for release. The project advances in stages, and we state plainly what is proven, what is not yet proven, and what we still do not know."
       },
       "story": {
         "h2": "Knowledge, safeguarded.",
@@ -697,9 +701,29 @@
       },
       "team": {
         "h2": "Team and organisation",
-        "body": "Details about the team, roles, and the accountable entity will be published once they are confirmed and approved for publication.",
+        "body": "COCONUT Computer Club leads the engineering, PERKAMINDO is responsible for information security, and PT Lontar Riset Indonesia for strategy and business. Collaboration remains open to other parties who share the project's standards.",
+        "items": [
+          {
+            "name": "COCONUT Computer Club",
+            "role": "Engineering",
+            "url": "https://coconut.or.id",
+            "logo": "/assets/partners/coconut-logo-blue.png"
+          },
+          {
+            "name": "PERKAMINDO",
+            "role": "Information security",
+            "url": "https://perkamindo.org",
+            "logo": "/assets/partners/perkamindo.png"
+          },
+          {
+            "name": "PT Lontar Riset Indonesia",
+            "role": "Strategy and business",
+            "url": "https://lontartech.co.id",
+            "logo": "/assets/partners/lontar.svg"
+          }
+        ],
         "cta": {
-          "label": "Explore Collaboration Opportunities",
+          "label": "Open for collaboration",
           "to": "/en/partnerships/"
         }
       },

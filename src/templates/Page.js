@@ -337,11 +337,23 @@ function Technology({ page, locale }) {
                       </span>
                       <span>{row.label}</span>
                     </th>
-                    {row.values.map((value, index) => (
-                      <td key={index} className={index === 0 ? "is-jalaranu" : undefined}>
-                        {value}
-                      </td>
-                    ))}
+                    {row.values.map((value, index) => {
+                      const cell =
+                        typeof value === "object" && value !== null
+                          ? value
+                          : { text: value };
+                      const classes = [];
+                      if (index === 0) classes.push("is-jalaranu");
+                      if (cell.highlight) classes.push("is-highlight");
+                      return (
+                        <td
+                          key={index}
+                          className={classes.length ? classes.join(" ") : undefined}
+                        >
+                          {cell.text}
+                        </td>
+                      );
+                    })}
                   </tr>
                 );
               })}
@@ -650,6 +662,24 @@ function About({ page, content }) {
             <Rich text={page.team.body} />
           </p>
         </div>
+        {page.team.items ? (
+          <ul className="partner-grid">
+            {page.team.items.map((partner) => (
+              <li key={partner.name}>
+                <a
+                  className="partner-card"
+                  href={partner.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={partner.logo} alt={partner.name} loading="lazy" />
+                  <span className="partner-card__name">{partner.name}</span>
+                  <span className="partner-card__role">{partner.role}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : null}
         <Button to={page.team.cta.to} variant="secondary">
           {page.team.cta.label}
         </Button>
@@ -766,6 +796,7 @@ export function Head(props) {
   const alternate = `${siteUrl}${equivalentPath}`;
   const isNotFound = pageKey === "notFound";
   const xDefault = `${siteUrl}${locale === "en" ? currentPath : equivalentPath}`;
+  const ogImage = `${siteUrl}/assets/og-default${locale === "id" ? "-id" : ""}.png`;
 
   return (
     <>
@@ -787,6 +818,29 @@ export function Head(props) {
       {!isNotFound ? <meta property="og:url" content={canonical} /> : null}
       <meta property="og:locale" content={locale === "en" ? "en_US" : "id_ID"} />
       <meta property="og:site_name" content={content.site.title} />
+      {!isNotFound ? <meta property="og:image" content={ogImage} /> : null}
+      {!isNotFound ? (
+        <meta property="og:image:alt" content={content.site.ogImageAlt} />
+      ) : null}
+      {!isNotFound ? (
+        <meta property="og:image:width" content="1200" />
+      ) : null}
+      {!isNotFound ? (
+        <meta property="og:image:height" content="630" />
+      ) : null}
+      {!isNotFound ? (
+        <meta name="twitter:card" content="summary_large_image" />
+      ) : null}
+      {!isNotFound ? (
+        <meta name="twitter:title" content={seoTitle} />
+      ) : null}
+      {!isNotFound ? (
+        <meta name="twitter:description" content={seoDescription} />
+      ) : null}
+      {!isNotFound ? <meta name="twitter:image" content={ogImage} /> : null}
+      {!isNotFound ? (
+        <meta name="twitter:image:alt" content={content.site.ogImageAlt} />
+      ) : null}
     </>
   );
 }

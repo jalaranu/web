@@ -1556,6 +1556,12 @@ p {
   color: var(--jlr-blue);
 }
 
+.compare-table td.is-highlight {
+  background: #C23329;
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
 /* ---------- In-page section nav ---------- */
 
 .inpage-nav {
@@ -1625,6 +1631,54 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+/* ---------- Partner grid ---------- */
+
+.partner-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  border: 1px solid var(--jlr-border);
+  padding: 20px;
+  text-decoration: none;
+  color: var(--jlr-text);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.partner-card:hover {
+  border-color: var(--jlr-accent);
+}
+
+.partner-card img {
+  height: 44px;
+  width: auto;
+  max-width: 100%;
+}
+
+.partner-card__name {
+  font-weight: 700;
+}
+
+.partner-card__role {
+  font-size: 0.8125rem;
+  color: var(--jlr-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 767px) {
+  .partner-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---------- Redirect page ---------- */

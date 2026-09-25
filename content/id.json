@@ -9,6 +9,7 @@
     "footerTagline": "Jalaranu - pengembangan proyek datacenter bawah danau untuk ketahanan digital Indonesia. Proyek ini mengevaluasi efisiensi termal, keandalan operasi, dan dampak lingkungan melalui program bertahap berbasis bukti sebelum ada komitmen konstruksi.",
     "copyright": "Jalaranu",
     "logoAlt": "Jalaranu",
+    "ogImageAlt": "Wordmark Jalaranu pada latar gelap dengan tajuk Infrastruktur komputasi di bawah danau.",
     "skipLink": "Langsung ke konten utama",
     "menuToggle": "Buka atau tutup menu",
     "socialFollow": "Ikuti Jalaranu",
@@ -256,7 +257,7 @@
               "icon": "history",
               "label": "Kematangan operasi",
               "values": [
-                "Konseptual; belum dibangun",
+                "Prototipe dan pengujian sedang berlangsung",
                 "Terbukti di laut (Project Natick)",
                 "Terbukti beroperasi",
                 "Terbukti untuk beban kritis"
@@ -316,7 +317,10 @@
               "icon": "anchor",
               "label": "Permukaan ancaman maritim",
               "values": [
-                "Di luar jangkauan kapal selam",
+                {
+                  "text": "Di luar jangkauan kapal selam",
+                  "highlight": true
+                },
                 "Penyadapan kabel kapal selam, seret jangkar",
                 "Tidak ada",
                 "Tidak ada"
@@ -434,13 +438,13 @@
       "status": {
         "h2": "Status pengembangan",
         "items": [
-          "Tahap pengembangan akan diumumkan setelah dikonfirmasi.",
-          "Fokus pekerjaan, tanggal pembaruan, dan bukti yang dapat dibagikan akan disampaikan setelah tersedia."
+          "Jalaranu kini berada pada tahap prototipe dan pengujian. Tahap saat ini diumumkan di sini dan akan terus diperbarui.",
+          "Pertanyaan pengujian, metode, dan bukti apa pun yang disetujui untuk dibagikan akan dipublikasikan begitu tersedia."
         ]
       },
       "plan": {
         "h2": "Pertanyaan yang membentuk rencana pengujian.",
-        "body": "Kriteria keberhasilan, metode, dan tanggung jawab perlu ditetapkan sebelum pengujian dimulai.",
+        "body": "Kriteria keberhasilan, metode, dan tanggung jawab ditetapkan sebelum setiap langkah pengujian, agar setiap hasil dapat dinilai terhadap kriteria yang dipublikasikan.",
         "table": [
           {
             "area": "Termal dan energi",
@@ -664,7 +668,7 @@
       "seoDescription": "Kenali Jalaranu, cerita identitasnya, prinsip pengembangan, dan pihak yang bertanggung jawab atas proyek datacenter bawah danau.",
       "hero": {
         "h1": "Berakar pada identitas Indonesia. Dibangun melalui pembuktian.",
-        "body": "Jalaranu adalah inisiatif pengembangan proyek datacenter bawah danau. Kami ingin mempertemukan **rekayasa, kebutuhan infrastruktur, serta pemahaman terhadap lingkungan** dalam satu proses pengembangan yang terukur."
+        "body": "Jalaranu mengembangkan datacenter bawah danau dan memandang danau Indonesia sebagai aset strategis nasional yang harus dipahami sebelum dimanfaatkan. Ambisi itu kami terjemahkan menjadi **proses yang terukur**: pertanyaan dan metode dipublikasikan di awal, dan temuan dibagikan bersama bukti serta batasannya begitu disetujui untuk dirilis. Pengembangan berjalan bertahap, dan kami menyatakan secara jujur apa yang sudah terbukti, apa yang belum terbukti, serta apa yang masih belum kami ketahui."
       },
       "story": {
         "h2": "Pengetahuan yang dijaga.",
@@ -697,9 +701,29 @@
       },
       "team": {
         "h2": "Tim dan organisasi",
-        "body": "Informasi mengenai tim, peran, dan badan usaha penanggung jawab akan ditampilkan setelah dikonfirmasi dan disetujui untuk publikasi.",
+        "body": "Jalaranu dikembangkan melalui kolaborasi terbuka antar organisasi dengan peran yang saling melengkapi: COCONUT Computer Club mengerjakan rekayasa, PERKAMINDO bertanggung jawab atas keamanan informasi, dan PT Lontar Riset Indonesia bertanggung jawab atas strategi dan bisnis. Kolaborasi tetap terbuka bagi pihak lain yang memiliki standar yang sama dengan proyek ini.",
+        "items": [
+          {
+            "name": "COCONUT Computer Club",
+            "role": "Rekayasa",
+            "url": "https://coconut.or.id",
+            "logo": "/assets/partners/coconut-logo-blue.png"
+          },
+          {
+            "name": "PERKAMINDO",
+            "role": "Keamanan informasi",
+            "url": "https://perkamindo.org",
+            "logo": "/assets/partners/perkamindo.png"
+          },
+          {
+            "name": "PT Lontar Riset Indonesia",
+            "role": "Strategi dan bisnis",
+            "url": "https://lontartech.co.id",
+            "logo": "/assets/partners/lontar.svg"
+          }
+        ],
         "cta": {
-          "label": "Kenali Peluang Kolaborasi",
+          "label": "Terbuka untuk kolaborasi",
           "to": "/id/partnerships/"
         }
       },
