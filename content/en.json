@@ -231,6 +231,16 @@
           "rowHeading": "Criterion",
           "columns": [
             {
+              "icon": "droplets",
+              "name": "Underlake datacenter",
+              "sub": "Freshwater lake"
+            },
+            {
+              "icon": "waves",
+              "name": "Undersea datacenter",
+              "sub": "Ocean deployment"
+            },
+            {
               "icon": "building2",
               "name": "Terrestrial datacenter",
               "sub": "Conventional cooling"
@@ -239,16 +249,6 @@
               "icon": "shield-check",
               "name": "Hardened bunker",
               "sub": "Reinforced shell"
-            },
-            {
-              "icon": "waves",
-              "name": "Undersea datacenter",
-              "sub": "Ocean deployment"
-            },
-            {
-              "icon": "droplets",
-              "name": "Underlake datacenter",
-              "sub": "Freshwater lake"
             }
           ],
           "rows": [
@@ -256,100 +256,100 @@
               "icon": "history",
               "label": "Operational maturity",
               "values": [
-                "Proven operations",
-                "Proven for critical workloads",
+                "Conceptual; unbuilt",
                 "Proven at sea (Project Natick)",
-                "Conceptual; unbuilt"
+                "Proven operations",
+                "Proven for critical workloads"
               ]
             },
             {
               "icon": "shield",
               "label": "Physical protection",
               "values": [
-                "Site security, exposed perimeter",
-                "Reinforced construction, restricted access",
+                "Pressure hull, inland water column",
                 "Hardened shell, remote siting",
-                "Pressure hull, inland water column"
+                "Site security, exposed perimeter",
+                "Reinforced construction, restricted access"
               ]
             },
             {
               "icon": "thermometer",
               "label": "Heat rejection",
               "values": [
-                "Mechanical cooling, energy cost",
-                "Complex confined heat rejection",
+                "Passive water cooling, thermal budget unmeasured",
                 "Passive water cooling",
-                "Passive water cooling, thermal budget unmeasured"
+                "Mechanical cooling, energy cost",
+                "Complex confined heat rejection"
               ]
             },
             {
               "icon": "scale",
               "label": "Jurisdiction",
               "values": [
-                "Domestic, urban corridors",
-                "Domestic",
+                "Domestic inland waters",
                 "Contested maritime zones",
-                "Domestic inland waters"
+                "Domestic, urban corridors",
+                "Domestic"
               ]
             },
             {
               "icon": "landmark",
               "label": "Land threat surface",
               "values": [
-                "Direct perimeter access, site security required",
-                "Reinforced against intrusion, restricted access",
+                "Submerged module, shore station remains exposed",
                 "Remote at sea, shore station remains exposed",
-                "Submerged module, shore station remains exposed"
+                "Direct perimeter access, site security required",
+                "Reinforced against intrusion, restricted access"
               ]
             },
             {
               "icon": "plane",
               "label": "Air threat surface",
               "values": [
-                "Fully exposed from the air",
-                "Hardened against aerial threats",
+                "Module shielded by the water column, shore station exposed",
                 "Exposed surface support at sea",
-                "Module shielded by the water column, shore station exposed"
+                "Fully exposed from the air",
+                "Hardened against aerial threats"
               ]
             },
             {
               "icon": "anchor",
               "label": "Maritime threat surface",
               "values": [
-                "None",
-                "None",
+                "Out of submarine reach",
                 "Submarine cable interception, anchor drag",
-                "Out of submarine reach"
+                "None",
+                "None"
               ]
             },
             {
               "icon": "boxes",
               "label": "Scalability",
               "values": [
-                "Hyperscale clusters",
-                "Harder to scale",
+                "Lake-limited modules",
                 "Site-limited modules",
-                "Lake-limited modules"
+                "Hyperscale clusters",
+                "Harder to scale"
               ]
             },
             {
               "icon": "dollar-sign",
               "label": "Ten-year cost model",
               "values": [
-                "$6.00M",
-                "$6.34M",
+                "$7.85M",
                 "Not modeled",
-                "$7.85M"
+                "$6.00M",
+                "$6.34M"
               ]
             },
             {
               "icon": "flask-conical",
               "label": "Evidence status",
               "values": [
-                "Measured",
-                "Measured",
+                "Computed",
                 "Proven pilot",
-                "Computed"
+                "Measured",
+                "Measured"
               ]
             }
           ]

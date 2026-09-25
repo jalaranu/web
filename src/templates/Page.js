@@ -313,7 +313,7 @@ function Technology({ page, locale }) {
                     <th
                       key={column.name}
                       scope="col"
-                      className={index === 3 ? "is-jalaranu" : undefined}
+                      className={index === 0 ? "is-jalaranu" : undefined}
                     >
                       <span className="compare-table__header-icon">
                         {ColumnIcon ? <ColumnIcon size={18} aria-hidden="true" /> : null}
@@ -337,7 +337,7 @@ function Technology({ page, locale }) {
                       <span>{row.label}</span>
                     </th>
                     {row.values.map((value, index) => (
-                      <td key={index} className={index === 3 ? "is-jalaranu" : undefined}>
+                      <td key={index} className={index === 0 ? "is-jalaranu" : undefined}>
                         {value}
                       </td>
                     ))}
