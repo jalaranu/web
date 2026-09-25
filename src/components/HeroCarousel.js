@@ -56,6 +56,10 @@ export default function HeroCarousel({ slides, labels }) {
             src={slide.src}
             alt={slideIndex === index ? slide.alt : ""}
             loading={slideIndex === 0 ? "eager" : "lazy"}
+            width={1600}
+            height={900}
+            sizes="100vw"
+            srcSet={`${slide.src.replace(/\.webp$/, "-640.webp")} 640w, ${slide.src.replace(/\.webp$/, "-960.webp")} 960w, ${slide.src.replace(/\.webp$/, "-1280.webp")} 1280w, ${slide.src} 1600w`}
           />
         </div>
       ))}
