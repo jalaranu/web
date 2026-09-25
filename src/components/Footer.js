@@ -24,6 +24,7 @@ export default function Footer({ locale, content }) {
               {SOCIAL_BRANDS.map(({ key, label, Icon }) => {
                 const href = social[key];
                 if (!href) return null;
+                const handle = href.replace(/^https?:\/\//, "");
                 return (
                   <li key={key}>
                     <a
@@ -31,8 +32,8 @@ export default function Footer({ locale, content }) {
                       href={href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label={`${label} @projectjalaranu`}
-                      title={`${label} @projectjalaranu`}
+                      aria-label={`${label}: ${handle}`}
+                      title={`${label}: ${handle}`}
                     >
                       <Icon size={18} />
                     </a>
