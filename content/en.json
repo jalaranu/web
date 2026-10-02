@@ -1023,6 +1023,25 @@
         "h1": "Rooted in Indonesian identity. Developed through evidence.",
         "body": "Jalaranu is developing an underlake datacenter and treats Indonesia's lakes as strategic national assets that must be understood before they are used. We turn that ambition into a **measurable process**: questions and methods are published up front, and findings are shared with their evidence and limits as they are approved for release. The project advances in stages, and we state plainly what is proven, what is not yet proven, and what we still do not know."
       },
+      "mv": {
+        "mission": {
+          "eyebrow": "Mission",
+          "title": "Safeguard the critical, unveil the hidden.",
+          "body": [
+            "Building and testing a modular datacenter beneath the lake to protect strategic data and keep Indonesia's critical services running. Bringing the **open-source** spirit to life through ==open, transparent, and collaborative== development—sharing code, methods, and findings together with their limits; uniting researchers, engineers, the state, and the public in shared responsibility.",
+            "Making the lake a ==partner in knowledge==, not merely a site for infrastructure: developing sensors, continuous monitoring, and scientific expeditions to accelerate pure limnological research into the flora, fauna, waters, and geological archives of Nusantara. Every step respects the life of the lake and the communities that depend on it."
+          ]
+        },
+        "vision": {
+          "eyebrow": "Vision",
+          "title": "Digital sovereignty, born from the homeland.",
+          "body": [
+            "An Indonesia ==sovereign over its data==, with digital infrastructure woven into the geography of Nusantara—safeguarding knowledge beneath the water while opening new horizons of discovery.",
+            "Lakes remain alive, their secrets ever better understood, and their scientists equipped to explore further. Jalaranu grows step by step into Indonesia's contribution to the map of global computing: **technology born from understanding its own homeland**.",
+            "That progress serves the mandate of the 1945 Constitution: the land, the waters, and the natural riches within them are ==held by the state and used for the greatest prosperity of the people==; the knowledge that grows from them helps enlighten the life of the nation."
+          ]
+        }
+      },
       "story": {
         "h2": "Knowledge, safeguarded.",
         "body": [

@@ -1493,6 +1493,58 @@ p {
   margin: 32px 0;
 }
 
+/* ---------- About mission & vision cards ---------- */
+
+.about-mv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 8px;
+}
+
+.mv-card {
+  border: 1px solid var(--jlr-border-subtle);
+  background: var(--jlr-surface);
+  padding: 28px 28px 32px;
+}
+
+.mv-card .overline {
+  margin-bottom: 12px;
+  color: var(--jlr-accent-text);
+}
+
+.mv-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.mv-card p {
+  color: var(--jlr-text-secondary);
+  font-size: 0.9375rem;
+}
+
+.mv-card p + p {
+  margin-top: 12px;
+}
+
+.mv-card--mission {
+  border-top: 3px solid var(--jlr-accent);
+}
+
+.mv-card--vision {
+  border-top: 3px solid var(--jlr-blue);
+}
+
+.mv-card--vision .overline {
+  color: #00759B;
+}
+
+@media (max-width: 767px) {
+  .about-mv {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---------- About page paper link ---------- */
 
 .paper-link {

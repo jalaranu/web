@@ -1017,6 +1017,30 @@ function About({ page, content }) {
               <Rich text={page.hero.body} />
             </p>
           </div>
+          <div className="about-mv">
+            <div className="mv-card mv-card--mission">
+              <span className="overline">{page.mv.mission.eyebrow}</span>
+              <h3>
+                <Rich text={page.mv.mission.title} />
+              </h3>
+              {page.mv.mission.body.map((paragraph, index) => (
+                <p key={index}>
+                  <Rich text={paragraph} />
+                </p>
+              ))}
+            </div>
+            <div className="mv-card mv-card--vision">
+              <span className="overline">{page.mv.vision.eyebrow}</span>
+              <h3>
+                <Rich text={page.mv.vision.title} />
+              </h3>
+              {page.mv.vision.body.map((paragraph, index) => (
+                <p key={index}>
+                  <Rich text={paragraph} />
+                </p>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
