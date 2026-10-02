@@ -1515,6 +1515,26 @@ p {
   color: var(--jlr-accent-text);
 }
 
+.paper-citation {
+  margin-top: 32px;
+  max-width: 760px;
+  border-top: 1px solid var(--jlr-border-subtle);
+  padding-top: 20px;
+}
+
+.paper-citation .overline {
+  margin-bottom: 8px;
+}
+
+.paper-citation p {
+  color: var(--jlr-text-secondary);
+  font-size: 0.9375rem;
+}
+
+.paper-citation__doi {
+  color: var(--jlr-text);
+}
+
 /* ---------- Privacy sections ---------- */
 
 .privacy-section {

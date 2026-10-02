@@ -1082,10 +1082,13 @@
       },
       "paper": {
         "h2": "Published research",
-        "body": "The engineering reasoning, threat model, thermal screening, and cost comparison behind this project are documented in an open paper. Read it directly or save a copy.",
+        "body": "The engineering reasoning, threat model, thermal screening, and cost comparison behind this project are documented in an open paper. Download it directly from this page.",
         "linkLabel": "Paper - An Underlake Data Center Framework for Intelligence Infrastructure and Indonesian National Resilience",
         "linkHref": "/assets/jalaranu-underlake-datacenter-paper.pdf",
-        "cite": "[PDF 1]"
+        "cite": "[PDF 1]",
+        "citationLabel": "Cite as",
+        "citation": "[1] N. Halim and I. Nasikin, \u201cJALARANU: An Underlake Data Center Framework for Intelligence Infrastructure and Indonesian National Resilience\u201d, Oct. 2026, doi: ",
+        "citationDoi": "10.5281/zenodo.23106842"
       }
     },
     "privacy": {

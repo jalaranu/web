@@ -377,7 +377,6 @@
       },
       "indexLabel": "Di halaman ini",
       "indexMoreLabel": "Bagian lainnya",
-      "indexMoreLabel": "Bagian lainnya",
       "index": [
         {
           "id": "system",
@@ -1090,10 +1089,13 @@
       },
       "paper": {
         "h2": "Riset yang dipublikasikan",
-        "body": "Dasar rekayasa, model ancaman, penyaringan termal, dan perbandingan biaya di balik proyek ini terdokumentasi dalam paper terbuka. Baca langsung atau simpan salinannya.",
+        "body": "Dasar rekayasa, model ancaman, penyaringan termal, dan perbandingan biaya di balik proyek ini terdokumentasi dalam paper terbuka. Unduh langsung dari halaman ini.",
         "linkLabel": "Paper - An Underlake Data Center Framework for Intelligence Infrastructure and Indonesian National Resilience",
         "linkHref": "/assets/jalaranu-underlake-datacenter-paper.pdf",
-        "cite": "[PDF 1]"
+        "cite": "[PDF 1]",
+        "citationLabel": "Sitasi",
+        "citation": "[1] N. Halim and I. Nasikin, \u201cJALARANU: An Underlake Data Center Framework for Intelligence Infrastructure and Indonesian National Resilience\u201d, Oct. 2026, doi: ",
+        "citationDoi": "10.5281/zenodo.23106842"
       }
     },
     "privacy": {

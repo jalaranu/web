@@ -1060,13 +1060,27 @@ function About({ page, content }) {
         <a
           className="btn btn--secondary paper-link"
           href={page.paper.linkHref}
-          target="_blank"
-          rel="noopener noreferrer"
+          download="jalaranu-underlake-datacenter-paper.pdf"
         >
           <FileText size={16} aria-hidden="true" />
           <span>{page.paper.linkLabel}</span>
           <span className="paper-link__cite">{page.paper.cite}</span>
         </a>
+        <div className="paper-citation">
+          <span className="overline">{page.paper.citationLabel}</span>
+          <p>
+            <Rich text={page.paper.citation} />
+            <a
+              className="paper-citation__doi"
+              href={`https://doi.org/${page.paper.citationDoi}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {page.paper.citationDoi}
+            </a>
+            .
+          </p>
+        </div>
       </Section>
 
       <Section
