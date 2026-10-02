@@ -464,6 +464,7 @@
       ],
       "hero": {
         "eyebrow": "Use Cases · Strategic data and critical services",
+        "image": "/assets/hero/danau-landscape-2.webp",
         "h1": "For data that must remain protected. For services that must ==keep running==.",
         "intro": [
           "From strategic state information to financial services and vital infrastructure, every sector has different requirements for protecting the confidentiality, integrity, and availability of data.",

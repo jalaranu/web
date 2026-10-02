@@ -559,8 +559,20 @@ function UseCases({ page, locale }) {
 
   return (
     <>
-      <div className="hero">
-        <div className="container">
+      <div className="hero hero--cinematic dark">
+        <div className="hero-bg" aria-hidden="true">
+          <img
+            src={page.hero.image}
+            alt=""
+            loading="eager"
+            width={1600}
+            height={900}
+            sizes="100vw"
+            srcSet={`${page.hero.image.replace(/\.webp$/, "-640.webp")} 640w, ${page.hero.image.replace(/\.webp$/, "-960.webp")} 960w, ${page.hero.image.replace(/\.webp$/, "-1280.webp")} 1280w, ${page.hero.image} 1600w`}
+          />
+        </div>
+        <div className="hero-bg__overlay" aria-hidden="true" />
+        <div className="container hero__content">
           <span className="overline">{page.hero.eyebrow}</span>
           <h1>
             <Rich text={page.hero.h1} />
@@ -576,7 +588,7 @@ function UseCases({ page, locale }) {
             <Button to={page.hero.primaryCta.to} variant="primary" arrow>
               {page.hero.primaryCta.label}
             </Button>
-            <Button to={page.hero.secondaryCta.to} variant="secondary">
+            <Button to={page.hero.secondaryCta.to} variant="secondary-on-dark">
               {page.hero.secondaryCta.label}
             </Button>
           </div>

@@ -890,6 +890,29 @@ p {
   inset: 0;
 }
 
+.hero-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-bg__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(16, 24, 32, 0.86) 0%,
+    rgba(16, 24, 32, 0.68) 42%,
+    rgba(16, 24, 32, 0.92) 100%
+  );
+}
+
 .hero-carousel__slide {
   position: absolute;
   inset: 0;
@@ -1633,6 +1656,30 @@ p {
 .inpage-nav a:hover {
   color: var(--jlr-text);
   border-bottom-color: var(--jlr-accent);
+}
+
+.dark .inpage-nav {
+  border-bottom-color: var(--jlr-dark-muted);
+}
+
+.dark .inpage-nav a {
+  color: var(--jlr-dark-muted);
+}
+
+.dark .inpage-nav a:hover {
+  color: var(--jlr-dark-text);
+  border-bottom-color: var(--jlr-accent);
+}
+
+.dark .inpage-nav__more {
+  background: var(--jlr-dark-surface);
+  border-color: var(--jlr-dark-muted);
+  color: var(--jlr-dark-text);
+}
+
+.dark .inpage-nav__more:hover {
+  background: var(--jlr-dark-text);
+  color: var(--jlr-dark-bg);
 }
 
 .inpage-nav__more {
