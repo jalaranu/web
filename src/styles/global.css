@@ -1522,8 +1522,55 @@ p {
   padding-top: 20px;
 }
 
-.paper-citation .overline {
+.paper-citation__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   margin-bottom: 8px;
+}
+
+.paper-citation__head .overline {
+  margin-bottom: 0;
+}
+
+.cite-copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cite-copy__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--jlr-border);
+  background: transparent;
+  color: var(--jlr-text);
+  cursor: pointer;
+  transition: background-color var(--jlr-motion-base) var(--jlr-ease-standard),
+    color var(--jlr-motion-base) var(--jlr-ease-standard),
+    border-color var(--jlr-motion-base) var(--jlr-ease-standard);
+}
+
+.cite-copy__btn:hover {
+  background: var(--jlr-text);
+  color: var(--jlr-bg);
+}
+
+.cite-copy__btn[data-copied="true"] {
+  border-color: var(--jlr-accent);
+  color: var(--jlr-accent-text);
+  background: transparent;
+}
+
+.cite-copy__status {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--jlr-accent-text);
 }
 
 .paper-citation p {

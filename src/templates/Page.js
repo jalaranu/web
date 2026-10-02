@@ -40,6 +40,7 @@ import Rich from "../components/Rich";
 import HeroCarousel from "../components/HeroCarousel";
 import FlowDiagram from "../components/FlowDiagram";
 import InPageNav from "../components/InPageNav";
+import CopyCitation from "../components/CopyCitation";
 
 const PLACEMENT_ICONS = {
   building2: Building2,
@@ -1067,7 +1068,14 @@ function About({ page, content }) {
           <span className="paper-link__cite">{page.paper.cite}</span>
         </a>
         <div className="paper-citation">
-          <span className="overline">{page.paper.citationLabel}</span>
+          <div className="paper-citation__head">
+            <span className="overline">{page.paper.citationLabel}</span>
+            <CopyCitation
+              text={`${page.paper.citation}${page.paper.citationDoi}.`}
+              label={page.paper.copyLabel}
+              copiedLabel={page.paper.copiedLabel}
+            />
+          </div>
           <p>
             <Rich text={page.paper.citation} />
             <a
