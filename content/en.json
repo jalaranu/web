@@ -66,6 +66,10 @@
         "imageAlt": "Project illustration: the Jalaranu datacenter module beneath the lake surface, connected to shore-based support facilities by protected power and communication routes.",
         "slides": [
           {
+            "src": "/assets/hero/danau-landscape-1.webp",
+            "alt": "Aerial view of a lake with a barge and crane lowering a structure into the water"
+          },
+          {
             "src": "/assets/hero/danau-batur.webp",
             "alt": "Lake Batur, Bali, seen from its volcanic shore"
           },

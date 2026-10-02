@@ -66,6 +66,10 @@
         "imageAlt": "Ilustrasi proyek Jalaranu: modul datacenter di bawah permukaan danau yang terhubung ke fasilitas pendukung di darat melalui jalur daya dan komunikasi yang terlindung.",
         "slides": [
           {
+            "src": "/assets/hero/danau-landscape-1.webp",
+            "alt": "Pemandangan udara sebuah danau dengan tongkang dan derek yang menurunkan struktur ke dalam air"
+          },
+          {
             "src": "/assets/hero/danau-batur.webp",
             "alt": "Danau Batur, Bali, dilihat dari tepian vulkaniknya"
           },
