@@ -1007,9 +1007,9 @@ function Partnerships({ page, locale }) {
 function About({ page, content }) {
   return (
     <>
-      <div className="hero">
+      <div className="hero hero--about">
         <div className="container">
-          <h1 style={{ fontSize: "var(--jlr-fs-h1)" }}>
+          <h1>
             <Rich text={page.hero.h1} />
           </h1>
           <div className="hero__intro">
@@ -1017,34 +1017,37 @@ function About({ page, content }) {
               <Rich text={page.hero.body} />
             </p>
           </div>
-          <div className="about-mv">
-            <div className="mv-card mv-card--mission">
-              <span className="overline">{page.mv.mission.eyebrow}</span>
-              <h3>
-                <Rich text={page.mv.mission.title} />
-              </h3>
-              {page.mv.mission.body.map((paragraph, index) => (
-                <p key={index}>
-                  <Rich text={paragraph} />
-                </p>
-              ))}
-            </div>
-            <div className="mv-card mv-card--vision">
-              <span className="overline">{page.mv.vision.eyebrow}</span>
-              <h3>
-                <Rich text={page.mv.vision.title} />
-              </h3>
-              {page.mv.vision.body.map((paragraph, index) => (
-                <p key={index}>
-                  <Rich text={paragraph} />
-                </p>
-              ))}
-            </div>
-          </div>
         </div>
       </div>
 
-      <Section>
+      <Section className="section--alt about-mv-section">
+        <div className="about-mv">
+          <div className="mv-card">
+            <span className="overline">{page.mv.mission.eyebrow}</span>
+            <h3>
+              <Rich text={page.mv.mission.title} />
+            </h3>
+            {page.mv.mission.body.map((paragraph, index) => (
+              <p key={index}>
+                <Rich text={paragraph} />
+              </p>
+            ))}
+          </div>
+          <div className="mv-card">
+            <span className="overline">{page.mv.vision.eyebrow}</span>
+            <h3>
+              <Rich text={page.mv.vision.title} />
+            </h3>
+            {page.mv.vision.body.map((paragraph, index) => (
+              <p key={index}>
+                <Rich text={paragraph} />
+              </p>
+            ))}
+          </div>
+        </div>
+      </Section>
+
+      <Section className="about-story">
         <div className="section-head">
           <h2>
             <Rich text={page.story.h2} />
@@ -1082,36 +1085,38 @@ function About({ page, content }) {
             <Rich text={page.paper.body} />
           </p>
         </div>
-        <a
-          className="btn btn--secondary paper-link"
-          href={page.paper.linkHref}
-          download="jalaranu-underlake-datacenter-paper.pdf"
-        >
-          <FileText size={16} aria-hidden="true" />
-          <span>{page.paper.linkLabel}</span>
-          <span className="paper-link__cite">{page.paper.cite}</span>
-        </a>
-        <div className="paper-citation">
-          <div className="paper-citation__head">
-            <span className="overline">{page.paper.citationLabel}</span>
-            <CopyCitation
-              text={`${page.paper.citation}${page.paper.citationDoi}.`}
-              label={page.paper.copyLabel}
-              copiedLabel={page.paper.copiedLabel}
-            />
+        <div className="paper-module">
+          <a
+            className="btn btn--secondary paper-link"
+            href={page.paper.linkHref}
+            download="jalaranu-underlake-datacenter-paper.pdf"
+          >
+            <FileText size={16} aria-hidden="true" />
+            <span>{page.paper.linkLabel}</span>
+            <span className="paper-link__cite">{page.paper.cite}</span>
+          </a>
+          <div className="paper-citation">
+            <div className="paper-citation__head">
+              <span className="overline">{page.paper.citationLabel}</span>
+              <CopyCitation
+                text={`${page.paper.citation}${page.paper.citationDoi}.`}
+                label={page.paper.copyLabel}
+                copiedLabel={page.paper.copiedLabel}
+              />
+            </div>
+            <p>
+              <Rich text={page.paper.citation} />
+              <a
+                className="paper-citation__doi"
+                href={`https://doi.org/${page.paper.citationDoi}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {page.paper.citationDoi}
+              </a>
+              .
+            </p>
           </div>
-          <p>
-            <Rich text={page.paper.citation} />
-            <a
-              className="paper-citation__doi"
-              href={`https://doi.org/${page.paper.citationDoi}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {page.paper.citationDoi}
-            </a>
-            .
-          </p>
         </div>
       </Section>
 
